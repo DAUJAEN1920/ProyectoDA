@@ -1,4 +1,5 @@
 # ProyectoDA
+# El heredero
 
 Introducción:
-La historia narra las aventuras de un pobre huérfano llamado SkyWalker en época medieval que se sumergirá en una aventura donde diversas situaciones repercutirán en el devenir de su vida. Su acompañante Klara Pölzl Hitler, le ayudará en su frenético viaje en la lucha contra los judíos y en búsqueda de venganza por la muerte de Hitler. 
+La historia narra las aventuras de un noble bastardo llamado Ferdinand en época medieval que se sumergirá en una aventura donde diversas situaciones repercutirán en el devenir de su vida. Su acompañante Lucía, le ayudará en su frenético viaje en la lucha contra su propia familia que trabaja para Roca Rivasly, con el objetivo de conseguir de vuelta su destino y su vida como miembro de una familia noble.

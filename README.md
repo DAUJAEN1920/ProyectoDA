@@ -5,4 +5,6 @@ La historia narra las aventuras de un noble bastardo llamado Ferdinand en época
 
 Captura de pantalla del Product Backlog:
 
-URL del tablero Trello: 
+![Trello](CapturaDA.PNG)
+
+URL del tablero Trello: https://trello.com/b/8kb1jpLx/product-backlog

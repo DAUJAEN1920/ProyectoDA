@@ -15,3 +15,6 @@ Captura del Sprint Backlog:
 ![Trello](sprintbacklog.PNG)
 
 Hemos elegido la 1 y la 2 ya que son esenciales para contar la historia. La 3 la hemos elegido para mostrar más visualmente las situaciones y objetos de los que hablamos, para una mejor comprensión. Y la 4 y 5 las hemos elegido ya que son esenciales y para mayor comodidad del usuario.
+
+Captura de pantalla de las HU descompuestas en tareas al principio del Sprint:
+![Trello](sp.PNG)

@@ -22,6 +22,6 @@ Captura de pantalla de las HU descompuestas en tareas al principio del Sprint:
 
 Capturas de pantalla del Product Backlog y del Sprint Backlog tras las modificaciones  realizadas en el Product Backlog Refinement:
 
-![Trello](PB_PBR.PNG)
-![Trello](SB_PBR.PNG)
+![Trello](PB_PBR.JPG)
+![Trello](SB_PBR.JPG)
 

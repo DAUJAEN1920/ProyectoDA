@@ -30,6 +30,8 @@ undum.game.slideUpSpeed = 500
 undum.game.situations = {
     start: new undum.SimpleSituation(
         "<h1>Introducci&#243n</h1>\
+        <img src='media/games/tutorial/granja.png' class='float_right'>\
+\
         <p>Mi nombre es Ferdinand, y soy un simple campesino de 18 a&#241os que vive en un modesto pueblo llamado Ancira, \
 		lejos de las grandes ciudades del reino. La vida aqu&#237 es muy simple, mi d&#237a a d&#237a consiste en cultivar y en conseguir sobrevivir. \
 		Tampoco est&#225 tan mal, no hay que complicarse con muchos l&#237os, y la gente de aqu&#237 es muy entra&#241able. Me ayudaron mucho cuando falleci&#243 mi madre \
@@ -64,7 +66,9 @@ undum.game.situations = {
     }),
 	sit1: new undum.SimpleSituation(
         "<p>Est&#225 bien, hoy ir&#233 contigo - respond&#237. </p>\
-		\
+        \
+        <img src='media/games/tutorial/ganado.png' class='float_left'>\
+\
 		<p>Una gran sonrisa se esboza en la cara de Luc&#237a.</p>\
 		<p>-&#161Genial! - dijo con una sonrisa esbozada - Pues ir&#233 para la granja ya. No tardes mucho, &#191vale? -\
 		Despu&#233s de decir eso sali&#243 corriendo, casi tropezando por el camino.</p>\

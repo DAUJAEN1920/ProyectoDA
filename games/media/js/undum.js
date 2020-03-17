@@ -492,7 +492,7 @@
     var FudgeAdjectivesQuality = function(title, opts) {
         WordScaleQuality.call(this, title, [
             "terrible".l(), "poor".l(), "mediocre".l(),
-            "fair".l(), "good".l(), "great".l(), "superb".l()
+            "equilibrada".l(), "good".l(), "great".l(), "superb".l()
         ], opts);
         if (!('offset' in opts)) this.offset = -3;
     };
@@ -2265,7 +2265,7 @@
         terrible: "terrible",
         poor: "poor",
         mediocre: "mediocre",
-        fair: "fair",
+        fair: "equilibrada",
         good: "good",
         great: "great",
         superb: "superb",

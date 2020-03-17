@@ -193,7 +193,7 @@ undum.game.situations = {
     A lo que el herrero, de pronto, empezó a sudar bastamente, sabiendo que había perdido todo argumento para replicarme.\
     No, no, sin problema claro, la verdad que no sé por qué te he preguntado eso jaja.\
     El herrero me da el dinero suficiente para aguantar durante bastante tiempo, así que no tendré ningún problema para invitar a Lucía a cenar esta noche.\
-    Suspiro de cansancio por la tremenda tarde que he tenido entre el trabajo y llegar a la herrería, pero me despejo rápidamente, ya que he quedado con Lucía, así que me preparo rápidamente.\
+    Suspiro de cansancio por la tremenda tarde que he tenido entre el trabajo y llegar a la herrería, pero me despejo rápidamente, ya que he quedado con Lucía, así que me preparo con la mayor brevedad posible.\
      </p>"
     ),
    

@@ -77,9 +77,9 @@ undum.game.situations = {
 		como si fuera la primera vez que la ayudo en sus tareas.</p>\
 		<p>-Bueno, as&#237 de primeras, puedes<a href='sit1a'> orde&#241ar las vacas</a>, o<a href='sit1b'> comprobar el pienso de las gallinas.</a></p>"
 
-		),
+	),
 
-		sit1a: new undum.SimpleSituation(
+	sit1a: new undum.SimpleSituation(
 		"<p>-Creo que prefiero orde&#241ar las vacas.</p>\
 		<p>-&#161Pues aqu&#237 tienes! - Luc&#237a se da la vuelta, coge un cubo y lo levanta r&#225pidamente -\
 		Hay m&#225s en ese almac&#233n, intenta llenar los que puedas. Luego ir&#233 a ayudarte si hace falta.</p>\
@@ -177,25 +177,38 @@ undum.game.situations = {
 	),
 
 	sitcultivo: new undum.SimpleSituation(
-    "<h1>Ir al cultivo</h1>\
-    <img src='media/games/tutorial/cultivo.jpg' class='float_left'>\
-    <p>Decido seguir arando el campo. Los brazos me pesaban del cansancio y el atardecer estaba llegando, pero justo antes de terminar, me sobresalto con el graznido de un cuerpo que ha pasado cerca de ti, por un momento ves que lleva algo brillante en su pico.\
+    	"<h1>Ir al cultivo</h1>\
+    	<img src='media/games/tutorial/cultivo.jpg' class='float_left'>\
+    	<p>Decido seguir arando el campo. Los brazos me pesaban del cansancio y el atardecer estaba llegando, pero justo antes de terminar, me sobresalto con el graznido de un cuerpo que ha pasado cerca de ti, por un momento ves que lleva algo brillante en su pico.\
        Lo sigues con cierta curiosidad hasta un árbol cerca del cultivo, viendo como se posa en él y vuelve a irse pero sin el objeto brillante en su pico.\
-    Escalas el árbol y ¡Qué leches! el maldito cuervo llevaba una pendiente de oro. Cojo el pendiente, bajo el árbol y salto de la alegría. Hoy es mi día de suerte, justo cuando necesitaba algo de dinero - piensas.\
-    Corrí lo más rápido que pude hacia el pueblo, ya que estaba empezando a anochecer y el herrero cerraba pronto, necesitabas ese dinero cuanto antes. \
-    LLegas como puedes a la herrería. Nada más entrar le dices al herrero:\
-    ¡Buenas! Quiero venderte este pendiente, por favor, necesito el dinero cuanto antes.\
-    El herrero te mira con cara de duda.\
-    ¿Un chico con un pendiente? Que extraño…\
-    En ese momento, Ferdinand sintió el verdadero terror, ¿como le explico que se lo he robado a un cuervo, que a su vez se lo habrá robado a alguien?\
-    En un segundo caes en la mejor excusa posible.\
-    ¿Qué pasa? ¿Los chicos no podemos llevar pendientes?\
-    A lo que el herrero, de pronto, empezó a sudar bastamente, sabiendo que había perdido todo argumento para replicarme.\
-    No, no, sin problema claro, la verdad que no sé por qué te he preguntado eso jaja.\
-    El herrero me da el dinero suficiente para aguantar durante bastante tiempo, así que no tendré ningún problema para invitar a Lucía a cenar esta noche.\
-    Suspiro de cansancio por la tremenda tarde que he tenido entre el trabajo y llegar a la herrería, pero me despejo rápidamente, ya que he quedado con Lucía, así que me preparo con la mayor brevedad posible.\
-     </p>"
-    ),
+    	Escalas el árbol y ¡Qué leches! el maldito cuervo llevaba una pendiente de oro. Cojo el pendiente, bajo el árbol y salto de la alegría. Hoy es mi día de suerte, justo cuando necesitaba algo de dinero - piensas.\
+    	Corrí lo más rápido que pude hacia el pueblo, ya que estaba empezando a anochecer y el herrero cerraba pronto, necesitabas ese dinero cuanto antes. \
+    	Llegas como puedes a la herrería. Nada más entrar le dices al herrero:\
+    	¡Buenas! Quiero venderte este pendiente, por favor, necesito el dinero cuanto antes.\
+    	El herrero te mira con cara de duda.\
+    	¿Un chico con un pendiente? Que extraño…\
+    	En ese momento, Ferdinand sintió el verdadero terror, ¿como le explico que se lo he robado a un cuervo, que a su vez se lo habrá robado a alguien?\
+    	En un segundo caes en la mejor excusa posible.\
+    	¿Qué pasa? ¿Los chicos no podemos llevar pendientes?\
+    	A lo que el herrero, de pronto, empezó a sudar bastamente, sabiendo que había perdido todo argumento para replicarme.\
+   		No, no, sin problema claro, la verdad que no sé por qué te he preguntado eso jaja.\
+    	El herrero me da el dinero suficiente para aguantar durante bastante tiempo, así que no tendré ningún problema para invitar a Lucía a cenar esta noche.\
+    	Suspiro de cansancio por la tremenda tarde que he tenido entre el trabajo y llegar a la herrería, pero me despejo rápidamente, ya que he quedado con Lucía, así que <a href='continuacioncultivo'>me preparo con la mayor brevedad posible.</a>\
+     	</p>"
+	),
+	
+	continuacioncultivo: new undum.SimpleSituation(
+		"<p>Una vez preparado sal&#237 de camino a la taberna con paso ligero, no quer&#237a hacerla esperar y quedar mal.\
+		Aunque vivo a las afueras del pueblo no se tarda mucho en llegar a la plaza central del mismo.</p>\
+		\
+		<p>Ya hab&#237a anochecido cuando llegu&#233 a la taberna. Para mi sorpresa, llegu&#233 antes que Luc&#237a.\
+		As&#237 que decid&#237 esperarla en la entrada. Pasaron varios minutos hasta que al final la dislumbr&#233 corriendo hacia la taberna.</p>\
+		\
+		<p>-&#161Lo siento lo siento lo siento...! - Se le escucha decir mientras se acerca a la taberna.</p>\
+		\
+		<p>Hum, no s&#233 si<a href='sit3'> ech&#225rselo en cara en plan broma,</a> o<a href='sit4'> echar pelillos a la mar.</a></p>"
+
+	),
    
    
     "quality-types": new undum.SimpleSituation(
@@ -247,21 +260,21 @@ undum.game.start = "start";
  * that quality will never show up in the character bar in the UI. */
 undum.game.qualities = {
     skill: new undum.IntegerQuality(
-        "Skill", {priority:"0001", group:'stats'}
+        "Habilidad", {priority:"0001", group:'stats'}
     ),
     stamina: new undum.NumericQuality(
-        "Stamina", {priority:"0002", group:'stats'}
+        "Resistencia", {priority:"0002", group:'stats'}
     ),
     luck: new undum.FudgeAdjectivesQuality( // Fudge as in the FUDGE RPG
-        "<span title='Skill, Stamina and Luck are reverently borrowed from the Fighting Fantasy series of gamebooks. The words representing Luck are from the FUDGE RPG. This tooltip is illustrating that you can use any HTML in the label for a quality (in this case a span containing a title attribute).'>Luck</span>",
+        "<span title='Skill, Stamina and Luck are reverently borrowed from the Fighting Fantasy series of gamebooks. The words representing Luck are from the FUDGE RPG. This tooltip is illustrating that you can use any HTML in the label for a quality (in this case a span containing a title attribute).'>Fortuna</span>",
         {priority:"0003", group:'stats'}
     ),
 
     inspiration: new undum.NonZeroIntegerQuality(
-        "Inspiration", {priority:"0001", group:'progress'}
+        "Inspiración", {priority:"0001", group:'progress'}
     ),
     novice: new undum.OnOffQuality(
-        "Novice", {priority:"0002", group:'progress', onDisplay:"&#10003;"}
+        "Novicio", {priority:"0002", group:'progress', onDisplay:"&#10003;"}
     )
 };
 
@@ -273,7 +286,7 @@ undum.game.qualities = {
  * non-existent group. */
 undum.game.qualityGroups = {
     stats: new undum.QualityGroup(null, {priority:"0001"}),
-    progress: new undum.QualityGroup('Progress', {priority:"0002"})
+    progress: new undum.QualityGroup('Progreso', {priority:"0002"})
 };
 
 // ---------------------------------------------------------------------------
@@ -285,5 +298,5 @@ undum.game.init = function(character, system) {
     character.qualities.luck = 0;
     character.qualities.novice = 1;
     character.qualities.inspiration = 0;
-    system.setCharacterText("<p>You are starting on an exciting journey.</p>");
+    system.setCharacterText("<p>¡Disfruta de esta trepidante aventura!</p>");
 };

@@ -17,4 +17,11 @@ Captura del Sprint Backlog:
 Hemos elegido la 1 y la 2 ya que son esenciales para contar la historia. La 3 la hemos elegido para mostrar más visualmente las situaciones y objetos de los que hablamos, para una mejor comprensión. Y la 4 y 5 las hemos elegido ya que son esenciales y para mayor comodidad del usuario.
 
 Captura de pantalla de las HU descompuestas en tareas al principio del Sprint:
+
 ![Trello](sp.PNG)
+
+Capturas de pantalla del Product Backlog y del Sprint Backlog tras las modificaciones  realizadas en el Product Backlog Refinement:
+
+![Trello](PB_PBR.jpg)
+![Trello](SB_PBR.jpg)
+

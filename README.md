@@ -33,6 +33,14 @@ Hemos realizado un reparto equitativo de las tareas, de forma que todos los comp
 
 De cara al próximo Sprint, optaremos por seguir construyendo la historia y realizar requisitos con cierta funcionalidad para poder incrementar el valor de nuestra aventura conversacional. Locpróximo que mayor valor dará a nuestro proyecto será personalizar aún más nuestra página para que se adapte a la historia y nos ayude a poder mimetizarnos con la misma.
 
+Conclusiones obtenidas en la Sprint Retrospective:
+
+Se trabajó de forma correcta, gracias al reparto equitativo de tareas que nos ha ayudado a poder echarnos una mano unos a otros cuando nos atascábamos y poder así aprender. 
+
+Se podría mejorar la claridad con la que se definen las tareas, ya que alguna vez no se ha definido bien su meta y hemos realizado a veces más cosas, y otras veces menos de lo que se nos pedía.
+
+Nuestro plan para realizar mejoras de cara al próximo Sprint, será continuar con esta buena dinámica y poder centrarnos más en la experiencia del usuario y no tanto en los aspectos estructurales de la página.
+
 Captura de pantalla de las tareas del Sprint Planning al final del sprint:
 
 ![Trello](cap.JPG)

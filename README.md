@@ -34,8 +34,10 @@ Hemos realizado un reparto equitativo de las tareas, de forma que todos los comp
 De cara al próximo Sprint, optaremos por seguir construyendo la historia y realizar requisitos con cierta funcionalidad para poder incrementar el valor de nuestra aventura conversacional. Locpróximo que mayor valor dará a nuestro proyecto será personalizar aún más nuestra página para que se adapte a la historia y nos ayude a poder mimetizarnos con la misma.
 
 Captura de pantalla de las tareas del Sprint Planning al final del sprint:
+
 ![Trello](cap.JPG)
 
 Captura de pantalla de las HU del Sprint Backlog una vez acabado el sprint:
+
 ![Trello](cap2.JPG)
 

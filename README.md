@@ -9,7 +9,7 @@ Captura de pantalla del Product Backlog:
 
 URL del tablero Trello: https://trello.com/b/8kb1jpLx/product-backlog
 
-
+## Sprint 1:
 Captura del Sprint Backlog:
 
 ![Trello](sprintbacklog.PNG)
@@ -24,4 +24,18 @@ Capturas de pantalla del Product Backlog y del Sprint Backlog tras las modificac
 
 ![Trello](PB_PBR.jpg)
 ![Trello](SB_PBR.jpg)
+
+Conclusiones obtenidas en la Sprint Review:
+
+Hemos realizado los requisitos fundamentales para poder estructurar el proyecto y poder así desarrollarlo e incluirle nuevas funcionalidades de cara a Sprints posteriores. No se ha realizado requisitos con características demasiado particulares, dado que hemos preferido realizar los que mayor valor dan y poder así conseguir una evolución del proyecto satisfactoria.
+
+Hemos realizado un reparto equitativo de las tareas, de forma que todos los componentes del grupo pudieran realizar, como mínimo, una tarea de cada requisito. No se ha presentado ningún problema durante el desarrollo del Sprint.
+
+De cara al próximo Sprint, optaremos por seguir construyendo la historia y realizar requisitos con cierta funcionalidad para poder incrementar el valor de nuestra aventura conversacional. Locpróximo que mayor valor dará a nuestro proyecto será personalizar aún más nuestra página para que se adapte a la historia y nos ayude a poder mimetizarnos con la misma.
+
+Captura de pantalla de las tareas del Sprint Planning al final del sprint:
+![Trello](cap.JPG)
+
+Captura de pantalla de las HU del Sprint Backlog una vez acabado el sprint:
+![Trello](cap2.JPG)
 

@@ -126,7 +126,7 @@ undum.game.situations = {
 		\
 		<p>-&#161Lo siento lo siento lo siento...! - Se le escucha decir mientras se acerca a la taberna.</p>\
 		\
-		<p>Hum, no s&#233 si<a href='sit3'> ech&#225rselo en cara en plan broma,</a> o<a href='sit4'> echar pelillos a la mar.</a></p>" 
+		<p>Hum, no s&#233 si<a href='sit3'> ech&#225rselo en cara de mofa,</a> o<a href='sit4'> echar pelillos a la mar.</a></p>" 
 
 	),
 
@@ -176,7 +176,7 @@ undum.game.situations = {
 		\
 		<p>-&#161Lo siento lo siento lo siento...! - Se le escucha decir mientras se acerca a la taberna.</p>\
 		\
-		<p>Hum, no s&#233 si<a href='sit3'> ech&#225rselo en cara en plan broma,</a> o<a href='sit4'> echar pelillos a la mar.</a></p>" 
+		<p>Hum, no s&#233 si<a href='sit3'> ech&#225rselo en cara de mofa,</a> o<a href='sit4'> echar pelillos a la mar.</a></p>" 
 
 	),
 

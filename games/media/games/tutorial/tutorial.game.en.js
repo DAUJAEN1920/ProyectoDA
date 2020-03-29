@@ -266,6 +266,55 @@ undum.game.situations = {
 	
 	),
    
+   comidaa: new undum.SimpleSituation(
+	"<p>-Pues para mí un buen filete de carne y vino para acompañarlo - era lo que casi siempre pedía, me encantaba como preparaban la carne allí.</p>\
+	\
+	<p>-¿Y la señorita?</p>\
+	\
+	<p>-Ya, ¿y por qué motivo me has hecho perder mi precioso tiempo entonces? - dije como mofa.</p>\
+	\
+	<p>-A mí ponme lo mismo que a él.</p>\
+	\
+	<p>-¿Estás segura? - estaba algo sorprendido - Igual es demasiada comida para ti.</p>\
+	\
+	<p>-¡Sí, estoy segura! - dijo mientras me apartaba la mirada.</p>\
+	\
+	<p>-Marchando entonces - dijo el camarero mientras se dirigía a la cocina.</p>\
+	\
+	<p>Charlé con Lucía sobre las fiestas venideras, hasta que finalmente llegó la comida. Eran unos filetes de carnes bastante grandes y suculentos,\
+	con una salsa de setas para acompañarlo. Tenía un aspecto increíble, empecé a salivar dispuesto a comenzar a devorar mi plato, hasta que levanté\
+	la mirada un segundo de éste para ver la cara de Lucía con una mezcla de disgusto y sorpresa que no podía dejar pasar.</p>\
+	\
+	<p>-Es… enorme - seguía bastante sorprendida, hasta que hizo un cambio radical atacandome - ¡¿Por qué no dijiste que era tan grande?!</p>\
+	\
+	<p>-Yo te había avisado, no es culpa mía que la señorita no sea capaz de tomar mi opinión en serio - dije mofándome un poco.</p>\
+	\
+	<p>-¡Ugh! - tras otro arrebato de ira, Lucía arremetió contra el plato.</p>\
+	\
+	<p>Nunca había visto comer tanto en mi vida, pero logró comerse el plato entero. Incluso se tomó el vino, pese a nunca haberla visto tomar dicha bebida.</p>\
+	\
+	<p>-¡¿Qué te ha parecido?! - dijo algo contenta - ¡No hay nada que no pueda conseguir!</p>\
+	\
+	<p>-Ni que esto fuera una competición o algo - dije, aunque para mis adentros admito que me pareció bastante graciosa mientras devoraba el plato de aquella manera.</p>\
+	\
+	<p>Terminamos la comida tranquilamente, fue una noche magnífica. Nos disponíamos a salir cuando entraron dos personas con apariencia intimidante\
+	y misteriosa, parecían forasteros de algún lugar lejano, pero no le dimos mucha importancia y decidimos salir del bar.</p>\
+	\
+	<p>Estábamos llegando a la puerta cuando de pronto, un tío le sujetó el brazo de malas maneras a Lucía, la cual se giró con cara de pocos amigos.</p>\
+	\
+	<p>-¿Qué te crees que estás haciendo? - respondió con enfado Lucía.</p>\
+	\
+	<p>-Ehhh nenaaa - el hombre desprendía un fuerte olor a alcohol - ¿no quiereh da una vueltesita conmigo?</p>\
+	\
+	<p>Ella hizo una mueca disgustada, y ante la situación le soltó un puñetazo, haciendo que se tambaleara. Él se giró con aire violento, y otro hombre se levantó de la mesa de la que venía el borracho.</p>\
+	\
+	<p>-¿Quieres jugar, eh gatita? - dijo el borracho mientras se tocaba la cara.</p>\
+	\
+	<p>-¿Tienes algún problema con mi primo? - dijo el otro hombre.</p>\
+	\
+	Viendo como se estaba desenvolviendo la situación barajas tus opciones, si<a href='peleaa'> meterte en el fregado</a> o<a href='peleab'> mantenerte al margen.</a></p>"
+	
+	),
    
     "quality-types": new undum.SimpleSituation(
         "<p>Not all the qualities in the character panel are displayed as\

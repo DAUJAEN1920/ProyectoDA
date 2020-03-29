@@ -126,7 +126,7 @@ undum.game.situations = {
 		\
 		<p>-&#161Lo siento lo siento lo siento...! - Se le escucha decir mientras se acerca a la taberna.</p>\
 		\
-		<p>Hum, no s&#233 si<a href='sit3'> ech&#225rselo en cara de mofa,</a> o<a href='sit4'> echar pelillos a la mar.</a></p>" 
+		<p>Hum, no s&#233 si<a href='sitaberna1'> ech&#225rselo en cara de mofa,</a> o<a href='sitaberna2'> echar pelillos a la mar.</a></p>" 
 
 	),
 
@@ -176,7 +176,7 @@ undum.game.situations = {
 		\
 		<p>-&#161Lo siento lo siento lo siento...! - Se le escucha decir mientras se acerca a la taberna.</p>\
 		\
-		<p>Hum, no s&#233 si<a href='sit3'> ech&#225rselo en cara de mofa,</a> o<a href='sit4'> echar pelillos a la mar.</a></p>" 
+		<p>Hum, no s&#233 si<a href='sitaberna1'> ech&#225rselo en cara de mofa,</a> o<a href='sitaberna2'> echar pelillos a la mar.</a></p>" 
 
 	),
 
@@ -210,8 +210,33 @@ undum.game.situations = {
 		\
 		<p>-&#161Lo siento lo siento lo siento...! - Se le escucha decir mientras se acerca a la taberna.</p>\
 		\
-		<p>Hum, no s&#233 si<a href='sit3'> ech&#225rselo en cara en plan broma,</a> o<a href='sit4'> echar pelillos a la mar.</a></p>"
+		<p>Hum, no s&#233 si<a href='sitaberna1'> ech&#225rselo en cara en plan broma,</a> o<a href='sitaberna2'> echar pelillos a la mar.</a></p>"
 
+	),
+
+	sitaberna1: new undum.SimpleSituation(
+	"<p>-Vaya vaya, y eso que eres tú la que siempre dice que “llegar tarde es de mala educación, ¡el tiempo es oro y no es\
+	bueno gastar el de los demás! - dije intentando imitar de mala manera su voz.</p>\
+	\
+	<p>-¡Igual deberías hacer de bufón con imitaciones tan malas como esa! - dijo enojada Lucía mientras jadeaba después de\
+	la carrerita - ¡Solo ha sido una vez!</p>\
+	\
+	<p>-Ya, ¿y por qué motivo me has hecho perder mi precioso tiempo entonces? - dije como mofa.</p>\
+	\
+	<p>-Simplemente no encontraba mi collar, eso es todo. Mi madre ha tenido que moverlo de sitio...</p>\
+	\
+	<p>Lucía mostró el collar orgullosamente, como si no lo hubiera visto ya cientos de veces. Pero sí es cierto que era un collar precioso.\
+	Tengo entendido que se lo dio su padre muy de joven y siempre se aleja de su casa lo lleva encima, como si fuera un amuleto de buena suerte.</p>\
+	<p>-Bueno, ¿vamos entrando?</p>\
+	\
+	<p>-¡Por supuesto! - dijo mientras guiñaba Lucía.</p>\
+	\
+	<p>Dentro de la taberna tomamos la mesa más cercana a la barra. El ambiente era muy cálido, estaba casi lleno con gente muy alegre\
+	en las mesas de alrededor. Un camarero se acercó a la mesa al rato.</p>\
+	<p>-¿Que va a ser esta noche?</p>\
+	<p>No s&#233 si pedir<a href='comidaa'> el tipico filete con carne y vino de beber</a>, algo más ligero en la forma de<a href='comidab'> un revuelto con hidromiel de bebida</a>, o simplemente\
+	<a href='comidac'> que me sorprenda el camarero.</a></p>"
+	
 	),
    
    

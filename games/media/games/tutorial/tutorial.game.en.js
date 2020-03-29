@@ -233,7 +233,34 @@ undum.game.situations = {
 	\
 	<p>Dentro de la taberna tomamos la mesa más cercana a la barra. El ambiente era muy cálido, estaba casi lleno con gente muy alegre\
 	en las mesas de alrededor. Un camarero se acercó a la mesa al rato.</p>\
-	<p>-¿Que va a ser esta noche?</p>\
+	\
+	<p>-¿Qué va a ser esta noche?</p>\
+	\
+	<p>No s&#233 si pedir<a href='comidaa'> el tipico filete con carne y vino de beber</a>, algo más ligero en la forma de<a href='comidab'> un revuelto con hidromiel de bebida</a>, o simplemente\
+	<a href='comidac'> que me sorprenda el camarero.</a></p>"
+	
+	),
+
+	sitaberna2: new undum.SimpleSituation(
+	"<p>-Tranquila, he llegado hace nada, así que no me has hecho esperar - traté de tranquilizarla.</p>\
+	\
+	<p>-¡¿De verdad?! - dijo mientras jadeaba por la carrera Lucía. Se paró y tomó aire para responder aliviada - Me alegro...</p>\
+	\
+	<p>-En cualquier caso, no te ha pasado nada viniendo, ¿no?</p>\
+	\
+	<p>-Oh no, nada por el estilo. Es que no encontraba mi collar y no quería salir sin él.</p>\
+	\
+	<p>Lucía mostró el collar orgullosamente, como si no lo hubiera visto ya cientos de veces. Pero sí es cierto que era un collar precioso.\
+	Tengo entendido que se lo dio su padre muy de joven y siempre se aleja de su casa lo lleva encima, como si fuera un amuleto de buena suerte.</p>\
+	<p>-Bueno, ¿vamos entrando?</p>\
+	\
+	<p>-¡Por supuesto! - dijo mientras guiñaba Lucía.</p>\
+	\
+	<p>Dentro de la taberna tomamos la mesa más cercana a la barra. El ambiente era muy cálido, estaba casi lleno con gente muy alegre\
+	en las mesas de alrededor. Un camarero se acercó a la mesa al rato.</p>\
+	\
+	<p>-¿Qué va a ser esta noche?</p>\
+	\
 	<p>No s&#233 si pedir<a href='comidaa'> el tipico filete con carne y vino de beber</a>, algo más ligero en la forma de<a href='comidab'> un revuelto con hidromiel de bebida</a>, o simplemente\
 	<a href='comidac'> que me sorprenda el camarero.</a></p>"
 	

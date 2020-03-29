@@ -315,6 +315,43 @@ undum.game.situations = {
 	Viendo como se estaba desenvolviendo la situación barajas tus opciones, si<a href='peleaa'> meterte en el fregado</a> o<a href='peleab'> mantenerte al margen.</a></p>"
 	
 	),
+
+	comidab: new undum.SimpleSituation(
+	"<p>-Un revuelto y de beber hidromiel - Tampoco era cuestión de hincharse esta vez.</p>\
+	\
+	<p>-¿Y la señorita?</p>\
+	\
+	<p>-A mí ponme lo mismo que a él.</p>\
+	\
+	<p>-Marchando entonces - dijo el camarero mientras se dirigía a la cocina</p>\
+	\
+	<p>La cena fue fantástica. Charlé con Lucía sobre las fiestas venideras, hicimos bromas y nos lo pasamos genial. La comida también fue magnífica, \
+	el plato estaba combinado de manera que no se hacía nada pesado, y los sabores de las verduras en el revuelto resaltaban de manera espectacular.</p>\
+	\
+	<p>- Pues debo darte la razón, -afirmó Lucía después de echar un trago de hidromiel - este sitio no está naaada mal. </p>\
+	\
+	<p>- Te lo dije, deberías hacerme caso más a menud- dije en tono orgulloso. </p>\
+	\
+	<p>-Je, es verdad. Ya no eres aquel enclenque al que no le podías confiar nada. </p>\
+	\
+	<p>Terminamos la comida tranquilamente, fue una noche magnífica. Nos disponíamos a salir cuando entraron dos personas con apariencia intimidante\
+	y misteriosa, parecían forasteros de algún lugar lejano, pero no le dimos mucha importancia y decidimos salir del bar.</p>\
+	\
+	<p>Estábamos llegando a la puerta cuando de pronto, un tío le sujetó el brazo de malas maneras a Lucía, la cual se giró con cara de pocos amigos.</p>\
+	\
+	<p>-¿Qué te crees que estás haciendo? - respondió con enfado Lucía.</p>\
+	\
+	<p>-Ehhh nenaaa - el hombre desprendía un fuerte olor a alcohol - ¿no quiereh da una vueltesita conmigo?</p>\
+	\
+	<p>Ella hizo una mueca disgustada, y ante la situación le soltó un puñetazo, haciendo que se tambaleara. Él se giró con aire violento, y otro hombre se levantó de la mesa de la que venía el borracho.</p>\
+	\
+	<p>-¿Quieres jugar, eh gatita? - dijo el borracho mientras se tocaba la cara.</p>\
+	\
+	<p>-¿Tienes algún problema con mi primo? - dijo el otro hombre.</p>\
+	\
+	Viendo como se estaba desenvolviendo la situación barajas tus opciones, si<a href='peleaa'> meterte en el fregado</a> o<a href='peleab'> mantenerte al margen.</a></p>"
+	
+	),
    
     "quality-types": new undum.SimpleSituation(
         "<p>Not all the qualities in the character panel are displayed as\

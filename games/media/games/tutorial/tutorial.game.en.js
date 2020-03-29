@@ -353,6 +353,50 @@ undum.game.situations = {
 	
 	),
    
+   comidac: new undum.SimpleSituation(
+	"<p>-¿Por qué no me sorprende hoy? Póngame lo que le apetezca.</p>\
+	\
+	<p>-Oh, esto es interesante - dijo el camarero algo sorprendido -¿Y la señorita?</p>\
+	\
+	<p>-Pues… venga por qué no, también quiero un plato sorpresa.</p>\
+	\
+	<p>-Están aventureros hoy eh… - dijo con una sonrisilla - Pues voy a ver que se le ocurre a cocina.</p>\
+	\
+	<p>Estábamos un poco nerviosos por la comida, aunque no quisiéramos admitirlo. Tampoco queríamos que la cena se arruinara por la comida, pues el ambiente era genial. Al rato llegó el camarero con la bebida.</p>\
+	\
+	<p>-Esta bebida es un trabajo casero, receta de nuestro chef. Todavía no sabemos si le va a gustar al público, así que hemos aprovechado para usaros de conejillos de indias - dijo en tono jocoso el camarero.</p>\
+	\
+	<p>-Pues no sé si me hace mucha gracia ser una conejilla de indias… ¿Podemos saber que lleva la bebida?</p>\
+	\
+	<p>-Es un secreto. - dijo mientras volvía a la cocina.</p>\
+	\
+	<p>La bebida era de un tono oscuro, y tenía burbujas. Nunca había visto una bebida como aquella. Decidimos probarla y, sorprendentemente, estaba dulce. </p>\
+	\
+	<p>-Es… muy refrescante. - dije sorprendido - Está bastante mejor de lo que esperaba.</p>\
+	\
+	<p>¿Bromeas? ¡Es lo mejor que he tomado en mucho tiempo! - dijo Lucía para inmediatamente darle un largo trago a aquella misteriosa bebida.</p>\
+	\
+	<p>La comida acabó siendo un plato combinado, pero no pudimos dejar de pensar en aquella bebida misteriosa. Quizá la pida la próxima vez que venga a este lugar.</p>\
+	\
+	<p>Terminamos la comida tranquilamente, fue una noche magnífica. Nos disponíamos a salir cuando entraron dos personas con apariencia intimidante\
+	y misteriosa, parecían forasteros de algún lugar lejano, pero no le dimos mucha importancia y decidimos salir del bar.</p>\
+	\
+	<p>Estábamos llegando a la puerta cuando de pronto, un tío le sujetó el brazo de malas maneras a Lucía, la cual se giró con cara de pocos amigos.</p>\
+	\
+	<p>-¿Qué te crees que estás haciendo? - respondió con enfado Lucía.</p>\
+	\
+	<p>-Ehhh nenaaa - el hombre desprendía un fuerte olor a alcohol - ¿no quiereh da una vueltesita conmigo?</p>\
+	\
+	<p>Ella hizo una mueca disgustada, y ante la situación le soltó un puñetazo, haciendo que se tambaleara. Él se giró con aire violento, y otro hombre se levantó de la mesa de la que venía el borracho.</p>\
+	\
+	<p>-¿Quieres jugar, eh gatita? - dijo el borracho mientras se tocaba la cara.</p>\
+	\
+	<p>-¿Tienes algún problema con mi primo? - dijo el otro hombre.</p>\
+	\
+	Viendo como se estaba desenvolviendo la situación barajas tus opciones, si<a href='peleaa'> meterte en el fregado</a> o<a href='peleab'> mantenerte al margen.</a></p>"
+	
+	),
+
     "quality-types": new undum.SimpleSituation(
         "<p>Not all the qualities in the character panel are displayed as\
         numeric. Internally they are all numeric, but different qualities\

@@ -187,12 +187,13 @@ undum.game.situations = {
        Lo sigues con cierta curiosidad hasta un árbol cerca del cultivo, viendo como se posa en él y vuelve a irse pero sin el objeto brillante en su pico.\
     	Escalas el árbol y ¡Qué leches! el maldito cuervo llevaba una pendiente de oro. Cojo el pendiente, bajo el árbol y salto de la alegría. Hoy es mi día de suerte, justo cuando necesitaba algo de dinero - piensas.\
     	Corrí lo más rápido que pude hacia el pueblo, ya que estaba empezando a anochecer y el herrero cerraba pronto, necesitabas ese dinero cuanto antes. \
-    	Llegas como puedes a la herrería. Nada más entrar le dices al herrero:\
+		<img src='media/games/tutorial/forja.jpg' class='float_left'>\
+		Llegas como puedes a la herrería. Nada más entrar le dices al herrero:\
     	¡Buenas! Quiero venderte este pendiente, por favor, necesito el dinero cuanto antes.\
     	El herrero te mira con cara de duda.\
     	¿Un chico con un pendiente? Que extraño…\
     	En ese momento, Ferdinand sintió el verdadero terror, ¿como le explico que se lo he robado a un cuervo, que a su vez se lo habrá robado a alguien?\
-    	En un segundo caes en la mejor excusa posible.\
+		En un segundo caes en la mejor excusa posible.\
     	¿Qué pasa? ¿Los chicos no podemos llevar pendientes?\
     	A lo que el herrero, de pronto, empezó a sudar bastamente, sabiendo que había perdido todo argumento para replicarme.\
    		No, no, sin problema claro, la verdad que no sé por qué te he preguntado eso jaja.\

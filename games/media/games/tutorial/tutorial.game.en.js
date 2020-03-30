@@ -28,8 +28,8 @@ undum.game.slideUpSpeed = 500
 
 /* The situations that the game can be in. Each has a unique ID. */
 undum.game.situations = {
-    start: new undum.SimpleSituation(
-        "<h1>Introducci&#243n</h1>\
+	start: new undum.SimpleSituation(
+		"<h1>Introducci&#243n</h1>\
         <img src='media/games/tutorial/granja.png' class='float_right'>\
         <p>Mi nombre es Ferdinand, y soy un simple campesino de 18 a&#241os que vive en un modesto pueblo llamado Ancira, \
 		lejos de las grandes ciudades del reino. La vida aqu&#237 es muy simple, mi d&#237a a d&#237a consiste en cultivar y en conseguir sobrevivir. \
@@ -45,27 +45,27 @@ undum.game.situations = {
         \
         <p class='transient'>Ya ten&#237a planeado ir a por el cultivo, pues hoy era el d&#237a de la recolecta. No s&#233 qu&#233 decidir entre <a href='sit1'>acompa&#241ar a\
         Luc&#237a</a> o <a href='sitcultivo'>Ir al cultivo</a> </p>"
-    ),
+	),
 
-    // NB: The 'hub' situation which is the main list of topics, is
-    // defined wholly in the HTML file, and doesn't have an entry in
-    // the game.situations dictionary in this file.
+	// NB: The 'hub' situation which is the main list of topics, is
+	// defined wholly in the HTML file, and doesn't have an entry in
+	// the game.situations dictionary in this file.
 
-    // For variety, here we define a situation using the top-level
-    // Situation type. This is a neat approach to generate text by
-    // looking it up in the HTML document. For static text that makes
-    // more sense than writing it longhand.
-    situations: new undum.Situation({
-        enter: function(character, system, from) {
-            system.write($("#s_situations").html());
-        },
-        tags: ["topic"],
-        optionText: "What Undum Games are Made Of",
-        displayOrder: 1
-    }),
+	// For variety, here we define a situation using the top-level
+	// Situation type. This is a neat approach to generate text by
+	// looking it up in the HTML document. For static text that makes
+	// more sense than writing it longhand.
+	situations: new undum.Situation({
+		enter: function (character, system, from) {
+			system.write($("#s_situations").html());
+		},
+		tags: ["topic"],
+		optionText: "What Undum Games are Made Of",
+		displayOrder: 1
+	}),
 	sit1: new undum.SimpleSituation(
-        
-        "<h1>Acompañar a Luc&#237a</h1>\
+
+		"<h1>Acompañar a Luc&#237a</h1>\
         <p>Est&#225 bien, hoy ir&#233 contigo - respond&#237. </p>\
         <img src='media/games/tutorial/ganado.jpg' class='float_right'>\
         \
@@ -126,7 +126,7 @@ undum.game.situations = {
 		\
 		<p>-&#161Lo siento lo siento lo siento...! - Se le escucha decir mientras se acerca a la taberna.</p>\
 		\
-		<p>Hum, no s&#233 si<a href='sitaberna1'> ech&#225rselo en cara de mofa,</a> o<a href='sitaberna2'> echar pelillos a la mar.</a></p>" 
+		<p>Hum, no s&#233 si<a href='sitaberna1'> ech&#225rselo en cara de mofa,</a> o<a href='sitaberna2'> echar pelillos a la mar.</a></p>"
 
 	),
 
@@ -176,12 +176,12 @@ undum.game.situations = {
 		\
 		<p>-&#161Lo siento lo siento lo siento...! - Se le escucha decir mientras se acerca a la taberna.</p>\
 		\
-		<p>Hum, no s&#233 si<a href='sitaberna1'> ech&#225rselo en cara de mofa,</a> o<a href='sitaberna2'> echar pelillos a la mar.</a></p>" 
+		<p>Hum, no s&#233 si<a href='sitaberna1'> ech&#225rselo en cara de mofa,</a> o<a href='sitaberna2'> echar pelillos a la mar.</a></p>"
 
 	),
 
 	sitcultivo: new undum.SimpleSituation(
-    	"<h1>Ir al cultivo</h1>\
+		"<h1>Ir al cultivo</h1>\
     	<img src='media/games/tutorial/cultivo.jpg' class='float_left'>\
     	<p>Decido seguir arando el campo. Los brazos me pesaban del cansancio y el atardecer estaba llegando, pero justo antes de terminar, me sobresalto con el graznido de un cuerpo que ha pasado cerca de ti, por un momento ves que lleva algo brillante en su pico.\
        Lo sigues con cierta curiosidad hasta un árbol cerca del cultivo, viendo como se posa en él y vuelve a irse pero sin el objeto brillante en su pico.\
@@ -198,10 +198,11 @@ undum.game.situations = {
     	A lo que el herrero, de pronto, empezó a sudar bastamente, sabiendo que había perdido todo argumento para replicarme.\
    		No, no, sin problema claro, la verdad que no sé por qué te he preguntado eso jaja.\
     	El herrero me da el dinero suficiente para aguantar durante bastante tiempo, así que no tendré ningún problema para invitar a Lucía a cenar esta noche.\
-    	Suspiro de cansancio por la tremenda tarde que he tenido entre el trabajo y llegar a la herrería, pero me despejo rápidamente, ya que he quedado con Lucía, así que <a href='continuacioncultivo'>me preparo con la mayor brevedad posible.</a>\
+		<img src='media/games/tutorial/armario.jpg' class='float_left'>\
+		Suspiro de cansancio por la tremenda tarde que he tenido entre el trabajo y llegar a la herrería, pero me despejo rápidamente, ya que he quedado con Lucía, así que <a href='continuacioncultivo'>me preparo con la mayor brevedad posible.</a>\
      	</p>"
 	),
-	
+
 	continuacioncultivo: new undum.SimpleSituation(
 		"<p>Una vez preparado sal&#237 de camino a la taberna con paso ligero, no quer&#237a hacerla esperar y quedar mal.\
 		Aunque vivo a las afueras del pueblo no se tarda mucho en llegar a la plaza central del mismo.</p>\
@@ -216,7 +217,7 @@ undum.game.situations = {
 	),
 
 	sitaberna1: new undum.SimpleSituation(
-	"<p>-Vaya vaya, y eso que eres tú la que siempre dice que “llegar tarde es de mala educación, ¡el tiempo es oro y no es\
+		"<p>-Vaya vaya, y eso que eres tú la que siempre dice que “llegar tarde es de mala educación, ¡el tiempo es oro y no es\
 	bueno gastar el de los demás! - dije intentando imitar de mala manera su voz.</p>\
 	\
 	<p>-¡Igual deberías hacer de bufón con imitaciones tan malas como esa! - dijo enojada Lucía mientras jadeaba después de\
@@ -239,11 +240,11 @@ undum.game.situations = {
 	\
 	<p>No s&#233 si pedir<a href='comidaa'> el tipico filete con carne y vino de beber</a>, algo más ligero en la forma de<a href='comidab'> un revuelto con hidromiel de bebida</a>, o simplemente\
 	<a href='comidac'> que me sorprenda el camarero.</a></p>"
-	
+
 	),
 
 	sitaberna2: new undum.SimpleSituation(
-	"<p>-Tranquila, he llegado hace nada, así que no me has hecho esperar - traté de tranquilizarla.</p>\
+		"<p>-Tranquila, he llegado hace nada, así que no me has hecho esperar - traté de tranquilizarla.</p>\
 	\
 	<p>-¡¿De verdad?! - dijo mientras jadeaba por la carrera Lucía. Se paró y tomó aire para responder aliviada - Me alegro...</p>\
 	\
@@ -264,11 +265,11 @@ undum.game.situations = {
 	\
 	<p>No s&#233 si pedir<a href='comidaa'> el tipico filete con carne y vino de beber</a>, algo más ligero en la forma de<a href='comidab'> un revuelto con hidromiel de bebida</a>, o simplemente\
 	<a href='comidac'> que me sorprenda el camarero.</a></p>"
-	
+
 	),
-   
-   comidaa: new undum.SimpleSituation(
-	"<p>-Pues para mí un buen filete de carne y vino para acompañarlo - era lo que casi siempre pedía, me encantaba como preparaban la carne allí.</p>\
+
+	comidaa: new undum.SimpleSituation(
+		"<p>-Pues para mí un buen filete de carne y vino para acompañarlo - era lo que casi siempre pedía, me encantaba como preparaban la carne allí.</p>\
 	\
 	<p>-¿Y la señorita?</p>\
 	\
@@ -313,12 +314,12 @@ undum.game.situations = {
 	\
 	<p>-¿Tienes algún problema con mi primo? - dijo el otro hombre.</p>\
 	\
-	Viendo como se estaba desenvolviendo la situación barajas tus opciones, si<a href='peleaa'> meterte en el fregado</a> o<a href='peleab'> mantenerte al margen.</a></p>"
-	
+	<p>Viendo como se estaba desenvolviendo la situación barajas tus opciones, si<a href='peleaa'> meterte en el fregado</a> o<a href='peleab'> mantenerte al margen.</a></p>"
+
 	),
 
 	comidab: new undum.SimpleSituation(
-	"<p>-Un revuelto y de beber hidromiel - Tampoco era cuestión de hincharse esta vez.</p>\
+		"<p>-Un revuelto y de beber hidromiel - Tampoco era cuestión de hincharse esta vez.</p>\
 	\
 	<p>-¿Y la señorita?</p>\
 	\
@@ -350,12 +351,12 @@ undum.game.situations = {
 	\
 	<p>-¿Tienes algún problema con mi primo? - dijo el otro hombre.</p>\
 	\
-	Viendo como se estaba desenvolviendo la situación barajas tus opciones, si<a href='peleaa'> meterte en el fregado</a> o<a href='peleab'> mantenerte al margen.</a></p>"
-	
+	<p>Viendo como se estaba desenvolviendo la situación barajas tus opciones, si<a href='peleaa'> meterte en el fregado</a> o<a href='peleab'> mantenerte al margen.</a></p>"
+
 	),
-   
-   comidac: new undum.SimpleSituation(
-	"<p>-¿Por qué no me sorprende hoy? Póngame lo que le apetezca.</p>\
+
+	comidac: new undum.SimpleSituation(
+		"<p>-¿Por qué no me sorprende hoy? Póngame lo que le apetezca.</p>\
 	\
 	<p>-Oh, esto es interesante - dijo el camarero algo sorprendido -¿Y la señorita?</p>\
 	\
@@ -370,6 +371,7 @@ undum.game.situations = {
 	<p>-Pues no sé si me hace mucha gracia ser una conejilla de indias… ¿Podemos saber que lleva la bebida?</p>\
 	\
 	<p>-Es un secreto. - dijo mientras volvía a la cocina.</p>\
+	<img src='media/games/tutorial/bebida.jpg' class='float_right'>\
 	\
 	<p>La bebida era de un tono oscuro, y tenía burbujas. Nunca había visto una bebida como aquella. Decidimos probarla y, sorprendentemente, estaba dulce. </p>\
 	\
@@ -394,48 +396,24 @@ undum.game.situations = {
 	\
 	<p>-¿Tienes algún problema con mi primo? - dijo el otro hombre.</p>\
 	\
-	Viendo como se estaba desenvolviendo la situación barajas tus opciones, si<a href='peleaa'> meterte en el fregado</a> o<a href='peleab'> mantenerte al margen.</a></p>"
-	
+	<p>Viendo como se estaba desenvolviendo la situación barajas tus opciones, si<a href='peleaa'> meterte en el fregado</a> o<a href='peleab'> mantenerte al margen.</a></p>"
 	),
-
-    "quality-types": new undum.SimpleSituation(
-        "<p>Not all the qualities in the character panel are displayed as\
-        numeric. Internally they are all numeric, but different qualities\
-        get to choose how to display themselves. So 'Luck', for example, is\
-        displayed as words (based on the FUDGE RPG's adjective scale),\
-        and 'Novice' is using just a check-mark.</p>\
-        \
-        <p>To see how Luck changes, try using this\
-        <a href='./luck-boost'>luck-boosting action</a> or this\
-        <a href='./luck-reduce'>luck-reducing action</a>. Notice that\
-        luck uses a numeric bonus when it runs out of words. There are a range\
-        of different display types provided with Undum, and you can easily\
-        add your own too.</p>\
-        \
-        <p>When you <a href='character-text'>leave this situation</a>,\
-        I'll set 'Novice' to zero. Watch\
-        the character panel, and you'll see that Novice decides it doesn't\
-        need to be displayed any more and will be removed. You will also see\
-        that when the last\
-        quality in a group is removed ('Novice' is in the 'Progress' group),\
-        then the group heading is also removed. You can tell Undum what\
-        group each quality belongs to, and what order they should be listed.\
-        <p>",
-        {
-            actions: {
-                "luck-boost": function(character, system, action) {
-                    system.setQuality("luck", character.qualities.luck+1);
-                },
-                "luck-reduce": function(character, system, action) {
-                    system.setQuality("luck", character.qualities.luck-1);
-                }
-            },
-            exit: function(character, system, to) {
-                system.setQuality("novice", 0);
-            }
-        }
-    ),
-   };
+	"peleaa": new undum.SimpleSituation(
+		"<p>El hombre borracho se disponía a darle una torta a Lucía, así que me puse en medio y encajé el\
+		 golpe como pude.</p>\
+		 \
+		<p>-¡Ah, con que también quieres recibir tú…! - dijo el borracho enfadado\
+		<p>"
+	),
+	"peleab": new undum.SimpleSituation(
+		"<p>Decidí dar un paso hacia atrás viendo lo que se venía, pero el borracho se percató y soltó\
+			-¡¿Tú no eres amigo de ella?!\
+			-¿Yo? No, para nada, soy un refinado catador de tierras lejanas que…\
+			-¡Déjate de tonterías Ferdie! - gritó Lucía desmantelando mi coartada.\
+			-¡Vas a pillar! - dijo el borracho enfadado\
+			</p>"
+	),
+};
 
 // ---------------------------------------------------------------------------
 /* The Id of the starting situation. */
@@ -446,23 +424,23 @@ undum.game.start = "start";
  * possess. We don't have to be exhaustive, but if we miss one out then
  * that quality will never show up in the character bar in the UI. */
 undum.game.qualities = {
-    skill: new undum.IntegerQuality(
-        "Habilidad", {priority:"0001", group:'stats'}
-    ),
-    stamina: new undum.NumericQuality(
-        "Resistencia", {priority:"0002", group:'stats'}
-    ),
-    luck: new undum.FudgeAdjectivesQuality( // Fudge as in the FUDGE RPG
-        "<span title='Skill, Stamina and Luck are reverently borrowed from the Fighting Fantasy series of gamebooks. The words representing Luck are from the FUDGE RPG. This tooltip is illustrating that you can use any HTML in the label for a quality (in this case a span containing a title attribute).'>Fortuna</span>",
-        {priority:"0003", group:'stats'}
-    ),
+	skill: new undum.IntegerQuality(
+		"Habilidad", { priority: "0001", group: 'stats' }
+	),
+	stamina: new undum.NumericQuality(
+		"Resistencia", { priority: "0002", group: 'stats' }
+	),
+	luck: new undum.FudgeAdjectivesQuality( // Fudge as in the FUDGE RPG
+		"<span title='Skill, Stamina and Luck are reverently borrowed from the Fighting Fantasy series of gamebooks. The words representing Luck are from the FUDGE RPG. This tooltip is illustrating that you can use any HTML in the label for a quality (in this case a span containing a title attribute).'>Fortuna</span>",
+		{ priority: "0003", group: 'stats' }
+	),
 
-    inspiration: new undum.NonZeroIntegerQuality(
-        "Inspiración", {priority:"0001", group:'progress'}
-    ),
-    novice: new undum.OnOffQuality(
-        "Novicio", {priority:"0002", group:'progress', onDisplay:"&#10003;"}
-    )
+	inspiration: new undum.NonZeroIntegerQuality(
+		"Inspiración", { priority: "0001", group: 'progress' }
+	),
+	novice: new undum.OnOffQuality(
+		"Novicio", { priority: "0002", group: 'progress', onDisplay: "&#10003;" }
+	)
 };
 
 // ---------------------------------------------------------------------------
@@ -472,18 +450,18 @@ undum.game.qualities = {
  * the end. It is an error to have a quality definition belong to a
  * non-existent group. */
 undum.game.qualityGroups = {
-    stats: new undum.QualityGroup(null, {priority:"0001"}),
-    progress: new undum.QualityGroup('Progreso', {priority:"0002"})
+	stats: new undum.QualityGroup(null, { priority: "0001" }),
+	progress: new undum.QualityGroup('Progreso', { priority: "0002" })
 };
 
 // ---------------------------------------------------------------------------
 /* This function gets run before the game begins. It is normally used
  * to configure the character at the start of play. */
-undum.game.init = function(character, system) {
-    character.qualities.skill = 12;
-    character.qualities.stamina = 12;
-    character.qualities.luck = 0;
-    character.qualities.novice = 1;
-    character.qualities.inspiration = 0;
-    system.setCharacterText("<p>¡Disfruta de esta trepidante aventura!</p>");
+undum.game.init = function (character, system) {
+	character.qualities.skill = 12;
+	character.qualities.stamina = 12;
+	character.qualities.luck = 0;
+	character.qualities.novice = 1;
+	character.qualities.inspiration = 0;
+	system.setCharacterText("<p>¡Disfruta de esta trepidante aventura!</p>");
 };

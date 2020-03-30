@@ -1,6 +1,6 @@
 body {
     background: #170804 url("../img/fondo.jpg") repeat-x left top;
-    font-family: Palatino, Times, "Times New Roman", serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 18px;
     width: 100%;
     height: 100vh;
@@ -70,7 +70,7 @@ body {
 #title h1 span.fancy {
     font-size: 2.5em;
     line-height: 0;
-    font-family: Tangerine, Palatino, Times, "Times New Roman", serif;
+    font-family: Tangerine, Palatino, Times, "Arial", serif;
     font-style: italic;
     margin: 0 -0.2em;
 }

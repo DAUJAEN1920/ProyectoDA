@@ -9,7 +9,7 @@ La historia narra las aventuras de un noble bastardo llamado Ferdinand en época
 
 URL del tablero Trello: https://trello.com/b/8kb1jpLx/product-backlog
 
-## Sprint 1:
+## Sprint 1 (Product Owner - David Luque):
 - Captura del Sprint Backlog:
 
 ![Trello](sprintbacklog.PNG)
@@ -48,3 +48,15 @@ Nuestro plan para realizar mejoras de cara al próximo Sprint, será continuar c
 - Captura de pantalla de las HU del Sprint Backlog una vez acabado el sprint:
 
 ![Trello](cap2.JPG)
+
+## Sprint 2 (Product Owner - José Javier Lozano):
+
+- Captura del Sprint Backlog:
+
+![Trello](SPRINT2_BACKLOG.jpg)
+
+Hemos elegido la 1 ya que es esencial para contar la historia. La 2 y la 3 las hemos elegido ya que son complementarias y necesarias para la evolución de la aventura conversacional (tanto trama como interacción con la misma). La 4 la hemos elegido para conseguir un mayor impacto visual para el usuario, y comodidad a la hora de vivir la aventura. La 5 la hemos elegido ya que consigue envolver al usuario en un ambiente acorde a la historia y mejorar su experiencia de usuario.
+
+- Captura de pantalla de las HU descompuestas en tareas al principio del Sprint:
+
+![Trello](SPRINT2_HU.JPG)

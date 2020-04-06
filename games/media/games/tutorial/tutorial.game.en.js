@@ -117,17 +117,28 @@ undum.game.situations = {
 		\
 		<p>Despu&#233s del intercambio volv&#237 a casa y me prepar&#233 para la cena.</p>\
 		\
-		<img src='media/games/tutorial/taberna.jpg' class='float_left'>\
 		<p>Una vez preparado sal&#237 de camino a la taberna con paso ligero, no quer&#237a hacerla esperar y quedar mal.\
 		Aunque vivo a las afueras del pueblo no se tarda mucho en llegar a la plaza central del mismo.</p>\
 		\
+		<img src='media/games/tutorial/daga.jpg' class='float_left'>\
+		<p>Tomé un atajo para no retrasar a mi amistosa compañera. Intenté no retrasarme por el camino, mas <a href='./daga' class='once'>una daga</a> de un color y empuñadura vistosa\
+		 me hizo retrasarme para inspeccionarla</p>\
 		<p>Ya hab&#237a anochecido cuando llegu&#233 a la taberna. Para mi sorpresa, llegu&#233 antes que Luc&#237a.\
 		As&#237 que decid&#237 esperarla en la entrada. Pasaron varios minutos hasta que al final la dislumbr&#233 corriendo hacia la taberna.</p>\
 		\
+		<img src='media/games/tutorial/taberna.jpg' class='float_left'>\
 		<p>-&#161Lo siento lo siento lo siento...! - Se le escucha decir mientras se acerca a la taberna.</p>\
 		\
 		<p>Hum, no s&#233 si<a href='sitaberna1'> ech&#225rselo en cara de mofa,</a> o<a href='sitaberna2'> echar pelillos a la mar.</a></p>"
-
+		,{
+			actions:{
+				'daga': function(character,system,action){
+					system.setQuality("daga",true);
+					system.setCharacterText("<p> La daga te induce un poder interior tan intenso que sientes la fuerza del verdadero Thor\
+					corriendo por tus venas</p>");
+				}
+			}
+		}
 	),
 
 	sit1b: new undum.SimpleSituation(
@@ -167,17 +178,28 @@ undum.game.situations = {
 		\
 		<p>Despu&#233s del intercambio volv&#237 a casa y me prepar&#233 para la cena.</p>\
 		\
-		<img src='media/games/tutorial/taberna.jpg' class='float_left'>\
 		<p>Una vez preparado sal&#237 de camino a la taberna con paso ligero, no quer&#237a hacerla esperar y quedar mal.\
 		Aunque vivo a las afueras del pueblo no se tarda mucho en llegar a la plaza central del mismo.</p>\
 		\
+		<img src='media/games/tutorial/daga.jpg' class='float_left'>\
+		<p>Tomé un atajo para no retrasar a mi amistosa compañera. Intenté no retrasarme por el camino, mas <a href='./daga' class='once'>una daga</a>  de un color y empuñadura vistosa\
+		 me hizo retrasarme para inspeccionarla</p>\
 		<p>Ya hab&#237a anochecido cuando llegu&#233 a la taberna. Para mi sorpresa, llegu&#233 antes que Luc&#237a.\
 		As&#237 que decid&#237 esperarla en la entrada. Pasaron varios minutos hasta que al final la dislumbr&#233 corriendo hacia la taberna.</p>\
+		<img src='media/games/tutorial/taberna.jpg' class='float_left'>\
 		\
 		<p>-&#161Lo siento lo siento lo siento...! - Se le escucha decir mientras se acerca a la taberna.</p>\
 		\
 		<p>Hum, no s&#233 si<a href='sitaberna1'> ech&#225rselo en cara de mofa,</a> o<a href='sitaberna2'> echar pelillos a la mar.</a></p>"
-
+		,{
+			actions:{
+				'daga': function(character,system,action){
+					system.setQuality("daga",true);
+					system.setCharacterText("<p> La daga te induce un poder interior tan intenso que sientes la fuerza del verdadero Thor\
+					corriendo por tus venas</p>");
+				}
+			}
+		}
 	),
 
 	sitcultivo: new undum.SimpleSituation(
@@ -207,13 +229,24 @@ undum.game.situations = {
 		"<p>Una vez preparado sal&#237 de camino a la taberna con paso ligero, no quer&#237a hacerla esperar y quedar mal.\
 		Aunque vivo a las afueras del pueblo no se tarda mucho en llegar a la plaza central del mismo.</p>\
 		\
+		<img src='media/games/tutorial/daga.jpg' class='float_left'>\
+		<p>Tomé un atajo para no retrasar a mi amistosa compañera. Intenté no retrasarme por el camino, mas <a href='./daga' class='once'>una daga</a>  de un color y empuñadura vistosa\
+		 me hizo retrasarme para inspeccionarla</p>\
 		<p>Ya hab&#237a anochecido cuando llegu&#233 a la taberna. Para mi sorpresa, llegu&#233 antes que Luc&#237a.\
 		As&#237 que decid&#237 esperarla en la entrada. Pasaron varios minutos hasta que al final la dislumbr&#233 corriendo hacia la taberna.</p>\
 		\
 		<p>-&#161Lo siento lo siento lo siento...! - Se le escucha decir mientras se acerca a la taberna.</p>\
 		\
 		<p>Hum, no s&#233 si<a href='sitaberna1'> ech&#225rselo en cara en plan broma,</a> o<a href='sitaberna2'> echar pelillos a la mar.</a></p>"
-
+		,{
+			actions:{
+				'daga': function(character,system,action){
+					system.setQuality("daga",true);
+					system.setCharacterText("<p> La daga te induce un poder interior tan intenso que sientes la fuerza del verdadero Thor\
+					corriendo por tus venas</p>");
+				}
+			}
+		}
 	),
 
 	sitaberna1: new undum.SimpleSituation(
@@ -424,6 +457,9 @@ undum.game.start = "start";
  * possess. We don't have to be exhaustive, but if we miss one out then
  * that quality will never show up in the character bar in the UI. */
 undum.game.qualities = {
+	daga: new undum.OnOffQuality(
+		"Daga",{priority:"0003",group:'inventario',onDisplay:"&#10003;"}
+	),
 	skill: new undum.IntegerQuality(
 		"Habilidad", { priority: "0001", group: 'stats' }
 	),
@@ -441,7 +477,9 @@ undum.game.qualities = {
 	novice: new undum.OnOffQuality(
 		"Novicio", { priority: "0002", group: 'progress', onDisplay: "&#10003;" }
 	)
-};
+};{
+	
+}
 
 // ---------------------------------------------------------------------------
 /* The qualities are displayed in groups in the character bar. This
@@ -450,14 +488,17 @@ undum.game.qualities = {
  * the end. It is an error to have a quality definition belong to a
  * non-existent group. */
 undum.game.qualityGroups = {
+	inventario: new undum.QualityGroup('Inventario',{priority:"0001"}),
 	stats: new undum.QualityGroup(null, { priority: "0001" }),
 	progress: new undum.QualityGroup('Progreso', { priority: "0002" })
 };
+
 
 // ---------------------------------------------------------------------------
 /* This function gets run before the game begins. It is normally used
  * to configure the character at the start of play. */
 undum.game.init = function (character, system) {
+	system.setQuality("daga",false)
 	character.qualities.skill = 12;
 	character.qualities.stamina = 12;
 	character.qualities.luck = 0;

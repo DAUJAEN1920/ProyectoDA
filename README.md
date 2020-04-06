@@ -20,7 +20,7 @@ Hemos elegido la 1 y la 2 ya que son esenciales para contar la historia. La 3 la
 
 ![Trello](sp.PNG)
 
-- Capturas de pantalla del Product Backlog y del Sprint Backlog tras las modificaciones  realizadas en el Product Backlog Refinement:
+- Capturas de pantalla del Product Backlog y del Sprint Backlog tras las modificaciones realizadas en el Product Backlog Refinement:
 
 ![Trello](PB_PBR.jpg)
 ![Trello](SB_PBR.jpg)
@@ -60,3 +60,8 @@ Hemos elegido la 1 ya que es esencial para contar la historia. La 2 y la 3 las h
 - Captura de pantalla de las HU descompuestas en tareas al principio del Sprint:
 
 ![Trello](SPRINT2_HU.JPG)
+
+- Capturas de pantalla del Product Backlog y del Sprint Backlog tras las modificaciones realizadas en el Product Backlog Refinement:
+
+![Trello](PB_S2PBR.JPG)
+![Trello](SB_S2PBR.JPG)

@@ -64,4 +64,4 @@ Hemos elegido la 1 ya que es esencial para contar la historia. La 2 y la 3 las h
 - Capturas de pantalla del Product Backlog y del Sprint Backlog tras las modificaciones realizadas en el Product Backlog Refinement:
 
 ![Trello](PB_S2PBR.JPG)
-![Trello](SB_S2PBR.JPG)
+![Trello](SP_S2PBR.JPG)

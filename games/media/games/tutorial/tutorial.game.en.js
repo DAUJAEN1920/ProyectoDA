@@ -204,9 +204,10 @@ undum.game.situations = {
 
 	sitcultivo: new undum.SimpleSituation(
 		"<h1>Ir al cultivo</h1>\
-    	<img src='media/games/tutorial/cultivo.jpg' class='float_left'>\
-    	<p>Decido seguir arando el campo. Los brazos me pesaban del cansancio y el atardecer estaba llegando, pero justo antes de terminar, me sobresalto con el graznido de un cuerpo que ha pasado cerca de ti, por un momento ves que lleva algo brillante en su pico.\
-       Lo sigues con cierta curiosidad hasta un árbol cerca del cultivo, viendo como se posa en él y vuelve a irse pero sin el objeto brillante en su pico.\
+		<p>Decido seguir arando el campo. Los brazos me pesaban del cansancio y el atardecer estaba llegando,\
+		<img src='media/games/tutorial/cultivo.jpg' class='float_right'>\
+		pero justo antes de terminar, me sobresalto con el graznido de un cuerpo que ha pasado cerca de ti, por un momento ves que lleva algo brillante en su pico.\
+        Lo sigues con cierta curiosidad hasta un árbol cerca del cultivo, viendo como se posa en él y vuelve a irse pero sin el objeto brillante en su pico.\
     	Escalas el árbol y ¡Qué leches! el maldito cuervo llevaba una pendiente de oro. Cojo el pendiente, bajo el árbol y salto de la alegría. Hoy es mi día de suerte, justo cuando necesitaba algo de dinero - piensas.\
     	Corrí lo más rápido que pude hacia el pueblo, ya que estaba empezando a anochecer y el herrero cerraba pronto, necesitabas ese dinero cuanto antes. \
 		<img src='media/games/tutorial/forja.jpg' class='float_left'>\
@@ -219,8 +220,8 @@ undum.game.situations = {
     	¿Qué pasa? ¿Los chicos no podemos llevar pendientes?\
     	A lo que el herrero, de pronto, empezó a sudar bastamente, sabiendo que había perdido todo argumento para replicarme.\
    		No, no, sin problema claro, la verdad que no sé por qué te he preguntado eso jaja.\
-    	El herrero me da el dinero suficiente para aguantar durante bastante tiempo, así que no tendré ningún problema para invitar a Lucía a cenar esta noche.\
-		<img src='media/games/tutorial/armario.jpg' class='float_left'>\
+		El herrero me da el dinero suficiente para aguantar durante bastante tiempo, así que no tendré ningún problema para invitar a Lucía a cenar esta noche.\
+		<img src='media/games/tutorial/armario.jpg' class='float_right'>\
 		Suspiro de cansancio por la tremenda tarde que he tenido entre el trabajo y llegar a la herrería, pero me despejo rápidamente, ya que he quedado con Lucía, así que <a href='continuacioncultivo'>me preparo con la mayor brevedad posible.</a>\
      	</p>"
 	),
@@ -433,18 +434,17 @@ undum.game.situations = {
 	),
 	"peleaa": new undum.SimpleSituation(
 		"<p>El hombre borracho se disponía a darle una torta a Lucía, así que me puse en medio y encajé el\
-		 golpe como pude.</p>\
+		 golpe como pude.\
 		 \
-		<p>-¡Ah, con que también quieres recibir tú…! - dijo el borracho enfadado\
-		<p>"
+		-¡Ah, con que también quieres recibir tú…! - dijo el borracho enfadado\
+		</p>"
 	),
 	"peleab": new undum.SimpleSituation(
 		"<p>Decidí dar un paso hacia atrás viendo lo que se venía, pero el borracho se percató y soltó\
 			-¡¿Tú no eres amigo de ella?!\
 			-¿Yo? No, para nada, soy un refinado catador de tierras lejanas que…\
 			-¡Déjate de tonterías Ferdie! - gritó Lucía desmantelando mi coartada.\
-			-¡Vas a pillar! - dijo el borracho enfadado\
-			</p>"
+			-¡Vas a pillar! - dijo el borracho enfadado</p>"
 	),
 };
 

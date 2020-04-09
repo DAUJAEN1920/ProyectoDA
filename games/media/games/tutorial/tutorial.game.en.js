@@ -76,7 +76,12 @@ undum.game.situations = {
 		<p>Despu&#233s de terminar el desayuno, fui a la granja con Luc&#237a. All&#237, ella me esperaba con la cara ilusionada,\
 		como si fuera la primera vez que la ayudo en sus tareas.</p>\
 		<p>-Bueno, as&#237 de primeras, puedes<a href='sit1a'> orde&#241ar las vacas</a>, o<a href='sit1b'> comprobar el pienso de las gallinas.</a></p>"
-
+		,
+		{
+			enter: function (character, system, from) {
+				$('body').css('background-image', 'url(media/games/tutorial/granja.jpg)').css( 'background-size','granja')
+			}
+		}
 	),
 
 	sit1a: new undum.SimpleSituation(
@@ -130,10 +135,10 @@ undum.game.situations = {
 		<p>-&#161Lo siento lo siento lo siento...! - Se le escucha decir mientras se acerca a la taberna.</p>\
 		\
 		<p>Hum, no s&#233 si<a href='sitaberna1'> ech&#225rselo en cara de mofa,</a> o<a href='sitaberna2'> echar pelillos a la mar.</a></p>"
-		,{
-			actions:{
-				'daga': function(character,system,action){
-					system.setQuality("daga",true);
+		, {
+			actions: {
+				'daga': function (character, system, action) {
+					system.setQuality("daga", true);
 					system.setCharacterText("<p> La daga te induce un poder interior tan intenso que sientes la fuerza del verdadero Thor\
 					corriendo por tus venas</p>");
 				}
@@ -191,10 +196,10 @@ undum.game.situations = {
 		<p>-&#161Lo siento lo siento lo siento...! - Se le escucha decir mientras se acerca a la taberna.</p>\
 		\
 		<p>Hum, no s&#233 si<a href='sitaberna1'> ech&#225rselo en cara de mofa,</a> o<a href='sitaberna2'> echar pelillos a la mar.</a></p>"
-		,{
-			actions:{
-				'daga': function(character,system,action){
-					system.setQuality("daga",true);
+		, {
+			actions: {
+				'daga': function (character, system, action) {
+					system.setQuality("daga", true);
 					system.setCharacterText("<p> La daga te induce un poder interior tan intenso que sientes la fuerza del verdadero Thor\
 					corriendo por tus venas</p>");
 				}
@@ -239,10 +244,10 @@ undum.game.situations = {
 		<p>-&#161Lo siento lo siento lo siento...! - Se le escucha decir mientras se acerca a la taberna.</p>\
 		\
 		<p>Hum, no s&#233 si<a href='sitaberna1'> ech&#225rselo en cara en plan broma,</a> o<a href='sitaberna2'> echar pelillos a la mar.</a></p>"
-		,{
-			actions:{
-				'daga': function(character,system,action){
-					system.setQuality("daga",true);
+		, {
+			actions: {
+				'daga': function (character, system, action) {
+					system.setQuality("daga", true);
 					system.setCharacterText("<p> La daga te induce un poder interior tan intenso que sientes la fuerza del verdadero Thor\
 					corriendo por tus venas</p>");
 				}
@@ -274,7 +279,12 @@ undum.game.situations = {
 	\
 	<p>No s&#233 si pedir<a href='comidaa'> el tipico filete con carne y vino de beber</a>, algo más ligero en la forma de<a href='comidab'> un revuelto con hidromiel de bebida</a>, o simplemente\
 	<a href='comidac'> que me sorprenda el camarero.</a></p>"
-
+	,
+		{
+			enter: function (character, system, from) {
+				$('body').css('background-image', 'url(media/games/tutorial/ftaberna.jpg)').css( 'background-size','auto','100% 100%')
+			}
+		}
 	),
 
 	sitaberna2: new undum.SimpleSituation(
@@ -299,7 +309,12 @@ undum.game.situations = {
 	\
 	<p>No s&#233 si pedir<a href='comidaa'> el tipico filete con carne y vino de beber</a>, algo más ligero en la forma de<a href='comidab'> un revuelto con hidromiel de bebida</a>, o simplemente\
 	<a href='comidac'> que me sorprenda el camarero.</a></p>"
-
+	,
+		{
+			enter: function (character, system, from) {
+				$('body').css('background-image', 'url(media/games/tutorial/ftaberna.jpg)').css( 'background-size','auto','100% 100%')
+			}
+		}
 	),
 
 	comidaa: new undum.SimpleSituation(
@@ -458,7 +473,7 @@ undum.game.start = "start";
  * that quality will never show up in the character bar in the UI. */
 undum.game.qualities = {
 	daga: new undum.OnOffQuality(
-		"Daga",{priority:"0003",group:'inventario',onDisplay:"&#10003;"}
+		"Daga", { priority: "0003", group: 'inventario', onDisplay: "&#10003;" }
 	),
 	skill: new undum.IntegerQuality(
 		"Habilidad", { priority: "0001", group: 'stats' }
@@ -477,8 +492,8 @@ undum.game.qualities = {
 	novice: new undum.OnOffQuality(
 		"Novicio", { priority: "0002", group: 'progress', onDisplay: "&#10003;" }
 	)
-};{
-	
+}; {
+
 }
 
 // ---------------------------------------------------------------------------
@@ -488,7 +503,7 @@ undum.game.qualities = {
  * the end. It is an error to have a quality definition belong to a
  * non-existent group. */
 undum.game.qualityGroups = {
-	inventario: new undum.QualityGroup('Inventario',{priority:"0001"}),
+	inventario: new undum.QualityGroup('Inventario', { priority: "0001" }),
 	stats: new undum.QualityGroup(null, { priority: "0001" }),
 	progress: new undum.QualityGroup('Progreso', { priority: "0002" })
 };
@@ -498,7 +513,7 @@ undum.game.qualityGroups = {
 /* This function gets run before the game begins. It is normally used
  * to configure the character at the start of play. */
 undum.game.init = function (character, system) {
-	system.setQuality("daga",false)
+	system.setQuality("daga", false)
 	character.qualities.skill = 12;
 	character.qualities.stamina = 12;
 	character.qualities.luck = 0;

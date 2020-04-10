@@ -452,14 +452,44 @@ undum.game.situations = {
 		 golpe como pude.\
 		 \
 		-¡Ah, con que también quieres recibir tú…! - dijo el borracho enfadado\
-		</p>"
+		</p>",
+		{
+				enter: function( character, system, from ) {
+					if( character.qualities.daga ) {
+						system.doLink( "sidaga" );
+					} else { 
+						system.doLink( "nodaga" );
+					}
+				}
+		}
 	),
 	"peleab": new undum.SimpleSituation(
 		"<p>Decidí dar un paso hacia atrás viendo lo que se venía, pero el borracho se percató y soltó\
 			-¡¿Tú no eres amigo de ella?!\
 			-¿Yo? No, para nada, soy un refinado catador de tierras lejanas que…\
 			-¡Déjate de tonterías Ferdie! - gritó Lucía desmantelando mi coartada.\
-			-¡Vas a pillar! - dijo el borracho enfadado</p>"
+			-¡Vas a pillar! - dijo el borracho enfadado</p>",
+			{
+				enter: function( character, system, from ) {
+					if( character.qualities.daga ) {
+						system.doLink( "sidaga" );
+					} else { 
+						system.doLink( "nodaga" );
+					}
+				}
+		}
+	),
+	"sidaga": new undum.SimpleSituation(
+		"<p>Los 2 borrachos me acorralaron, lentamente pero no podía conseguir escapar. En ese momento recordé la daga \
+		que encontré anteriormente. La saqué rápidamente y se la incruste en el ojo de uno de los maleantes. Empezó a sangrar\
+		como gorrino en matanza mientras un líquido verde salía de su cuenca mezclado con la sangre. El dolor que sintió\
+		era inexplicable hasta que finalmente todo su cuerpo se convirtió en ese líquido verde. El otro huyó</p>"
+	),
+	"nodaga": new undum.SimpleSituation(
+		"<p>Los 2 borrachos me acorralaron, lentamente pero no podía conseguir escapar. No poseía ningún arma así que me las \
+		ingenié para pelear con todas mis fuerzas. Solté un gancho a uno de los borrachos con el fin de zafarme de su arrinconamiento.\
+		No obstante ,el seugundo borracho me agarró con el fin de no escapar y me empujó hacia una mesa donde trata de estrangularme\
+		Fortuna la mía conseguí coger un cuchillo situado en la mesa, clavándolselo en el cuello repetidas veces.</p>"
 	),
 };
 

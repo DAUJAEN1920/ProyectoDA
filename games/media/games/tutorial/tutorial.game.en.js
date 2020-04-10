@@ -449,9 +449,9 @@ undum.game.situations = {
 	),
 	"peleaa": new undum.SimpleSituation(
 		"<p>El hombre borracho se disponía a darle una torta a Lucía, así que me puse en medio y encajé el\
-		 golpe como pude.\
+		 golpe como pude.</p>\
 		 \
-		-¡Ah, con que también quieres recibir tú…! - dijo el borracho enfadado\
+		<p>-¡Ah, con que también quieres recibir tú…! - dijo el borracho enfadado\
 		</p>",
 		{
 				enter: function( character, system, from ) {
@@ -464,11 +464,11 @@ undum.game.situations = {
 		}
 	),
 	"peleab": new undum.SimpleSituation(
-		"<p>Decidí dar un paso hacia atrás viendo lo que se venía, pero el borracho se percató y soltó\
-			-¡¿Tú no eres amigo de ella?!\
-			-¿Yo? No, para nada, soy un refinado catador de tierras lejanas que…\
-			-¡Déjate de tonterías Ferdie! - gritó Lucía desmantelando mi coartada.\
-			-¡Vas a pillar! - dijo el borracho enfadado</p>",
+		"<p>Decidí dar un paso hacia atrás viendo lo que se venía, pero el borracho se percató y soltó</p>\
+			<p>-¡¿Tú no eres amigo de ella?!</p>\
+			<p>-¿Yo? No, para nada, soy un refinado catador de tierras lejanas que...</p>\
+			<p>-¡Déjate de tonterías Ferdie! - gritó Lucía desmantelando mi coartada.</p>\
+			<p>-¡Vas a pillar! - dijo el borracho enfadado</p>",
 			{
 				enter: function( character, system, from ) {
 					if( character.qualities.daga ) {
@@ -486,10 +486,76 @@ undum.game.situations = {
 		era inexplicable hasta que finalmente todo su cuerpo se convirtió en ese líquido verde. El otro huyó</p>"
 	),
 	"nodaga": new undum.SimpleSituation(
-		"<p>Los 2 borrachos me acorralaron, lentamente pero no podía conseguir escapar. No poseía ningún arma así que me las \
-		ingenié para pelear con todas mis fuerzas. Solté un gancho a uno de los borrachos con el fin de zafarme de su arrinconamiento.\
-		No obstante ,el seugundo borracho me agarró con el fin de no escapar y me empujó hacia una mesa donde trata de estrangularme\
-		Fortuna la mía conseguí coger un cuchillo situado en la mesa, clavándolselo en el cuello repetidas veces.</p>"
+		"<p>Los dos varones se disponían a darnos una paliza a los dos, mientras nosotros nos preparábamos para la contienda.\
+		Sin previo aviso, una de las dos personas misteriosas apareció en mitad de la pelea.\
+		Mostraba una figura alta y fornida, más de lo que esperaba. Rápidamente sujetó el brazo del borracho, donde se podía ver una sonrisa por debajo de la capucha.</p>\
+		\
+		<p>-¿Acaso tu madre no te enseñó cómo tratar a las damas? - dijo el hombre encapuchado con una sonrisa.</p>\
+		<p>-¡Pero serás...!</p>\
+		\
+		<p>Con un rápido movimiento agarró al borracho, haciéndole una llave. Un grito de dolor llenó la taberna, a lo que siguió un lanzamiento hacia el amigo del borracho, echándoles fuera de la taberna.</p>\
+		\
+		<p>Los dos hombres se pusieron en pie a malas penas y salieron corriendo.\
+		Poco a poco la taberna empezó a calmarse, hasta que lo único que se oía era la risa de aquel hombre encapuchado.\
+		Sin percatarnos, la otra figura encapuchada se acercó y le dió un golpe en la cabeza.</p>\
+		\
+		<p>-¡Auch! - dijo el hombre encapuchado mientras se llevaba la mano a donde le habían golpeado.</p>\
+		<p>-Que falta de delicadeza... - la voz del otro encapuchado era la de una mujer - De verdad, a veces me pregunto si vamos a poder ir a algún sitio sin dar la nota -  dijo mientras suspiraba.</p>\
+		\
+		<p>-Venga mujer, no te pongas así… Ya sabes el dicho, no hay mal que no se lleve torta.</p>\
+		<p>-Ugh, tu y tus chistes, me tenéis enferma... - dijo mientras abandonaban la taberna como si nada hubiera pasado.</p>\
+		<p>-¡Auch! - dijo el hombre encapuchado mientras se llevaba la mano a donde le habían golpeado.</p>\
+		<p>-Que falta de delicadeza... - la voz del otro encapuchado era la de una mujer - De verdad, a veces me pregunto si vamos a poder ir a algún sitio sin dar la nota -  dijo mientras suspiraba.</p>\
+		\
+		<p>Aún estábamos algo sorprendidos, y me costó reaccionar, pero cuando me di cuenta salí corriendo hacia aquellas personas.</p>\
+		<p>-¡Esperad! - dije jadeando - ¡Esperad por favor!</p>\
+		<p>Los dos se pararon finalmente, dándose la vuelta.</p>\
+		<p>-No os he agradecido lo que habéis hecho. - dije, mientras me percataba de que Lucía también había venido conmigo.</p>\
+		<p>-¡Sí, muchas gracias! - mencionó ella</p>\
+		<p>-¡No hay de qué! - dijo con un tono despreocupado el hombre - Éste cuerpo está acostumbrado a tratar con ganado como el de esta tarde.</p>\
+		<p>-Lástima que solo sea eso lo que sabes hacer - dijo con desdén la mujer.</p>\
+		<p>-Hum, yo soy Ferdinand, y ella es Lucía… ¿Os importaría decirme vuestros nombres?</p>\
+		\
+		<p>Los dos se miraron, y ambos se quitaron las capuchas. El hombre era rubio, con pelo largo y barba, mientras que la chica tenía un pelo más corto con un cabello pelirrojo.</p>\
+		<p>-¡Mi nombre es Félix! - dijo el hombre con su energía habitual.</p>\
+		<p>-A mí se me conoce como Anna. - dijo la mujer - Haréis bien en recordarlo.</p>\
+		<p>-Oye Anna - dijo Félix - ellos pueden servir, ¿no?</p>\
+		<p>-¿Con los primeros que pasan, en serio? - dijo Anna con tono escéptico - tú nunca cambias.</p>\
+		<p>-¡Bueno, es que el chaval me recuerda a mí cuando era joven! - dijo Félix riéndose.</p>\
+		<p>Me costaba ver en cómo me parecía, no era nada similar físicamente, y tampoco era rubio, así que no sabía cómo tomarme ese comentario.</p>\
+		<p>-Perdonad - dijo Lucía en tono inquisitivo - ¿A qué os referís?<\p>\
+		<p>-Bueno, estábamos pensando en conseguir nuevos principiantes para nuestra compañía - dijo con una sonrisa Félix- ¡y me parece que sois perfectos!</p>\
+		<p>-¿Compañía? - pregunté.</p>\
+		<p>-Somos unos mercenarios. - dijo Anna - Nuestra misión ahora mismo es encontrar reclutas, puesto que el jefe no se fía de guerreros experimentados. Y pensar que quiere poner mi superior intelecto en las manos de cualquier otra persona… - murmuró para sus adentros.</p>\
+		<p>¿Mercenarios?¿Realmente iba a dejar mi vida actual para eso?</p>\
+		<p>-Yo… no estoy seguro - titubeé</p>\
+		<p>-Escucha chaval - dijo Félix con un inusual tono serio - este pueblo no tiene ningún tipo de protección. Si llegara cualquier grupo de bandidos, Dios sabe lo que podría pasar.</p>\
+		<p>Aquel comentario despertó recuerdos que tenía siempre presente. Aquel día hace 5 años… Si hubiera sido más fuerte, hubiera podido defenderla…</p>\
+		<p>-Es un poco precipitado… - dijo Lucía algo preocupada</p>\
+		<p>-No - dije decidido - Lo haré. La fuerza lo rige todo, y sin ella no puedes proteger lo que más te importa. Lo sé de primera mano…</p>\
+		<p>-Ferdie… - dijo en tono triste Lucía - Yo te acompañaré.</p>\
+		<p>-¿Lucía?¿Estás segura?</p>\
+		<p>-Si te dejo solo es probable que te ahogues mientras bebes agua, ¡así que déjamelo a mí!</p>\
+		<p>Me sentí reconfortado, como si una llama se encendiera dentro de mí.</p>\
+		<p>-Tampoco tenéis que ir con tanta prisa. Mañana vendremos aquí por la mañana, y nos podéis dar la confirmación. Pensad también quién queréis que os entrene.</p>\
+		<p>-¿Y eso por qué? - dijo Lucía.</p>\
+		<p>-¡Si queréis ser guerreros venid conmigo! - dijo Félix - ¡Os enseñaré el arte de la batalla!</p>\
+		<p>-Si queréis conocer el bello arte de la magia - dijo Anna - yo os haré magos de verdad.</p>\
+		<p>-¿¡Magos!? - dijo ilusionada Lucía - ¿¡Nosotros?!</p>\
+		<p>-Incluso si no tenéis talento para la magia, con una profesora como yo estoy segura de que podréis ser magos si os lo proponéis.</p>\
+		<p>Después de esa conversación, cada uno se fue por su camino… Me despedí de Lucía y fue a mi casa. No tenía mucho que pensar, sabía que\
+		era una oportunidad de oro, y no la iba a desaprovechar. La única duda que tenía era que clase de entrenamiento prefería.<\p>\
+		\
+		<p>A la mañana siguiente me preparé, y me dirigí de nuevo a la cantina, donde nos esperaban nuestros amigos mercenarios.\
+		Me encontré a Lucía por el camino, y ambos nerviosos llegamos a nuestro destino.</p>\
+		<p>-¡Buenos días Ferdie! ¿Has decidido ya qué quieres aprender? - dijo Lucía</p>\
+		<p>-Mmmm... lo sabrás cuando estemos con Félix y Anna - dije sonriendo para mis adentros</p>\
+		<p>-Venga yaaaa - dijo mientras inflaba sus mejillas - necesitamos tener un equipo equilibrado...</p>\
+		<p>-Pues decides cuando llegemos, no te sulfures.</p>\
+		<p>Ella bufó como siempre, me encantaba burlarme de ella. Sin darnos cuenta llegamos finalmente a la cantina</p>\
+		<p>-¡Buenos días! ¡Espero que hayáis decidido ya qué vais a hacer! - dijo Félix.</p>\
+		<p>-El tiempo es oro, vamos a ponernos manos a la obra cuanto antes - añadió Anna.</p>\
+		<p>Este es un momento muy importante de mi vida. Elijo volverme un caballero o un mago.\</p>"
 	),
 };
 

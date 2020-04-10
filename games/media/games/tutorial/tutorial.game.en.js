@@ -282,7 +282,7 @@ undum.game.situations = {
 	,
 		{
 			enter: function (character, system, from) {
-				$('body').css('background-image', 'url(media/games/tutorial/ftaberna.jpg)').css( 'background-size','auto','100% 100%')
+				$('body').css('background-image', 'url(media/games/tutorial/ftaberna.jpg)').css( 'background-size','cover','100% 100%')
 			}
 		}
 	),
@@ -312,7 +312,7 @@ undum.game.situations = {
 	,
 		{
 			enter: function (character, system, from) {
-				$('body').css('background-image', 'url(media/games/tutorial/ftaberna.jpg)').css( 'background-size','auto','100% 100%')
+				$('body').css('background-image', 'url(media/games/tutorial/ftaberna.jpg)').css( 'background-size','cover','100% 100%')
 			}
 		}
 	),

@@ -211,22 +211,21 @@ undum.game.situations = {
 		"<h1>Ir al cultivo</h1>\
 		<p>Decido seguir arando el campo. Los brazos me pesaban del cansancio y el atardecer estaba llegando,\
 		<img src='media/games/tutorial/cultivo.jpg' class='float_right'>\
-		pero justo antes de terminar, me sobresalto con el graznido de un cuerpo que ha pasado cerca de ti, por un momento ves que lleva algo brillante en su pico.\
-        Lo sigues con cierta curiosidad hasta un árbol cerca del cultivo, viendo como se posa en él y vuelve a irse pero sin el objeto brillante en su pico.\
-    	Escalas el árbol y ¡Qué leches! el maldito cuervo llevaba una pendiente de oro. Cojo el pendiente, bajo el árbol y salto de la alegría. Hoy es mi día de suerte, justo cuando necesitaba algo de dinero - piensas.\
-    	Corrí lo más rápido que pude hacia el pueblo, ya que estaba empezando a anochecer y el herrero cerraba pronto, necesitabas ese dinero cuanto antes. \
-		<img src='media/games/tutorial/forja.jpg' class='float_left'>\
-		Llegas como puedes a la herrería. Nada más entrar le dices al herrero:\
-    	¡Buenas! Quiero venderte este pendiente, por favor, necesito el dinero cuanto antes.\
-    	El herrero te mira con cara de duda.\
-    	¿Un chico con un pendiente? Que extraño…\
-    	En ese momento, Ferdinand sintió el verdadero terror, ¿como le explico que se lo he robado a un cuervo, que a su vez se lo habrá robado a alguien?\
-		En un segundo caes en la mejor excusa posible.\
-    	¿Qué pasa? ¿Los chicos no podemos llevar pendientes?\
-    	A lo que el herrero, de pronto, empezó a sudar bastamente, sabiendo que había perdido todo argumento para replicarme.\
-   		No, no, sin problema claro, la verdad que no sé por qué te he preguntado eso jaja.\
-		El herrero me da el dinero suficiente para aguantar durante bastante tiempo, así que no tendré ningún problema para invitar a Lucía a cenar esta noche.\
-		<img src='media/games/tutorial/armario.jpg' class='float_right'>\
+		pero justo antes de terminar, me sobresalté con el graznido de un cuervo que pasó cerca de mí, por un momento vi que llevaba algo brillante en su pico.\
+        Lo seguí con cierta curiosidad hasta un árbol cerca del cultivo, viendo como se posa en él y vuelve a irse pero sin el objeto brillante en su pico.\
+    	Escalé el árbol y ¡Qué leches! el cuervo llevaba un pendiente de oro. Cojo el pendiente, bajo el árbol y salto de la alegría. Hoy es mi día de suerte, justo cuando necesitaba algo de dinero - piensas.\
+    	Corrí lo más rápido que pude hacia el pueblo, ya que estaba empezando a anochecer y el herrero cerraba pronto \
+		<img src='media/games/tutorial/forja.jpg' class='float_left'></p>\
+		<p>Llegué como pude a la herrería. Nada más entrar le dije al herrero:</p>\
+		<p>- ¡Buenas! Quiero venderte este pendiente, por favor, necesito el dinero cuanto antes.</p>\
+    	<p>El herrero me miró con cara de duda.</p>\
+    	- ¿Un chico con un pendiente? Que extraño…\
+    	<p>En ese momento, Ferdinand sintió el verdadero terror, ¿como le explico que se lo he robado a un cuervo, que a su vez se lo habrá robado a alguien?\
+		En un segundo caes en la mejor excusa posible.</p>\
+    	<p>- ¿Qué pasa? ¿Los chicos no podemos llevar pendientes?\
+    	A lo que el herrero, de pronto, empezó a sudar bastamente, sabiendo que había perdido todo argumento para replicarme.</p>\
+   		<p>- No, no, sin problema claro, la verdad que no sé por qué te he preguntado eso jaja.</p>\
+		<p>El herrero me da el dinero suficiente para aguantar durante bastante tiempo, así que no tendré ningún problema para invitar a Lucía a cenar esta noche.\
 		Suspiro de cansancio por la tremenda tarde que he tenido entre el trabajo y llegar a la herrería, pero me despejo rápidamente, ya que he quedado con Lucía, así que <a href='continuacioncultivo'>me preparo con la mayor brevedad posible.</a>\
      	</p>"
 	),
@@ -481,9 +480,49 @@ undum.game.situations = {
 	),
 	"sidaga": new undum.SimpleSituation(
 		"<p>Los 2 borrachos me acorralaron, lentamente pero no podía conseguir escapar. En ese momento recordé la daga \
-		que encontré anteriormente. La saqué rápidamente y se la incruste en el ojo de uno de los maleantes. Empezó a sangrar\
-		como gorrino en matanza mientras un líquido verde salía de su cuenca mezclado con la sangre. El dolor que sintió\
-		era inexplicable hasta que finalmente todo su cuerpo se convirtió en ese líquido verde. El otro huyó</p>"
+		que encontré anteriormente. La saqué rápidamente y me defendí como pude, haciendole un rasguño a uno de los borrachos.\
+		El hombre gritó y se desplomó casi al instante, al ver esto el otro borracho salió corriendo.\
+		<p>- ¿Pero qué? Si solo le he hecho un rasguño.</p> \
+		<p>- ¡Guau Ferdi nos has salvado! - dijo Lucía.</p>\
+		Los dos encapuchados al ver la situación se acercaron y bajaron sus capuchas. Uno era un hombre de aspecto fornido y de pelo rubio, la otra persona era una mujer pelirroja y algo más bajita\
+		<p>- Vaya, parece que habeis tenido bastante suerte, esa daga tiene algo especial. - dijo el hombre</p>\
+		<p>- ¿puedo ver la daga? - dijo la mujer.</p>\
+		<p>- Sí, claro toma. - respondí</p>\
+		<p>- Mmmmmm, parece que la daga está impregnada de algún tipo de veneno, debes tener cuidado con ella, te la devuelvo.\
+		<p>- Si no hubiera visto que llevabas una daga les hubiera dado una tunda yo mismo. - dijo el hombretón.</p>\
+		<p>- Tú como siempre queriendo liarla por donde pasas ¿no? -respondió la mujer con cara borde.</p>\
+		<p>- Es que sino es un rollo. - dijo el hombre sonriendo. - Por cierto, yo soy Félix, y mi compañera que no sabe divertirse se llama Anna.</p>\
+		<p>- ¿Que no sabe divertirse? ¿Perdona? En fin. - respondió Anna resoplando - Somos mercenarios que pasabamos por aquí.</p>\
+		<p>- ¡Encantada! Yo soy Lucía y este de aquí Ferdinand.</p>\
+		<p>- Por cierto estamos bucando aprendices que nos ayuden. Yo soy un guerrero y ella es maga, podríamos enseñaros todo lo que sabemos.</p>\
+		<p>-Yo… no estoy seguro - titubeé</p>\
+		<p>-Escucha chaval - dijo Félix con un inusual tono serio - este pueblo no tiene ningún tipo de protección. Si llegara cualquier grupo de bandidos, Dios sabe lo que podría pasar.</p>\
+		<p>Aquel comentario despertó recuerdos que tenía siempre presente. Aquel día hace 5 años… Si hubiera sido más fuerte, hubiera podido defenderla…</p>\
+		<p>-Es un poco precipitado… - dijo Lucía algo preocupada</p>\
+		<p>-No - dije decidido - Lo haré. La fuerza lo rige todo, y sin ella no puedes proteger lo que más te importa. Lo sé de primera mano…</p>\
+		<p>-Ferdie… - dijo en tono triste Lucía - Yo te acompañaré.</p>\
+		<p>-¿Lucía?¿Estás segura?</p>\
+		<p>-Si te dejo solo es probable que te ahogues mientras bebes agua, ¡así que déjamelo a mí!</p>\
+		<p>Me sentí reconfortado, como si una llama se encendiera dentro de mí.</p>\
+		<p>-Tampoco tenéis que ir con tanta prisa. Mañana vendremos aquí por la mañana, y nos podéis dar la confirmación. Pensad también quién queréis que os entrene.</p>\
+		<p>-¿Y eso por qué? - dijo Lucía.</p>\
+		<p>-¡Si queréis ser guerreros venid conmigo! - dijo Félix - ¡Os enseñaré el arte de la batalla!</p>\
+		<p>-Si queréis conocer el bello arte de la magia - dijo Anna - yo os haré magos de verdad.</p>\
+		<p>-¿¡Magos!? - dijo ilusionada Lucía - ¿¡Nosotros?!</p>\
+		<p>-Incluso si no tenéis talento para la magia, con una profesora como yo estoy segura de que podréis ser magos si os lo proponéis.</p>\
+		<p>Después de esa conversación, cada uno se fue por su camino… Me despedí de Lucía y fue a mi casa. No tenía mucho que pensar, sabía que\
+		era una oportunidad de oro, y no la iba a desaprovechar. La única duda que tenía era que clase de entrenamiento prefería\</p>\
+		\
+		<p>A la mañana siguiente me preparé, y me dirigí de nuevo a la cantina, donde nos esperaban nuestros amigos mercenarios.\
+		Me encontré a Lucía por el camino, y ambos nerviosos llegamos a nuestro destino.</p>\
+		<p>-¡Buenos días Ferdie! ¿Has decidido ya qué quieres aprender? - dijo Lucía</p>\
+		<p>-Mmmm... lo sabrás cuando estemos con Félix y Anna - dije sonriendo para mis adentros</p>\
+		<p>-Venga yaaaa - dijo mientras inflaba sus mejillas - necesitamos tener un equipo equilibrado...</p>\
+		<p>-Pues decides cuando llegemos, no te sulfures.</p>\
+		<p>Ella bufó como siempre, me encantaba burlarme de ella. Sin darnos cuenta llegamos finalmente a la cantina</p>\
+		<p>-¡Buenos días! ¡Espero que hayáis decidido ya qué vais a hacer! - dijo Félix.</p>\
+		<p>-El tiempo es oro, vamos a ponernos manos a la obra cuanto antes - añadió Anna.</p>\
+		<p>Este es un momento muy importante de mi vida. Elijo volverme un caballero o un mago.\</p>"
 	),
 	"nodaga": new undum.SimpleSituation(
 		"<p>Los dos varones se disponían a darnos una paliza a los dos, mientras nosotros nos preparábamos para la contienda.\

@@ -522,7 +522,7 @@ undum.game.situations = {
 		<p>Ella bufó como siempre, me encantaba burlarme de ella. Sin darnos cuenta llegamos finalmente a la cantina</p>\
 		<p>-¡Buenos días! ¡Espero que hayáis decidido ya qué vais a hacer! - dijo Félix.</p>\
 		<p>-El tiempo es oro, vamos a ponernos manos a la obra cuanto antes - añadió Anna.</p>\
-		<p>Este es un momento muy importante de mi vida. Elijo volverme un caballero o un mago.\</p>"
+		<p>Este es un momento muy importante de mi vida. Elijo volverme un <a href='caballero'>caballero</a> o un mago.\</p>"
 	),
 	"nodaga": new undum.SimpleSituation(
 		"<p>Los dos varones se disponían a darnos una paliza a los dos, mientras nosotros nos preparábamos para la contienda.\
@@ -594,7 +594,31 @@ undum.game.situations = {
 		<p>Ella bufó como siempre, me encantaba burlarme de ella. Sin darnos cuenta llegamos finalmente a la cantina</p>\
 		<p>-¡Buenos días! ¡Espero que hayáis decidido ya qué vais a hacer! - dijo Félix.</p>\
 		<p>-El tiempo es oro, vamos a ponernos manos a la obra cuanto antes - añadió Anna.</p>\
-		<p>Este es un momento muy importante de mi vida. Elijo volverme un caballero o un mago.\</p>"
+		<p>Este es un momento muy importante de mi vida. Elijo volverme un <a href='caballero'>caballero</a> o un mago.\</p>"
+	),
+	"caballero": new undum.SimpleSituation(
+		"<p> Me despedí de mi pueblo y de la gente que apreciaba y partí hacia la ciudad con el resto. Pasaron 5 años desde aquel día. \
+		Me he estado formando durante este tiempo con mi mentor Félix, me ha enseñado muchas técnicas y como moverme en una batalla.</p>\
+		\
+		<p>Me encontraba en las caballerizas entrenando con la lanza y el escudo contra Félix.</p>\
+		<p>- Parece que los años te hacen factura Félix, puedo ganarte con los ojos cerrados si quiero. - dije.</p>\
+		<p>- Pero qué dices bufón, vas a morder el polvo por lo que has dicho. - me respondió con enfado.</p>\
+		\
+		<p>Chocamos las lanzas de madera unas cuantas veces más, hasta que el desenlace del combate de entrenamiento fue una victoria por mi parte.</p>\
+		<p>- Vaya vaya, parece que he mejorado. - dije con orgullo.</p>\
+		<p>- No te equivoques, te he dejado ganar, en el campo de batalla no me igualarías, pero en un entrenamiento no tengo ganas de ponerme en serio </p>\
+		<p>- respondió Félix intentando desmerecer mi victoria.</p>\
+		<p>Nos dirigimos a dejar las armas cuando, de pronto entran 4 encapuchados con dagas en mano. </p>\
+		<p>- ¿Quién es Ferdinand? - preguntó el más grande.</p>\
+		<p>- ¿Quién lo pregunta? -  respondí con un mal presentimiento.</p>\
+		<p>- No te hará falta saberlo. En realidad no importa, vais a morir los dos igualmente. - respondió con aire de superioridad </p>\
+		<p>Los cuatro se abalanzan sobre nosotros, pero no contaban con que sabíamos defendernos y ya habíamos calentado con el entrenamiento.\
+		La batalla se repartió en dos encapuchados para cada uno. Me lanzan un cuchillo arrojadizo, pero lo paro con el escudo de madera, el otro hombre me sorprendió \
+		por la derecha intentando dar una cuchillada con la daga, pero mis reflejos actúan y antes de que lo consiga le clavo la lanza de madera en el pecho, la cual se parte\
+		y el hombre grita de dolor mientras caía al suelo. El hombre que me lanzó el cuchillo vino a por mí, era el más grande. </p>\
+		<p>- Veo que no eres tan inútil como pareces pero a ver ahora cómo te defiendes pequeño. - dijo mientras se preparaba para arremeter contra mí.</p>\
+		<p>Lanzó dos reveses contra mí, uno lo paré con el escudo, ya casi destruido por el golpe, pero el otro alcanzó mi pierna, dejándome una herida no muy grave, \
+		ya que me eché para atrás y conseguí que el ataque no fuera a más. \</p>"
 	),
 };
 

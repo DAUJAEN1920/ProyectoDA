@@ -81,7 +81,6 @@ undum.game.situations = {
 
 	sit1a: new undum.SimpleSituation(
 		"<p>-Creo que prefiero orde&#241ar las vacas.</p>\
-		<img src='media/games/tutorial/vacas.jpg' class='float_left'>\
 		<p>-&#161Pues aqu&#237 tienes! - Luc&#237a se da la vuelta, coge un cubo y lo levanta r&#225pidamente -\
 		Hay m&#225s en ese almac&#233n, intenta llenar los que puedas. Luego ir&#233 a ayudarte si hace falta.</p>\
 		\
@@ -117,7 +116,6 @@ undum.game.situations = {
 		\
 		<p>Despu&#233s del intercambio volv&#237 a casa y me prepar&#233 para la cena.</p>\
 		\
-		<img src='media/games/tutorial/taberna.jpg' class='float_left'>\
 		<p>Una vez preparado sal&#237 de camino a la taberna con paso ligero, no quer&#237a hacerla esperar y quedar mal.\
 		Aunque vivo a las afueras del pueblo no se tarda mucho en llegar a la plaza central del mismo.</p>\
 		\
@@ -132,7 +130,6 @@ undum.game.situations = {
 
 	sit1b: new undum.SimpleSituation(
 		"<p>-Creo que comprobar&#233 el pienso de las gallinas.</p> \
-		<img src='media/games/tutorial/gallina.jpg' class='float_left'>\
 		<p>-Bueno, pues ve al almac&#233n y coge el saco marr&#243n que est&#225 dentro. Luego ir&#233 a ayudarte si hace falta. - dijo Luc&#237a. </p> \
 		\
 		Despu&#233s de eso, me dirig&#237 al almac&#233n. Estaba bastante bien protegido, as&#237 que pese a ser de d&#237a el interior estaba\
@@ -167,7 +164,6 @@ undum.game.situations = {
 		\
 		<p>Despu&#233s del intercambio volv&#237 a casa y me prepar&#233 para la cena.</p>\
 		\
-		<img src='media/games/tutorial/taberna.jpg' class='float_left'>\
 		<p>Una vez preparado sal&#237 de camino a la taberna con paso ligero, no quer&#237a hacerla esperar y quedar mal.\
 		Aunque vivo a las afueras del pueblo no se tarda mucho en llegar a la plaza central del mismo.</p>\
 		\

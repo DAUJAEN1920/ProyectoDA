@@ -65,3 +65,7 @@ Hemos elegido la 1 ya que es esencial para contar la historia. La 2 y la 3 las h
 
 ![Trello](PB_S2PBR.JPG)
 ![Trello](SP_S2PBR.JPG)
+
+**Conclusiones obtenidas en la Sprint Review**
+
+El trabajo siguió desarrollandose de manera similar al sprint anterior. Hemos aprendido a usar objetos para cambiar la historia, haciéndola más dinámica. Hemos seguido el transcurso de la historia añadiendo nuevas situaciones, situaciones con fondos alternativos, imágenes nuevas y música. 

@@ -1,7 +1,11 @@
 body {
-    background: #170804 url("../img/page_bg.jpg") repeat-x left top;
-    font-family: Palatino, Times, "Times New Roman", serif;
+    background: #170804 url("../img/fondo.jpg") repeat-x left top;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 18px;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
     line-height: 1.6em;
     background-attachment: fixed;
     overflow-y: scroll;
@@ -23,7 +27,7 @@ body {
 #title {
     max-width: 28em;
     background: #e6e6c6 url("../img/title_bg.jpg") repeat -1.1em -1.1em;
-    margin: 2.2em auto 1.1em auto;
+    margin: 2em auto 1em auto;
     padding: 1.7em;
     border: 1.1em solid rgba(0,0,0,0.25);
     cursor: pointer; /* Until we click to start. */
@@ -66,7 +70,7 @@ body {
 #title h1 span.fancy {
     font-size: 2.5em;
     line-height: 0;
-    font-family: Tangerine, Palatino, Times, "Times New Roman", serif;
+    font-family: Tangerine, Palatino, Times, "Arial", serif;
     font-style: italic;
     margin: 0 -0.2em;
 }
@@ -198,8 +202,8 @@ img.float_left {
 }
 
 #tools_wrapper {
-    position: fixed;
-    width: 100%;
+    position: auto;
+    width: 300px;
     max-width: 56em;
     top: 2.2em;
     left: 0;

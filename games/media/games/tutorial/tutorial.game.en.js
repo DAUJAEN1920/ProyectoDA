@@ -28,8 +28,8 @@ undum.game.slideUpSpeed = 500
 
 /* The situations that the game can be in. Each has a unique ID. */
 undum.game.situations = {
-    start: new undum.SimpleSituation(
-        "<h1>Introducci&#243n</h1>\
+	start: new undum.SimpleSituation(
+		"<h1>Introducci&#243n</h1>\
         <img src='media/games/tutorial/granja.png' class='float_right'>\
         <p>Mi nombre es Ferdinand, y soy un simple campesino de 18 a&#241os que vive en un modesto pueblo llamado Ancira, \
 		lejos de las grandes ciudades del reino. La vida aqu&#237 es muy simple, mi d&#237a a d&#237a consiste en cultivar y en conseguir sobrevivir. \
@@ -45,27 +45,27 @@ undum.game.situations = {
         \
         <p class='transient'>Ya ten&#237a planeado ir a por el cultivo, pues hoy era el d&#237a de la recolecta. No s&#233 qu&#233 decidir entre <a href='sit1'>acompa&#241ar a\
         Luc&#237a</a> o <a href='sitcultivo'>Ir al cultivo</a> </p>"
-    ),
+	),
 
-    // NB: The 'hub' situation which is the main list of topics, is
-    // defined wholly in the HTML file, and doesn't have an entry in
-    // the game.situations dictionary in this file.
+	// NB: The 'hub' situation which is the main list of topics, is
+	// defined wholly in the HTML file, and doesn't have an entry in
+	// the game.situations dictionary in this file.
 
-    // For variety, here we define a situation using the top-level
-    // Situation type. This is a neat approach to generate text by
-    // looking it up in the HTML document. For static text that makes
-    // more sense than writing it longhand.
-    situations: new undum.Situation({
-        enter: function(character, system, from) {
-            system.write($("#s_situations").html());
-        },
-        tags: ["topic"],
-        optionText: "What Undum Games are Made Of",
-        displayOrder: 1
-    }),
+	// For variety, here we define a situation using the top-level
+	// Situation type. This is a neat approach to generate text by
+	// looking it up in the HTML document. For static text that makes
+	// more sense than writing it longhand.
+	situations: new undum.Situation({
+		enter: function (character, system, from) {
+			system.write($("#s_situations").html());
+		},
+		tags: ["topic"],
+		optionText: "What Undum Games are Made Of",
+		displayOrder: 1
+	}),
 	sit1: new undum.SimpleSituation(
-        
-        "<h1>Acompañar a Luc&#237a</h1>\
+
+		"<h1>Acompañar a Luc&#237a</h1>\
         <p>Est&#225 bien, hoy ir&#233 contigo - respond&#237. </p>\
         <img src='media/games/tutorial/ganado.jpg' class='float_right'>\
         \
@@ -76,11 +76,17 @@ undum.game.situations = {
 		<p>Despu&#233s de terminar el desayuno, fui a la granja con Luc&#237a. All&#237, ella me esperaba con la cara ilusionada,\
 		como si fuera la primera vez que la ayudo en sus tareas.</p>\
 		<p>-Bueno, as&#237 de primeras, puedes<a href='sit1a'> orde&#241ar las vacas</a>, o<a href='sit1b'> comprobar el pienso de las gallinas.</a></p>"
-
+		,
+		{
+			enter: function (character, system, from) {
+				$('body').css('background-image', 'url(media/games/tutorial/granja.jpg)').css( 'background-size','granja')
+			}
+		}
 	),
 
 	sit1a: new undum.SimpleSituation(
 		"<p>-Creo que prefiero orde&#241ar las vacas.</p>\
+		<img src='media/games/tutorial/vacas.jpg' class='float_right'>\
 		<p>-&#161Pues aqu&#237 tienes! - Luc&#237a se da la vuelta, coge un cubo y lo levanta r&#225pidamente -\
 		Hay m&#225s en ese almac&#233n, intenta llenar los que puedas. Luego ir&#233 a ayudarte si hace falta.</p>\
 		\
@@ -119,17 +125,30 @@ undum.game.situations = {
 		<p>Una vez preparado sal&#237 de camino a la taberna con paso ligero, no quer&#237a hacerla esperar y quedar mal.\
 		Aunque vivo a las afueras del pueblo no se tarda mucho en llegar a la plaza central del mismo.</p>\
 		\
+		<img src='media/games/tutorial/daga.jpg' class='float_left'>\
+		<p>Tomé un atajo para no retrasar a mi amistosa compañera. Intenté no retrasarme por el camino, mas <a href='./daga' class='once'>una daga</a> de un color y empuñadura vistosa\
+		 me hizo retrasarme para inspeccionarla</p>\
 		<p>Ya hab&#237a anochecido cuando llegu&#233 a la taberna. Para mi sorpresa, llegu&#233 antes que Luc&#237a.\
 		As&#237 que decid&#237 esperarla en la entrada. Pasaron varios minutos hasta que al final la dislumbr&#233 corriendo hacia la taberna.</p>\
 		\
+		<img src='media/games/tutorial/taberna.jpg' class='float_left'>\
 		<p>-&#161Lo siento lo siento lo siento...! - Se le escucha decir mientras se acerca a la taberna.</p>\
 		\
-		<p>Hum, no s&#233 si<a href='sit3'> ech&#225rselo en cara en plan broma,</a> o<a href='sit4'> echar pelillos a la mar.</a></p>" 
-
+		<p>Hum, no s&#233 si<a href='sitaberna1'> ech&#225rselo en cara de mofa,</a> o<a href='sitaberna2'> echar pelillos a la mar.</a></p>"
+		, {
+			actions: {
+				'daga': function (character, system, action) {
+					system.setQuality("daga", true);
+					system.setCharacterText("<p> La daga te induce un poder interior tan intenso que sientes la fuerza del verdadero Thor\
+					corriendo por tus venas</p>");
+				}
+			}
+		}
 	),
 
 	sit1b: new undum.SimpleSituation(
 		"<p>-Creo que comprobar&#233 el pienso de las gallinas.</p> \
+		<img src='media/games/tutorial/gallinas.jpg' class='float_right'>\
 		<p>-Bueno, pues ve al almac&#233n y coge el saco marr&#243n que est&#225 dentro. Luego ir&#233 a ayudarte si hace falta. - dijo Luc&#237a. </p> \
 		\
 		Despu&#233s de eso, me dirig&#237 al almac&#233n. Estaba bastante bien protegido, as&#237 que pese a ser de d&#237a el interior estaba\
@@ -167,88 +186,441 @@ undum.game.situations = {
 		<p>Una vez preparado sal&#237 de camino a la taberna con paso ligero, no quer&#237a hacerla esperar y quedar mal.\
 		Aunque vivo a las afueras del pueblo no se tarda mucho en llegar a la plaza central del mismo.</p>\
 		\
+		<img src='media/games/tutorial/daga.jpg' class='float_left'>\
+		<p>Tomé un atajo para no retrasar a mi amistosa compañera. Intenté no retrasarme por el camino, mas <a href='./daga' class='once'>una daga</a>  de un color y empuñadura vistosa\
+		 me hizo retrasarme para inspeccionarla</p>\
 		<p>Ya hab&#237a anochecido cuando llegu&#233 a la taberna. Para mi sorpresa, llegu&#233 antes que Luc&#237a.\
 		As&#237 que decid&#237 esperarla en la entrada. Pasaron varios minutos hasta que al final la dislumbr&#233 corriendo hacia la taberna.</p>\
+		<img src='media/games/tutorial/taberna.jpg' class='float_left'>\
 		\
 		<p>-&#161Lo siento lo siento lo siento...! - Se le escucha decir mientras se acerca a la taberna.</p>\
 		\
-		<p>Hum, no s&#233 si<a href='sit3'> ech&#225rselo en cara en plan broma,</a> o<a href='sit4'> echar pelillos a la mar.</a></p>" 
-
+		<p>Hum, no s&#233 si<a href='sitaberna1'> ech&#225rselo en cara de mofa,</a> o<a href='sitaberna2'> echar pelillos a la mar.</a></p>"
+		, {
+			actions: {
+				'daga': function (character, system, action) {
+					system.setQuality("daga", true);
+					system.setCharacterText("<p> La daga te induce un poder interior tan intenso que sientes la fuerza del verdadero Thor\
+					corriendo por tus venas</p>");
+				}
+			}
+		}
 	),
 
 	sitcultivo: new undum.SimpleSituation(
-    	"<h1>Ir al cultivo</h1>\
-    	<img src='media/games/tutorial/cultivo.jpg' class='float_left'>\
-    	<p>Decido seguir arando el campo. Los brazos me pesaban del cansancio y el atardecer estaba llegando, pero justo antes de terminar, me sobresalto con el graznido de un cuerpo que ha pasado cerca de ti, por un momento ves que lleva algo brillante en su pico.\
-       Lo sigues con cierta curiosidad hasta un árbol cerca del cultivo, viendo como se posa en él y vuelve a irse pero sin el objeto brillante en su pico.\
-    	Escalas el árbol y ¡Qué leches! el maldito cuervo llevaba una pendiente de oro. Cojo el pendiente, bajo el árbol y salto de la alegría. Hoy es mi día de suerte, justo cuando necesitaba algo de dinero - piensas.\
-    	Corrí lo más rápido que pude hacia el pueblo, ya que estaba empezando a anochecer y el herrero cerraba pronto, necesitabas ese dinero cuanto antes. \
-    	Llegas como puedes a la herrería. Nada más entrar le dices al herrero:\
-    	¡Buenas! Quiero venderte este pendiente, por favor, necesito el dinero cuanto antes.\
-    	El herrero te mira con cara de duda.\
-    	¿Un chico con un pendiente? Que extraño…\
-    	En ese momento, Ferdinand sintió el verdadero terror, ¿como le explico que se lo he robado a un cuervo, que a su vez se lo habrá robado a alguien?\
-    	En un segundo caes en la mejor excusa posible.\
-    	¿Qué pasa? ¿Los chicos no podemos llevar pendientes?\
-    	A lo que el herrero, de pronto, empezó a sudar bastamente, sabiendo que había perdido todo argumento para replicarme.\
-   		No, no, sin problema claro, la verdad que no sé por qué te he preguntado eso jaja.\
-    	El herrero me da el dinero suficiente para aguantar durante bastante tiempo, así que no tendré ningún problema para invitar a Lucía a cenar esta noche.\
-    	Suspiro de cansancio por la tremenda tarde que he tenido entre el trabajo y llegar a la herrería, pero me despejo rápidamente, ya que he quedado con Lucía, así que <a href='continuacioncultivo'>me preparo con la mayor brevedad posible.</a>\
+		"<h1>Ir al cultivo</h1>\
+		<p>Decido seguir arando el campo. Los brazos me pesaban del cansancio y el atardecer estaba llegando,\
+		<img src='media/games/tutorial/cultivo.jpg' class='float_right'>\
+		pero justo antes de terminar, me sobresalté con el graznido de un cuervo que pasó cerca de mí, por un momento vi que llevaba algo brillante en su pico.\
+        Lo seguí con cierta curiosidad hasta un árbol cerca del cultivo, viendo como se posa en él y vuelve a irse pero sin el objeto brillante en su pico.\
+    	Escalé el árbol y ¡Qué leches! el cuervo llevaba un pendiente de oro. Cojo el pendiente, bajo el árbol y salto de la alegría. Hoy es mi día de suerte, justo cuando necesitaba algo de dinero - piensas.\
+    	Corrí lo más rápido que pude hacia el pueblo, ya que estaba empezando a anochecer y el herrero cerraba pronto \
+		<img src='media/games/tutorial/forja.jpg' class='float_left'></p>\
+		<p>Llegué como pude a la herrería. Nada más entrar le dije al herrero:</p>\
+		<p>- ¡Buenas! Quiero venderte este pendiente, por favor, necesito el dinero cuanto antes.</p>\
+    	<p>El herrero me miró con cara de duda.</p>\
+    	- ¿Un chico con un pendiente? Que extraño…\
+    	<p>En ese momento, Ferdinand sintió el verdadero terror, ¿como le explico que se lo he robado a un cuervo, que a su vez se lo habrá robado a alguien?\
+		En un segundo caes en la mejor excusa posible.</p>\
+    	<p>- ¿Qué pasa? ¿Los chicos no podemos llevar pendientes?\
+    	A lo que el herrero, de pronto, empezó a sudar bastamente, sabiendo que había perdido todo argumento para replicarme.</p>\
+   		<p>- No, no, sin problema claro, la verdad que no sé por qué te he preguntado eso jaja.</p>\
+		<p>El herrero me da el dinero suficiente para aguantar durante bastante tiempo, así que no tendré ningún problema para invitar a Lucía a cenar esta noche.\
+		Suspiro de cansancio por la tremenda tarde que he tenido entre el trabajo y llegar a la herrería, pero me despejo rápidamente, ya que he quedado con Lucía, así que <a href='continuacioncultivo'>me preparo con la mayor brevedad posible.</a>\
      	</p>"
 	),
-	
+
 	continuacioncultivo: new undum.SimpleSituation(
 		"<p>Una vez preparado sal&#237 de camino a la taberna con paso ligero, no quer&#237a hacerla esperar y quedar mal.\
 		Aunque vivo a las afueras del pueblo no se tarda mucho en llegar a la plaza central del mismo.</p>\
 		\
+		<img src='media/games/tutorial/daga.jpg' class='float_left'>\
+		<p>Tomé un atajo para no retrasar a mi amistosa compañera. Intenté no retrasarme por el camino, mas <a href='./daga' class='once'>una daga</a>  de un color y empuñadura vistosa\
+		 me hizo retrasarme para inspeccionarla</p>\
 		<p>Ya hab&#237a anochecido cuando llegu&#233 a la taberna. Para mi sorpresa, llegu&#233 antes que Luc&#237a.\
 		As&#237 que decid&#237 esperarla en la entrada. Pasaron varios minutos hasta que al final la dislumbr&#233 corriendo hacia la taberna.</p>\
 		\
 		<p>-&#161Lo siento lo siento lo siento...! - Se le escucha decir mientras se acerca a la taberna.</p>\
 		\
-		<p>Hum, no s&#233 si<a href='sit3'> ech&#225rselo en cara en plan broma,</a> o<a href='sit4'> echar pelillos a la mar.</a></p>"
+		<p>Hum, no s&#233 si<a href='sitaberna1'> ech&#225rselo en cara en plan broma,</a> o<a href='sitaberna2'> echar pelillos a la mar.</a></p>"
+		, {
+			actions: {
+				'daga': function (character, system, action) {
+					system.setQuality("daga", true);
+					system.setCharacterText("<p> La daga te induce un poder interior tan intenso que sientes la fuerza del verdadero Thor\
+					corriendo por tus venas</p>");
+				}
+			}
+		}
+	),
+
+	sitaberna1: new undum.SimpleSituation(
+		"<p>-Vaya vaya, y eso que eres tú la que siempre dice que “llegar tarde es de mala educación, ¡el tiempo es oro y no es\
+	bueno gastar el de los demás! - dije intentando imitar de mala manera su voz.</p>\
+	\
+	<p>-¡Igual deberías hacer de bufón con imitaciones tan malas como esa! - dijo enojada Lucía mientras jadeaba después de\
+	la carrerita - ¡Solo ha sido una vez!</p>\
+	\
+	<p>-Ya, ¿y por qué motivo me has hecho perder mi precioso tiempo entonces? - dije como mofa.</p>\
+	\
+	<p>-Simplemente no encontraba mi collar, eso es todo. Mi madre ha tenido que moverlo de sitio...</p>\
+	\
+	<p>Lucía mostró el collar orgullosamente, como si no lo hubiera visto ya cientos de veces. Pero sí es cierto que era un collar precioso.\
+	Tengo entendido que se lo dio su padre muy de joven y siempre se aleja de su casa lo lleva encima, como si fuera un amuleto de buena suerte.</p>\
+	<p>-Bueno, ¿vamos entrando?</p>\
+	\
+	<p>-¡Por supuesto! - dijo mientras guiñaba Lucía.</p>\
+	\
+	<p>Dentro de la taberna tomamos la mesa más cercana a la barra. El ambiente era muy cálido, estaba casi lleno con gente muy alegre\
+	en las mesas de alrededor. Un camarero se acercó a la mesa al rato.</p>\
+	\
+	<p>-¿Qué va a ser esta noche?</p>\
+	\
+	<p>No s&#233 si pedir<a href='comidaa'> el tipico filete con carne y vino de beber</a>, algo más ligero en la forma de<a href='comidab'> un revuelto con hidromiel de bebida</a>, o simplemente\
+	<a href='comidac'> que me sorprenda el camarero.</a></p>"
+	,
+		{
+			enter: function (character, system, from) {
+				$('body').css('background-image', 'url(media/games/tutorial/ftaberna.jpg)').css( 'background-size','cover','100% 100%')
+			}
+		}
+	),
+
+	sitaberna2: new undum.SimpleSituation(
+		"<p>-Tranquila, he llegado hace nada, así que no me has hecho esperar - traté de tranquilizarla.</p>\
+	\
+	<p>-¡¿De verdad?! - dijo mientras jadeaba por la carrera Lucía. Se paró y tomó aire para responder aliviada - Me alegro...</p>\
+	\
+	<p>-En cualquier caso, no te ha pasado nada viniendo, ¿no?</p>\
+	\
+	<p>-Oh no, nada por el estilo. Es que no encontraba mi collar y no quería salir sin él.</p>\
+	\
+	<p>Lucía mostró el collar orgullosamente, como si no lo hubiera visto ya cientos de veces. Pero sí es cierto que era un collar precioso.\
+	Tengo entendido que se lo dio su padre muy de joven y siempre se aleja de su casa lo lleva encima, como si fuera un amuleto de buena suerte.</p>\
+	<p>-Bueno, ¿vamos entrando?</p>\
+	\
+	<p>-¡Por supuesto! - dijo mientras guiñaba Lucía.</p>\
+	\
+	<p>Dentro de la taberna tomamos la mesa más cercana a la barra. El ambiente era muy cálido, estaba casi lleno con gente muy alegre\
+	en las mesas de alrededor. Un camarero se acercó a la mesa al rato.</p>\
+	\
+	<p>-¿Qué va a ser esta noche?</p>\
+	\
+	<p>No s&#233 si pedir<a href='comidaa'> el tipico filete con carne y vino de beber</a>, algo más ligero en la forma de<a href='comidab'> un revuelto con hidromiel de bebida</a>, o simplemente\
+	<a href='comidac'> que me sorprenda el camarero.</a></p>"
+	,
+		{
+			enter: function (character, system, from) {
+				$('body').css('background-image', 'url(media/games/tutorial/ftaberna.jpg)').css( 'background-size','cover','100% 100%')
+			}
+		}
+	),
+
+	comidaa: new undum.SimpleSituation(
+		"<p>-Pues para mí un buen filete de carne y vino para acompañarlo - era lo que casi siempre pedía, me encantaba como preparaban la carne allí.</p>\
+	\
+	<p>-¿Y la señorita?</p>\
+	\
+	<p>-Ya, ¿y por qué motivo me has hecho perder mi precioso tiempo entonces? - dije como mofa.</p>\
+	\
+	<p>-A mí ponme lo mismo que a él.</p>\
+	\
+	<p>-¿Estás segura? - estaba algo sorprendido - Igual es demasiada comida para ti.</p>\
+	\
+	<p>-¡Sí, estoy segura! - dijo mientras me apartaba la mirada.</p>\
+	\
+	<p>-Marchando entonces - dijo el camarero mientras se dirigía a la cocina.</p>\
+	\
+	<p>Charlé con Lucía sobre las fiestas venideras, hasta que finalmente llegó la comida. Eran unos filetes de carnes bastante grandes y suculentos,\
+	con una salsa de setas para acompañarlo. Tenía un aspecto increíble, empecé a salivar dispuesto a comenzar a devorar mi plato, hasta que levanté\
+	la mirada un segundo de éste para ver la cara de Lucía con una mezcla de disgusto y sorpresa que no podía dejar pasar.</p>\
+	\
+	<p>-Es… enorme - seguía bastante sorprendida, hasta que hizo un cambio radical atacandome - ¡¿Por qué no dijiste que era tan grande?!</p>\
+	\
+	<p>-Yo te había avisado, no es culpa mía que la señorita no sea capaz de tomar mi opinión en serio - dije mofándome un poco.</p>\
+	\
+	<p>-¡Ugh! - tras otro arrebato de ira, Lucía arremetió contra el plato.</p>\
+	\
+	<p>Nunca había visto comer tanto en mi vida, pero logró comerse el plato entero. Incluso se tomó el vino, pese a nunca haberla visto tomar dicha bebida.</p>\
+	\
+	<p>-¡¿Qué te ha parecido?! - dijo algo contenta - ¡No hay nada que no pueda conseguir!</p>\
+	\
+	<p>-Ni que esto fuera una competición o algo - dije, aunque para mis adentros admito que me pareció bastante graciosa mientras devoraba el plato de aquella manera.</p>\
+	\
+	<p>Terminamos la comida tranquilamente, fue una noche magnífica. Nos disponíamos a salir cuando entraron dos personas con apariencia intimidante\
+	y misteriosa, parecían forasteros de algún lugar lejano, pero no le dimos mucha importancia y decidimos salir del bar.</p>\
+	\
+	<p>Estábamos llegando a la puerta cuando de pronto, un tío le sujetó el brazo de malas maneras a Lucía, la cual se giró con cara de pocos amigos.</p>\
+	\
+	<p>-¿Qué te crees que estás haciendo? - respondió con enfado Lucía.</p>\
+	\
+	<p>-Ehhh nenaaa - el hombre desprendía un fuerte olor a alcohol - ¿no quiereh da una vueltesita conmigo?</p>\
+	\
+	<p>Ella hizo una mueca disgustada, y ante la situación le soltó un puñetazo, haciendo que se tambaleara. Él se giró con aire violento, y otro hombre se levantó de la mesa de la que venía el borracho.</p>\
+	\
+	<p>-¿Quieres jugar, eh gatita? - dijo el borracho mientras se tocaba la cara.</p>\
+	\
+	<p>-¿Tienes algún problema con mi primo? - dijo el otro hombre.</p>\
+	\
+	<p>Viendo como se estaba desenvolviendo la situación barajas tus opciones, si<a href='peleaa'> meterte en el fregado</a> o<a href='peleab'> mantenerte al margen.</a></p>"
 
 	),
-   
-   
-    "quality-types": new undum.SimpleSituation(
-        "<p>Not all the qualities in the character panel are displayed as\
-        numeric. Internally they are all numeric, but different qualities\
-        get to choose how to display themselves. So 'Luck', for example, is\
-        displayed as words (based on the FUDGE RPG's adjective scale),\
-        and 'Novice' is using just a check-mark.</p>\
-        \
-        <p>To see how Luck changes, try using this\
-        <a href='./luck-boost'>luck-boosting action</a> or this\
-        <a href='./luck-reduce'>luck-reducing action</a>. Notice that\
-        luck uses a numeric bonus when it runs out of words. There are a range\
-        of different display types provided with Undum, and you can easily\
-        add your own too.</p>\
-        \
-        <p>When you <a href='character-text'>leave this situation</a>,\
-        I'll set 'Novice' to zero. Watch\
-        the character panel, and you'll see that Novice decides it doesn't\
-        need to be displayed any more and will be removed. You will also see\
-        that when the last\
-        quality in a group is removed ('Novice' is in the 'Progress' group),\
-        then the group heading is also removed. You can tell Undum what\
-        group each quality belongs to, and what order they should be listed.\
-        <p>",
-        {
-            actions: {
-                "luck-boost": function(character, system, action) {
-                    system.setQuality("luck", character.qualities.luck+1);
-                },
-                "luck-reduce": function(character, system, action) {
-                    system.setQuality("luck", character.qualities.luck-1);
-                }
-            },
-            exit: function(character, system, to) {
-                system.setQuality("novice", 0);
-            }
-        }
-    ),
-   };
+
+	comidab: new undum.SimpleSituation(
+		"<p>-Un revuelto y de beber hidromiel - Tampoco era cuestión de hincharse esta vez.</p>\
+	\
+	<p>-¿Y la señorita?</p>\
+	\
+	<p>-A mí ponme lo mismo que a él.</p>\
+	\
+	<p>-Marchando entonces - dijo el camarero mientras se dirigía a la cocina</p>\
+	\
+	<p>La cena fue fantástica. Charlé con Lucía sobre las fiestas venideras, hicimos bromas y nos lo pasamos genial. La comida también fue magnífica, \
+	el plato estaba combinado de manera que no se hacía nada pesado, y los sabores de las verduras en el revuelto resaltaban de manera espectacular.</p>\
+	\
+	<p>- Pues debo darte la razón, -afirmó Lucía después de echar un trago de hidromiel - este sitio no está naaada mal. </p>\
+	\
+	<p>- Te lo dije, deberías hacerme caso más a menud- dije en tono orgulloso. </p>\
+	\
+	<p>-Je, es verdad. Ya no eres aquel enclenque al que no le podías confiar nada. </p>\
+	\
+	<p>Terminamos la comida tranquilamente, fue una noche magnífica. Nos disponíamos a salir cuando entraron dos personas con apariencia intimidante\
+	y misteriosa, parecían forasteros de algún lugar lejano, pero no le dimos mucha importancia y decidimos salir del bar.</p>\
+	\
+	<p>Estábamos llegando a la puerta cuando de pronto, un tío le sujetó el brazo de malas maneras a Lucía, la cual se giró con cara de pocos amigos.</p>\
+	\
+	<p>-¿Qué te crees que estás haciendo? - respondió con enfado Lucía.</p>\
+	\
+	<p>-Ehhh nenaaa - el hombre desprendía un fuerte olor a alcohol - ¿no quiereh da una vueltesita conmigo?</p>\
+	\
+	<p>Ella hizo una mueca disgustada, y ante la situación le soltó un puñetazo, haciendo que se tambaleara. Él se giró con aire violento, y otro hombre se levantó de la mesa de la que venía el borracho.</p>\
+	\
+	<p>-¿Quieres jugar, eh gatita? - dijo el borracho mientras se tocaba la cara.</p>\
+	\
+	<p>-¿Tienes algún problema con mi primo? - dijo el otro hombre.</p>\
+	\
+	<p>Viendo como se estaba desenvolviendo la situación barajas tus opciones, si<a href='peleaa'> meterte en el fregado</a> o<a href='peleab'> mantenerte al margen.</a></p>"
+
+	),
+
+	comidac: new undum.SimpleSituation(
+		"<p>-¿Por qué no me sorprende hoy? Póngame lo que le apetezca.</p>\
+	\
+	<p>-Oh, esto es interesante - dijo el camarero algo sorprendido -¿Y la señorita?</p>\
+	\
+	<p>-Pues… venga por qué no, también quiero un plato sorpresa.</p>\
+	\
+	<p>-Están aventureros hoy eh… - dijo con una sonrisilla - Pues voy a ver que se le ocurre a cocina.</p>\
+	\
+	<p>Estábamos un poco nerviosos por la comida, aunque no quisiéramos admitirlo. Tampoco queríamos que la cena se arruinara por la comida, pues el ambiente era genial. Al rato llegó el camarero con la bebida.</p>\
+	\
+	<p>-Esta bebida es un trabajo casero, receta de nuestro chef. Todavía no sabemos si le va a gustar al público, así que hemos aprovechado para usaros de conejillos de indias - dijo en tono jocoso el camarero.</p>\
+	\
+	<p>-Pues no sé si me hace mucha gracia ser una conejilla de indias… ¿Podemos saber que lleva la bebida?</p>\
+	\
+	<p>-Es un secreto. - dijo mientras volvía a la cocina.</p>\
+	<img src='media/games/tutorial/bebida.jpg' class='float_right'>\
+	\
+	<p>La bebida era de un tono oscuro, y tenía burbujas. Nunca había visto una bebida como aquella. Decidimos probarla y, sorprendentemente, estaba dulce. </p>\
+	\
+	<p>-Es… muy refrescante. - dije sorprendido - Está bastante mejor de lo que esperaba.</p>\
+	\
+	<p>¿Bromeas? ¡Es lo mejor que he tomado en mucho tiempo! - dijo Lucía para inmediatamente darle un largo trago a aquella misteriosa bebida.</p>\
+	\
+	<p>La comida acabó siendo un plato combinado, pero no pudimos dejar de pensar en aquella bebida misteriosa. Quizá la pida la próxima vez que venga a este lugar.</p>\
+	\
+	<p>Terminamos la comida tranquilamente, fue una noche magnífica. Nos disponíamos a salir cuando entraron dos personas con apariencia intimidante\
+	y misteriosa, parecían forasteros de algún lugar lejano, pero no le dimos mucha importancia y decidimos salir del bar.</p>\
+	\
+	<p>Estábamos llegando a la puerta cuando de pronto, un tío le sujetó el brazo de malas maneras a Lucía, la cual se giró con cara de pocos amigos.</p>\
+	\
+	<p>-¿Qué te crees que estás haciendo? - respondió con enfado Lucía.</p>\
+	\
+	<p>-Ehhh nenaaa - el hombre desprendía un fuerte olor a alcohol - ¿no quiereh da una vueltesita conmigo?</p>\
+	\
+	<p>Ella hizo una mueca disgustada, y ante la situación le soltó un puñetazo, haciendo que se tambaleara. Él se giró con aire violento, y otro hombre se levantó de la mesa de la que venía el borracho.</p>\
+	\
+	<p>-¿Quieres jugar, eh gatita? - dijo el borracho mientras se tocaba la cara.</p>\
+	\
+	<p>-¿Tienes algún problema con mi primo? - dijo el otro hombre.</p>\
+	\
+	<p>Viendo como se estaba desenvolviendo la situación barajas tus opciones, si<a href='peleaa'> meterte en el fregado</a> o<a href='peleab'> mantenerte al margen.</a></p>"
+	),
+	"peleaa": new undum.SimpleSituation(
+		"<p>El hombre borracho se disponía a darle una torta a Lucía, así que me puse en medio y encajé el\
+		 golpe como pude.</p>\
+		 \
+		<p>-¡Ah, con que también quieres recibir tú…! - dijo el borracho enfadado\
+		</p>",
+		{
+				enter: function( character, system, from ) {
+					if( character.qualities.daga ) {
+						system.doLink( "sidaga" );
+					} else { 
+						system.doLink( "nodaga" );
+					}
+				}
+		}
+	),
+	"peleab": new undum.SimpleSituation(
+		"<p>Decidí dar un paso hacia atrás viendo lo que se venía, pero el borracho se percató y soltó</p>\
+			<p>-¡¿Tú no eres amigo de ella?!</p>\
+			<p>-¿Yo? No, para nada, soy un refinado catador de tierras lejanas que...</p>\
+			<p>-¡Déjate de tonterías Ferdie! - gritó Lucía desmantelando mi coartada.</p>\
+			<p>-¡Vas a pillar! - dijo el borracho enfadado</p>",
+			{
+				enter: function( character, system, from ) {
+					if( character.qualities.daga ) {
+						system.doLink( "sidaga" );
+					} else { 
+						system.doLink( "nodaga" );
+					}
+				}
+		}
+	),
+	"sidaga": new undum.SimpleSituation(
+		"<p>Los 2 borrachos me acorralaron, lentamente pero no podía conseguir escapar. En ese momento recordé la daga \
+		que encontré anteriormente. La saqué rápidamente y me defendí como pude, haciendole un rasguño a uno de los borrachos.\
+		El hombre gritó y se desplomó casi al instante, al ver esto el otro borracho salió corriendo.\
+		<p>- ¿Pero qué? Si solo le he hecho un rasguño.</p> \
+		<p>- ¡Guau Ferdi nos has salvado! - dijo Lucía.</p>\
+		Los dos encapuchados al ver la situación se acercaron y bajaron sus capuchas. Uno era un hombre de aspecto fornido y de pelo rubio, la otra persona era una mujer pelirroja y algo más bajita\
+		<p>- Vaya, parece que habeis tenido bastante suerte, esa daga tiene algo especial. - dijo el hombre</p>\
+		<p>- ¿puedo ver la daga? - dijo la mujer.</p>\
+		<p>- Sí, claro toma. - respondí</p>\
+		<p>- Mmmmmm, parece que la daga está impregnada de algún tipo de veneno, debes tener cuidado con ella, te la devuelvo.\
+		<p>- Si no hubiera visto que llevabas una daga les hubiera dado una tunda yo mismo. - dijo el hombretón.</p>\
+		<p>- Tú como siempre queriendo liarla por donde pasas ¿no? -respondió la mujer con cara borde.</p>\
+		<p>- Es que sino es un rollo. - dijo el hombre sonriendo. - Por cierto, yo soy Félix, y mi compañera que no sabe divertirse se llama Anna.</p>\
+		<p>- ¿Que no sabe divertirse? ¿Perdona? En fin. - respondió Anna resoplando - Somos mercenarios que pasabamos por aquí.</p>\
+		<p>- ¡Encantada! Yo soy Lucía y este de aquí Ferdinand.</p>\
+		<p>- Por cierto estamos bucando aprendices que nos ayuden. Yo soy un guerrero y ella es maga, podríamos enseñaros todo lo que sabemos.</p>\
+		<p>-Yo… no estoy seguro - titubeé</p>\
+		<p>-Escucha chaval - dijo Félix con un inusual tono serio - este pueblo no tiene ningún tipo de protección. Si llegara cualquier grupo de bandidos, Dios sabe lo que podría pasar.</p>\
+		<p>Aquel comentario despertó recuerdos que tenía siempre presente. Aquel día hace 5 años… Si hubiera sido más fuerte, hubiera podido defenderla…</p>\
+		<p>-Es un poco precipitado… - dijo Lucía algo preocupada</p>\
+		<p>-No - dije decidido - Lo haré. La fuerza lo rige todo, y sin ella no puedes proteger lo que más te importa. Lo sé de primera mano…</p>\
+		<p>-Ferdie… - dijo en tono triste Lucía - Yo te acompañaré.</p>\
+		<p>-¿Lucía?¿Estás segura?</p>\
+		<p>-Si te dejo solo es probable que te ahogues mientras bebes agua, ¡así que déjamelo a mí!</p>\
+		<p>Me sentí reconfortado, como si una llama se encendiera dentro de mí.</p>\
+		<p>-Tampoco tenéis que ir con tanta prisa. Mañana vendremos aquí por la mañana, y nos podéis dar la confirmación. Pensad también quién queréis que os entrene.</p>\
+		<p>-¿Y eso por qué? - dijo Lucía.</p>\
+		<p>-¡Si queréis ser guerreros venid conmigo! - dijo Félix - ¡Os enseñaré el arte de la batalla!</p>\
+		<p>-Si queréis conocer el bello arte de la magia - dijo Anna - yo os haré magos de verdad.</p>\
+		<p>-¿¡Magos!? - dijo ilusionada Lucía - ¿¡Nosotros?!</p>\
+		<p>-Incluso si no tenéis talento para la magia, con una profesora como yo estoy segura de que podréis ser magos si os lo proponéis.</p>\
+		<p>Después de esa conversación, cada uno se fue por su camino… Me despedí de Lucía y fue a mi casa. No tenía mucho que pensar, sabía que\
+		era una oportunidad de oro, y no la iba a desaprovechar. La única duda que tenía era que clase de entrenamiento prefería\</p>\
+		\
+		<p>A la mañana siguiente me preparé, y me dirigí de nuevo a la cantina, donde nos esperaban nuestros amigos mercenarios.\
+		Me encontré a Lucía por el camino, y ambos nerviosos llegamos a nuestro destino.</p>\
+		<p>-¡Buenos días Ferdie! ¿Has decidido ya qué quieres aprender? - dijo Lucía</p>\
+		<p>-Mmmm... lo sabrás cuando estemos con Félix y Anna - dije sonriendo para mis adentros</p>\
+		<p>-Venga yaaaa - dijo mientras inflaba sus mejillas - necesitamos tener un equipo equilibrado...</p>\
+		<p>-Pues decides cuando llegemos, no te sulfures.</p>\
+		<p>Ella bufó como siempre, me encantaba burlarme de ella. Sin darnos cuenta llegamos finalmente a la cantina</p>\
+		<p>-¡Buenos días! ¡Espero que hayáis decidido ya qué vais a hacer! - dijo Félix.</p>\
+		<p>-El tiempo es oro, vamos a ponernos manos a la obra cuanto antes - añadió Anna.</p>\
+		<p>Este es un momento muy importante de mi vida. Elijo volverme un <a href='caballero'>caballero</a> o un mago.\</p>"
+	),
+	"nodaga": new undum.SimpleSituation(
+		"<p>Los dos varones se disponían a darnos una paliza a los dos, mientras nosotros nos preparábamos para la contienda.\
+		Sin previo aviso, una de las dos personas misteriosas apareció en mitad de la pelea.\
+		Mostraba una figura alta y fornida, más de lo que esperaba. Rápidamente sujetó el brazo del borracho, donde se podía ver una sonrisa por debajo de la capucha.</p>\
+		\
+		<p>-¿Acaso tu madre no te enseñó cómo tratar a las damas? - dijo el hombre encapuchado con una sonrisa.</p>\
+		<p>-¡Pero serás...!</p>\
+		\
+		<p>Con un rápido movimiento agarró al borracho, haciéndole una llave. Un grito de dolor llenó la taberna, a lo que siguió un lanzamiento hacia el amigo del borracho, echándoles fuera de la taberna.</p>\
+		\
+		<p>Los dos hombres se pusieron en pie a malas penas y salieron corriendo.\
+		Poco a poco la taberna empezó a calmarse, hasta que lo único que se oía era la risa de aquel hombre encapuchado.\
+		Sin percatarnos, la otra figura encapuchada se acercó y le dió un golpe en la cabeza.</p>\
+		\
+		<p>-¡Auch! - dijo el hombre encapuchado mientras se llevaba la mano a donde le habían golpeado.</p>\
+		<p>-Que falta de delicadeza... - la voz del otro encapuchado era la de una mujer - De verdad, a veces me pregunto si vamos a poder ir a algún sitio sin dar la nota -  dijo mientras suspiraba.</p>\
+		\
+		<p>-Venga mujer, no te pongas así… Ya sabes el dicho, no hay mal que no se lleve torta.</p>\
+		<p>-Ugh, tu y tus chistes, me tenéis enferma... - dijo mientras abandonaban la taberna como si nada hubiera pasado.</p>\
+		<p>-¡Auch! - dijo el hombre encapuchado mientras se llevaba la mano a donde le habían golpeado.</p>\
+		<p>-Que falta de delicadeza... - la voz del otro encapuchado era la de una mujer - De verdad, a veces me pregunto si vamos a poder ir a algún sitio sin dar la nota -  dijo mientras suspiraba.</p>\
+		\
+		<p>Aún estábamos algo sorprendidos, y me costó reaccionar, pero cuando me di cuenta salí corriendo hacia aquellas personas.</p>\
+		<p>-¡Esperad! - dije jadeando - ¡Esperad por favor!</p>\
+		<p>Los dos se pararon finalmente, dándose la vuelta.</p>\
+		<p>-No os he agradecido lo que habéis hecho. - dije, mientras me percataba de que Lucía también había venido conmigo.</p>\
+		<p>-¡Sí, muchas gracias! - mencionó ella</p>\
+		<p>-¡No hay de qué! - dijo con un tono despreocupado el hombre - Éste cuerpo está acostumbrado a tratar con ganado como el de esta tarde.</p>\
+		<p>-Lástima que solo sea eso lo que sabes hacer - dijo con desdén la mujer.</p>\
+		<p>-Hum, yo soy Ferdinand, y ella es Lucía… ¿Os importaría decirme vuestros nombres?</p>\
+		\
+		<p>Los dos se miraron, y ambos se quitaron las capuchas. El hombre era rubio, con pelo largo y barba, mientras que la chica tenía un pelo más corto con un cabello pelirrojo.</p>\
+		<p>-¡Mi nombre es Félix! - dijo el hombre con su energía habitual.</p>\
+		<p>-A mí se me conoce como Anna. - dijo la mujer - Haréis bien en recordarlo.</p>\
+		<p>-Oye Anna - dijo Félix - ellos pueden servir, ¿no?</p>\
+		<p>-¿Con los primeros que pasan, en serio? - dijo Anna con tono escéptico - tú nunca cambias.</p>\
+		<p>-¡Bueno, es que el chaval me recuerda a mí cuando era joven! - dijo Félix riéndose.</p>\
+		<p>Me costaba ver en cómo me parecía, no era nada similar físicamente, y tampoco era rubio, así que no sabía cómo tomarme ese comentario.</p>\
+		<p>-Perdonad - dijo Lucía en tono inquisitivo - ¿A qué os referís?<\p>\
+		<p>-Bueno, estábamos pensando en conseguir nuevos principiantes para nuestra compañía - dijo con una sonrisa Félix- ¡y me parece que sois perfectos!</p>\
+		<p>-¿Compañía? - pregunté.</p>\
+		<p>-Somos unos mercenarios. - dijo Anna - Nuestra misión ahora mismo es encontrar reclutas, puesto que el jefe no se fía de guerreros experimentados. Y pensar que quiere poner mi superior intelecto en las manos de cualquier otra persona… - murmuró para sus adentros.</p>\
+		<p>¿Mercenarios?¿Realmente iba a dejar mi vida actual para eso?</p>\
+		<p>-Yo… no estoy seguro - titubeé</p>\
+		<p>-Escucha chaval - dijo Félix con un inusual tono serio - este pueblo no tiene ningún tipo de protección. Si llegara cualquier grupo de bandidos, Dios sabe lo que podría pasar.</p>\
+		<p>Aquel comentario despertó recuerdos que tenía siempre presente. Aquel día hace 5 años… Si hubiera sido más fuerte, hubiera podido defenderla…</p>\
+		<p>-Es un poco precipitado… - dijo Lucía algo preocupada</p>\
+		<p>-No - dije decidido - Lo haré. La fuerza lo rige todo, y sin ella no puedes proteger lo que más te importa. Lo sé de primera mano…</p>\
+		<p>-Ferdie… - dijo en tono triste Lucía - Yo te acompañaré.</p>\
+		<p>-¿Lucía?¿Estás segura?</p>\
+		<p>-Si te dejo solo es probable que te ahogues mientras bebes agua, ¡así que déjamelo a mí!</p>\
+		<p>Me sentí reconfortado, como si una llama se encendiera dentro de mí.</p>\
+		<p>-Tampoco tenéis que ir con tanta prisa. Mañana vendremos aquí por la mañana, y nos podéis dar la confirmación. Pensad también quién queréis que os entrene.</p>\
+		<p>-¿Y eso por qué? - dijo Lucía.</p>\
+		<p>-¡Si queréis ser guerreros venid conmigo! - dijo Félix - ¡Os enseñaré el arte de la batalla!</p>\
+		<p>-Si queréis conocer el bello arte de la magia - dijo Anna - yo os haré magos de verdad.</p>\
+		<p>-¿¡Magos!? - dijo ilusionada Lucía - ¿¡Nosotros?!</p>\
+		<p>-Incluso si no tenéis talento para la magia, con una profesora como yo estoy segura de que podréis ser magos si os lo proponéis.</p>\
+		<p>Después de esa conversación, cada uno se fue por su camino… Me despedí de Lucía y fue a mi casa. No tenía mucho que pensar, sabía que\
+		era una oportunidad de oro, y no la iba a desaprovechar. La única duda que tenía era que clase de entrenamiento prefería.<\p>\
+		\
+		<p>A la mañana siguiente me preparé, y me dirigí de nuevo a la cantina, donde nos esperaban nuestros amigos mercenarios.\
+		Me encontré a Lucía por el camino, y ambos nerviosos llegamos a nuestro destino.</p>\
+		<p>-¡Buenos días Ferdie! ¿Has decidido ya qué quieres aprender? - dijo Lucía</p>\
+		<p>-Mmmm... lo sabrás cuando estemos con Félix y Anna - dije sonriendo para mis adentros</p>\
+		<p>-Venga yaaaa - dijo mientras inflaba sus mejillas - necesitamos tener un equipo equilibrado...</p>\
+		<p>-Pues decides cuando llegemos, no te sulfures.</p>\
+		<p>Ella bufó como siempre, me encantaba burlarme de ella. Sin darnos cuenta llegamos finalmente a la cantina</p>\
+		<p>-¡Buenos días! ¡Espero que hayáis decidido ya qué vais a hacer! - dijo Félix.</p>\
+		<p>-El tiempo es oro, vamos a ponernos manos a la obra cuanto antes - añadió Anna.</p>\
+		<p>Este es un momento muy importante de mi vida. Elijo volverme un <a href='caballero'>caballero</a> o un mago.\</p>"
+	),
+	"caballero": new undum.SimpleSituation(
+		"<p> Me despedí de mi pueblo y de la gente que apreciaba y partí hacia la ciudad con el resto. Pasaron 5 años desde aquel día. \
+		Me he estado formando durante este tiempo con mi mentor Félix, me ha enseñado muchas técnicas y como moverme en una batalla.</p>\
+		\
+		<p>Me encontraba en las caballerizas entrenando con la lanza y el escudo contra Félix.</p>\
+		<p>- Parece que los años te hacen factura Félix, puedo ganarte con los ojos cerrados si quiero. - dije.</p>\
+		<p>- Pero qué dices bufón, vas a morder el polvo por lo que has dicho. - me respondió con enfado.</p>\
+		\
+		<p>Chocamos las lanzas de madera unas cuantas veces más, hasta que el desenlace del combate de entrenamiento fue una victoria por mi parte.</p>\
+		<p>- Vaya vaya, parece que he mejorado. - dije con orgullo.</p>\
+		<p>- No te equivoques, te he dejado ganar, en el campo de batalla no me igualarías, pero en un entrenamiento no tengo ganas de ponerme en serio </p>\
+		<p>- respondió Félix intentando desmerecer mi victoria.</p>\
+		<p>Nos dirigimos a dejar las armas cuando, de pronto entran 4 encapuchados con dagas en mano. </p>\
+		<p>- ¿Quién es Ferdinand? - preguntó el más grande.</p>\
+		<p>- ¿Quién lo pregunta? -  respondí con un mal presentimiento.</p>\
+		<p>- No te hará falta saberlo. En realidad no importa, vais a morir los dos igualmente. - respondió con aire de superioridad </p>\
+		<p>Los cuatro se abalanzan sobre nosotros, pero no contaban con que sabíamos defendernos y ya habíamos calentado con el entrenamiento.\
+		La batalla se repartió en dos encapuchados para cada uno. Me lanzan un cuchillo arrojadizo, pero lo paro con el escudo de madera, el otro hombre me sorprendió \
+		por la derecha intentando dar una cuchillada con la daga, pero mis reflejos actúan y antes de que lo consiga le clavo la lanza de madera en el pecho, la cual se parte\
+		y el hombre grita de dolor mientras caía al suelo. El hombre que me lanzó el cuchillo vino a por mí, era el más grande. </p>\
+		<p>- Veo que no eres tan inútil como pareces pero a ver ahora cómo te defiendes pequeño. - dijo mientras se preparaba para arremeter contra mí.</p>\
+		<p>Lanzó dos reveses contra mí, uno lo paré con el escudo, ya casi destruido por el golpe, pero el otro alcanzó mi pierna, dejándome una herida no muy grave, \
+		ya que me eché para atrás y conseguí que el ataque no fuera a más. \</p>"
+	),
+};
 
 // ---------------------------------------------------------------------------
 /* The Id of the starting situation. */
@@ -259,24 +631,29 @@ undum.game.start = "start";
  * possess. We don't have to be exhaustive, but if we miss one out then
  * that quality will never show up in the character bar in the UI. */
 undum.game.qualities = {
-    skill: new undum.IntegerQuality(
-        "Habilidad", {priority:"0001", group:'stats'}
-    ),
-    stamina: new undum.NumericQuality(
-        "Resistencia", {priority:"0002", group:'stats'}
-    ),
-    luck: new undum.FudgeAdjectivesQuality( // Fudge as in the FUDGE RPG
-        "<span title='Skill, Stamina and Luck are reverently borrowed from the Fighting Fantasy series of gamebooks. The words representing Luck are from the FUDGE RPG. This tooltip is illustrating that you can use any HTML in the label for a quality (in this case a span containing a title attribute).'>Fortuna</span>",
-        {priority:"0003", group:'stats'}
-    ),
+	daga: new undum.OnOffQuality(
+		"Daga", { priority: "0003", group: 'inventario', onDisplay: "&#10003;" }
+	),
+	skill: new undum.IntegerQuality(
+		"Habilidad", { priority: "0001", group: 'stats' }
+	),
+	stamina: new undum.NumericQuality(
+		"Resistencia", { priority: "0002", group: 'stats' }
+	),
+	luck: new undum.FudgeAdjectivesQuality( // Fudge as in the FUDGE RPG
+		"<span title='Skill, Stamina and Luck are reverently borrowed from the Fighting Fantasy series of gamebooks. The words representing Luck are from the FUDGE RPG. This tooltip is illustrating that you can use any HTML in the label for a quality (in this case a span containing a title attribute).'>Fortuna</span>",
+		{ priority: "0003", group: 'stats' }
+	),
 
-    inspiration: new undum.NonZeroIntegerQuality(
-        "Inspiración", {priority:"0001", group:'progress'}
-    ),
-    novice: new undum.OnOffQuality(
-        "Novicio", {priority:"0002", group:'progress', onDisplay:"&#10003;"}
-    )
-};
+	inspiration: new undum.NonZeroIntegerQuality(
+		"Inspiración", { priority: "0001", group: 'progress' }
+	),
+	novice: new undum.OnOffQuality(
+		"Novicio", { priority: "0002", group: 'progress', onDisplay: "&#10003;" }
+	)
+}; {
+
+}
 
 // ---------------------------------------------------------------------------
 /* The qualities are displayed in groups in the character bar. This
@@ -285,18 +662,21 @@ undum.game.qualities = {
  * the end. It is an error to have a quality definition belong to a
  * non-existent group. */
 undum.game.qualityGroups = {
-    stats: new undum.QualityGroup(null, {priority:"0001"}),
-    progress: new undum.QualityGroup('Progreso', {priority:"0002"})
+	inventario: new undum.QualityGroup('Inventario', { priority: "0001" }),
+	stats: new undum.QualityGroup(null, { priority: "0001" }),
+	progress: new undum.QualityGroup('Progreso', { priority: "0002" })
 };
+
 
 // ---------------------------------------------------------------------------
 /* This function gets run before the game begins. It is normally used
  * to configure the character at the start of play. */
-undum.game.init = function(character, system) {
-    character.qualities.skill = 12;
-    character.qualities.stamina = 12;
-    character.qualities.luck = 0;
-    character.qualities.novice = 1;
-    character.qualities.inspiration = 0;
-    system.setCharacterText("<p>¡Disfruta de esta trepidante aventura!</p>");
+undum.game.init = function (character, system) {
+	system.setQuality("daga", false)
+	character.qualities.skill = 12;
+	character.qualities.stamina = 12;
+	character.qualities.luck = 0;
+	character.qualities.novice = 1;
+	character.qualities.inspiration = 0;
+	system.setCharacterText("<p>¡Disfruta de esta trepidante aventura!</p>");
 };

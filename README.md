@@ -69,3 +69,11 @@ Hemos elegido la 1 ya que es esencial para contar la historia. La 2 y la 3 las h
 **Conclusiones obtenidas en la Sprint Review**
 
 El trabajo siguió desarrollandose de manera similar al sprint anterior. Hemos aprendido a usar objetos para cambiar la historia, haciéndola más dinámica. Hemos seguido el transcurso de la historia añadiendo nuevas situaciones, situaciones con fondos alternativos, imágenes nuevas y música. 
+
+**Conclusiones obtenidas en la Sprint Retrospective**
+
+El dominio a la hora de programar la historia nos ha hecho realizar las tareas del sprint en un tiempo menor al esperado, lo que significa que no hicimos un buen trabajo durante la Sprint Review, pues no se añadieron tareas pese a que había más que tiempo suficiente.
+
+Hemos tenido alguna que otra dificultad a la hora de realizar las tareas, pero se han solventado rápidamente. El trabajo del equipo ha sido óptimo. 
+
+En el próximo sprint habrá que añadir todas las mejoras posibles para mejorar el proyecto antes de su entrega final, esto incluye completar todas las situaciones y añadir cualquier mejora de calidad que sea factible de implementar.

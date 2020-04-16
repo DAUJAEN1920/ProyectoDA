@@ -85,3 +85,15 @@ En el próximo sprint habrá que añadir todas las mejoras posibles para mejorar
 - Captura de pantalla de las HU del Sprint Backlog una vez acabado el sprint:
 
 ![Trello](HU_SP2F.JPG)
+
+## Sprint 3 (Product Owner - ÁLvaro Ortega Castro):
+
+- Captura del Sprint Backlog:
+
+![Trello](BacklogS3.PNG)
+
+Hemos elegido las historias que son innegociables para tratar de terminar el proyecto. Dependiendo de como se produzca el desarrollo de las tareas, se pueden añadir más durante el sprint retrospective.
+
+- Captura de pantalla de las HU descompuestas en tareas al principio del Sprint:
+
+![Trello](CapturaS3.PNG)

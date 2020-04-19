@@ -651,11 +651,20 @@ undum.game.situations = {
 		pude ver una <a href='sarten'>sarten</a>, un <a href='escudo'>escudo de hierro</a> y una <a href='flecha'>flecha puntiaguda</a>. \</p>"
 	),
 	"sarten": new undum.SimpleSituation(
-		"<p>Pude ver el mango saliente de una sartén en una de las cajas apiladas que había donde guardamos las armas, la mayoría era menaje y piezas de armas estropeadas. \
+		"<img src='media/games/tutorial/sarten.jpg' class='float_left'>\
+		<p>Pude ver el mango saliente de una <a href='./sarten' class='once'> sartén</a> en una de las cajas apiladas que había donde guardamos las armas, la mayoría era menaje y piezas de armas estropeadas. \
 		<p>Justo antes de que uno de los encapuchados se abalanzase sobre mí, pude esquivarlo y alcanzar la sartén por el mango.</p>\
 		\
 		<p>Nada más girarse para asestarme con la daga, le doy un derechazo con la sartén en la cabeza como si de un partido de tenis se tratara.</p>\
 		<p>El agresor, cayó fulminado al suelo, por lo que aproveché la situación para coger su daga e hincársela al otro encapuchado que tenía media lanza clavada en el <a href='pecho'>pecho</a>.</p>"
+		, {
+			actions: {
+				'sarten': function (character, system, action) {
+					system.setQuality("sarten", true);
+					system.setCharacterText("<p>Adquieres una sartén que seguro que en otro tiempo tuvo una mejor vida.</p>");
+				}
+			}
+		}
 		),
 	"pecho": new undum.SimpleSituation(
 		"<p>Cuando terminé con los dos agresores, me disponía a ayudar a Félix pero en un abrir y cerrar de ojos, había acabado con los otros dos y estaba limpiando su lanza.</p>\
@@ -677,6 +686,9 @@ undum.game.start = "start";
 undum.game.qualities = {
 	daga: new undum.OnOffQuality(
 		"Daga", { priority: "0003", group: 'inventario', onDisplay: "&#10003;" }
+	),
+	sarten: new undum.OnOffQuality(
+		"Sarten", { priority: "0004", group: 'inventario', onDisplay: "&#10004;" }
 	),
 	skill: new undum.IntegerQuality(
 		"Habilidad", { priority: "0001", group: 'stats' }
@@ -717,6 +729,7 @@ undum.game.qualityGroups = {
  * to configure the character at the start of play. */
 undum.game.init = function (character, system) {
 	system.setQuality("daga", false)
+	system.setQuality("sarten", false)
 	character.qualities.skill = 12;
 	character.qualities.stamina = 12;
 	character.qualities.luck = 0;

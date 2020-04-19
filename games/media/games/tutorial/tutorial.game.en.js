@@ -541,11 +541,6 @@ undum.game.situations = {
 		<p>-¡Auch! - dijo el hombre encapuchado mientras se llevaba la mano a donde le habían golpeado.</p>\
 		<p>-Que falta de delicadeza... - la voz del otro encapuchado era la de una mujer - De verdad, a veces me pregunto si vamos a poder ir a algún sitio sin dar la nota -  dijo mientras suspiraba.</p>\
 		\
-		<p>-Venga mujer, no te pongas así… Ya sabes el dicho, no hay mal que no se lleve torta.</p>\
-		<p>-Ugh, tu y tus chistes, me tenéis enferma... - dijo mientras abandonaban la taberna como si nada hubiera pasado.</p>\
-		<p>-¡Auch! - dijo el hombre encapuchado mientras se llevaba la mano a donde le habían golpeado.</p>\
-		<p>-Que falta de delicadeza... - la voz del otro encapuchado era la de una mujer - De verdad, a veces me pregunto si vamos a poder ir a algún sitio sin dar la nota -  dijo mientras suspiraba.</p>\
-		\
 		<p>Aún estábamos algo sorprendidos, y me costó reaccionar, pero cuando me di cuenta salí corriendo hacia aquellas personas.</p>\
 		<p>-¡Esperad! - dije jadeando - ¡Esperad por favor!</p>\
 		<p>Los dos se pararon finalmente, dándose la vuelta.</p>\
@@ -582,7 +577,7 @@ undum.game.situations = {
 		<p>-Si queréis conocer el bello arte de la magia - dijo Anna - yo os haré magos de verdad.</p>\
 		<p>-¿¡Magos!? - dijo ilusionada Lucía - ¿¡Nosotros?!</p>\
 		<p>-Incluso si no tenéis talento para la magia, con una profesora como yo estoy segura de que podréis ser magos si os lo proponéis.</p>\
-		<p>Después de esa conversación, cada uno se fue por su camino… Me despedí de Lucía y fue a mi casa. No tenía mucho que pensar, sabía que\
+		<p>Después de esa conversación, cada uno se fue por su camino… Me despedí de Lucía y fui a mi casa. No tenía mucho que pensar, sabía que\
 		era una oportunidad de oro, y no la iba a desaprovechar. La única duda que tenía era que clase de entrenamiento prefería.<\p>\
 		\
 		<p>A la mañana siguiente me preparé, y me dirigí de nuevo a la cantina, donde nos esperaban nuestros amigos mercenarios.\
@@ -594,8 +589,42 @@ undum.game.situations = {
 		<p>Ella bufó como siempre, me encantaba burlarme de ella. Sin darnos cuenta llegamos finalmente a la cantina</p>\
 		<p>-¡Buenos días! ¡Espero que hayáis decidido ya qué vais a hacer! - dijo Félix.</p>\
 		<p>-El tiempo es oro, vamos a ponernos manos a la obra cuanto antes - añadió Anna.</p>\
-		<p>Este es un momento muy importante de mi vida. Elijo volverme un <a href='caballero'>caballero</a> o un mago.\</p>"
+		<p>Este es un momento muy importante de mi vida. Elijo volverme un <a href='caballero'>caballero</a> o<a href='mago'> un mago.</a> \</p>"
 	),
+	"mago": new undum.SimpleSituation(
+		"<p> Me despedí de mi pueblo y de la gente que apreciaba y partí hacia la ciudad con el resto. Pasaron 5 años desde aquel día. \
+		<p>Me he estado formando durante este tiempo con mi maestra Anna,la cual me ha enseñado muchas técnicas y conjuros para usar durante la batalla.</p>\
+		\
+		<p>Estuve practicando y aprendiendo nuevos hechizos durante meses en una sala de entrenamiento junto a Lucía, bajo supervisión de nuestra maestra.</p>\
+		<p>- Vaya, parece que has mejorado Lucía, mas nunca llegarás a mi nivel de poder. -comenté en tono burlesco.</p>\
+		<p>- No me subestimes Ferdie , te vas a enterar. -respondió Lucía acompañado de un hechizo <a href='https://elderscrolls.fandom.com/es/wiki/Proyectil_%C3%ADgneo'>proyectil ígneo.</a></p>\
+		<p> Afortunadamente mi elevado conocimiento en la hechicería me hizo inmune a su ataque utilizando el hechizo `circulo de protección`.</p>\
+		<p>-Ya basta.-exclamó Anna con autoridad.</p>\
+		<p>-Creo que ya estáis listos para encaminar con nosotros una misión especial-añadió. </p>\
+		<p>-¿De qué se trata?-interrumpió Lucía.</p>\
+		<p>-Tenemos que encargarnos del emperador <a href='https://elderscrolls.fandom.com/es/wiki/Tito_Mede_II_(Skyrim)'>Tito Mede II</a>, un \
+		emperador maligno que secuestra a escondidas a los niños y esclaviza a los hombres para expandir La Hermandad Oscura-explicó Anna. </p>\
+		Yo había oído hablar de esa hermandad pero desconocía el origen de su proveninecia.</p>\
+		<p>-Está bien, os ayudaremos.-exhalté con enorme energía. </p>\
+		<p>-Genial,partiremos al castillo por la noche. Os explicaré el plan por el camino.-respondío Anna</p>\
+		<p>-Ferdinand,¿tienes un momento?. Me gustaría hablar contigo.-dijo con tono dubitativo</p>\
+		<p>-Claro, <a href='mago2'>acompáñame</a>  </p>"		
+	),
+	"mago2": new undum.SimpleSituation(
+		"<p>-He visto que tienes un don especial para la magia. Va a ser una misión muy difícil y es posible que si logramos matar al emperador\
+		<img src='media/games/tutorial/baston.jpg' class='float_right'>\
+		alguno de nosotros no continúe con vida. Por eso quiero hacerte entrega de un objeto que ha durado en nuestra familia durante generaciones\
+		. Se trata de un<a href='./baston' class='once'> bastón mágico</a> que te permitirá aumentar tu fuerza en el combate y en tus hechizos. Confío en que sabrás usarlo bien.-concluyó Anna con ahínco</p>"
+		, {
+			actions: {
+				'baston': function (character, system, action) {
+					system.setQuality("baston", true);
+					system.setCharacterText("<p>Coges el bastón con energía. Sientes su poder y su dureza a la vez que ligero de manipular.</p>");
+				}
+			}
+		}
+	
+		),
 	"caballero": new undum.SimpleSituation(
 		"<p> Me despedí de mi pueblo y de la gente que apreciaba y partí hacia la ciudad con el resto. Pasaron 5 años desde aquel día. \
 		Me he estado formando durante este tiempo con mi mentor Félix, me ha enseñado muchas técnicas y como moverme en una batalla.</p>\

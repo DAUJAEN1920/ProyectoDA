@@ -647,7 +647,22 @@ undum.game.situations = {
 		y el hombre grita de dolor mientras caía al suelo. El hombre que me lanzó el cuchillo vino a por mí, era el más grande. </p>\
 		<p>- Veo que no eres tan inútil como pareces pero a ver ahora cómo te defiendes pequeño. - dijo mientras se preparaba para arremeter contra mí.</p>\
 		<p>Lanzó dos reveses contra mí, uno lo paré con el escudo, ya casi destruido por el golpe, pero el otro alcanzó mi pierna, dejándome una herida no muy grave, \
-		ya que me eché para atrás y conseguí que el ataque no fuera a más. \</p>"
+		ya que me eché para atrás y conseguí que el ataque no fuera a más.No tenía mucho más que hacer con el palo restante de la lanza, así que intenté buscar algo con lo que defenderme,\
+		pude ver una <a href='sarten'>sarten</a>, un <a href='escudo'>escudo de hierro</a> y una <a href='flecha'>flecha puntiaguda</a>. \</p>"
+	),
+	"sarten": new undum.SimpleSituation(
+		"<p>Pude ver el mango saliente de una sartén en una de las cajas apiladas que había donde guardamos las armas, la mayoría era menaje y piezas de armas estropeadas. \
+		<p>Justo antes de que uno de los encapuchados se abalanzase sobre mí, pude esquivarlo y alcanzar la sartén por el mango.</p>\
+		\
+		<p>Nada más girarse para asestarme con la daga, le doy un derechazo con la sartén en la cabeza como si de un partido de tenis se tratara.</p>\
+		<p>El agresor, cayó fulminado al suelo, por lo que aproveché la situación para coger su daga e hincársela al otro encapuchado que tenía media lanza clavada en el <a href='pecho'>pecho</a>.</p>"
+		),
+	"pecho": new undum.SimpleSituation(
+		"<p>Cuando terminé con los dos agresores, me disponía a ayudar a Félix pero en un abrir y cerrar de ojos, había acabado con los otros dos y estaba limpiando su lanza.</p>\
+		<p>-¿Qué demonios ha ocurrido? - pregunté a Félix.</p>\
+		<p>-Parece que hay gente que todavía se acuerda de ti, pero no en el buen sentido -respondió.</p>\
+		<p>-Tenía una valiosa oportunidad de averiguar qué estaba pasando <a href='interrogar'>interrogando</a> al agresor que había dejado inconsciente,\
+		o  <a href='rematarlo'>rematarlo</a> y hacer como si no hubiera pasado nada.</p>"		
 	),
 };
 

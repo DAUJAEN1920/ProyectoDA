@@ -97,3 +97,9 @@ Hemos elegido las historias que son innegociables para tratar de terminar el pro
 - Captura de pantalla de las HU descompuestas en tareas al principio del Sprint:
 
 ![Trello](CapturaS3.PNG)
+
+- Capturas de pantalla del Product Backlog y del Sprint Backlog tras las modificaciones realizadas en el Product Backlog Refinement:
+
+![Trello](ProductBacklog.PNG)
+![Trello](BacklogS3.PNG)
+

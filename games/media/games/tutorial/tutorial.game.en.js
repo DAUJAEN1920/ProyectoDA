@@ -739,7 +739,7 @@ undum.game.situations = {
 		<p>Se ve que los rumores de que hace ya años tuvo una escapada bastante sospechosa son ciertos. - concretó Félix. </p>\
 		<p>- Quizás eso explica por qué a mi madre la mataron unos bandidos, ¡Maldito enfermo, me las pagará! - dije muy cabreado.</p>\
 		<p>- ¿Qué piensas hacer? - me dijo Félix.</p>\
-		<p><a href='rapida'>Armarte rapidamente e ir por él</a> o <a href='Lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>\
+		<p><a href='dagarapida'>Armarte rapidamente e ir por él</a> o <a href='dagalucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>\
 "		
 	),
 
@@ -748,8 +748,17 @@ undum.game.situations = {
 		<p>Pude ver el mango saliente de una <a href='./sarten' class='once'> sartén</a> en una de las cajas apiladas que había donde guardamos las armas, la mayoría era menaje y piezas de armas estropeadas. \
 		<p>Justo antes de que uno de los encapuchados se abalanzase sobre mí, pude esquivarlo y alcanzar la sartén por el mango.</p>\
 		\
-		<p>Nada más girarse para asestarme con la daga, le doy un derechazo con la sartén en la cabeza como si de un partido de tenis se tratara.</p>\
-		<p>El agresor, cayó fulminado al suelo <a href='pecho'>pecho</a>.</p>"
+		<p> Habiendo derribado a los dos malhechores que iban a por mí, comprobé cómo iba la situación de Félix contra los dos restantes agresores, para mi sorpresa Félix ya había acabado con ellos hace un rato.</p>\
+		<p>- Te lo dije, en el campo de batalla te supero con creces chavalin. - dijo Félix riendose.</p>\
+		<p>- Solo ha sido suerte viejales. - dije mientras también me reía.</p>\
+		<p>Registramos sus pertenencias para ver si había alguna pista del por qué del ataque, cuando Félix encontró algo:</p>\
+		<p>- Eh Ferdinand, tienes que ver esto, parece una carta donde dice que te asesinen. ¡Es del rey!. </p>\
+		<p>- ¿Pero por qué el rey querría asesinarme? - respondí con asombro. </p>\
+		<p>- Según dice aquí eres el heredero de la corona indirectamente, ya que eres el hijo bastardo de este, el rey Ashnard, también conocido como el rey loco. </p>\
+		<p>Se ve que los rumores de que hace ya años tuvo una escapada bastante sospechosa son ciertos. - concretó Félix. </p>\
+		<p>- Quizás eso explica por qué a mi madre la mataron unos bandidos, ¡Maldito enfermo, me las pagará! - dije muy cabreado.</p>\
+		<p>- ¿Qué piensas hacer? - me dijo Félix.</p>\
+		<p><a href='rapida'>Armarte rapidamente e ir por él</a> o <a href='Lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>"
 		, {
 			actions: {
 				'sarten': function (character, system, action) {
@@ -760,7 +769,7 @@ undum.game.situations = {
 		}
 		),
 	"escudo": new undum.SimpleSituation(
-		"<p>Cogí el escudo de hierro que tenía detrás mía colgado en la pared, me lo puse en el brazo y lo lancé contra este, le golpee en la frente del encapuchado más grande, haciéndole un instanockeo.</p>\
+		"<p>Cogí el <a href='./escudo' class='once'> escudo de hierro </a>que tenía detrás mía colgado en la pared, me lo puse en el brazo y lo lancé contra este, le golpee en la frente del encapuchado más grande, haciéndole un instanockeo.</p>\
 		<p>-¡Vengadores Unidos! - Grité.</p>\
 		<p>-¿Pero qué dices? - saltó Félix.</p>\
 		<p>No lo sé, me ha salido del alma. -dije.</p>\
@@ -785,7 +794,7 @@ undum.game.situations = {
 		}
 		),
 	"flecha": new undum.SimpleSituation(
-		"<p> Agarré una flecha que había visto dentro de un carcaj y con un ataque rápido, se la clavé al enorme encapuchado en el ojo, \
+		"<p> Agarré una <a href='./flecha' class='once'> flecha </a>que había visto dentro de un carcaj y con un ataque rápido, se la clavé al enorme encapuchado en el ojo, \
 		gritando este de dolor y cayendo hacia atrás.</p>\
 		<p> Habiendo derribado a los dos malhechores que iban a por mí, comprobé cómo iba la situación de Félix contra los dos restantes agresores, para mi sorpresa Félix ya había acabado con ellos hace un rato.</p>\
 		<p>- Te lo dije, en el campo de batalla te supero con creces chavalin. - dijo Félix riendose.</p>\
@@ -806,6 +815,37 @@ undum.game.situations = {
 				}
 			}
 		}
+	),
+	"dagarapida": new undum.SimpleSituation(
+		"<p> Decidí armarme rápidamente y fui directo al castillo con Félix, solicité una audiencia con el rey y entre a la sala del trono.</p>\
+		<p>- Vaya, si has conseguido sobrevivir engendro mio. - dijo el rey Ashnar.</p>\
+		<p>- Para tu desgracia sí, vengaré la muerte de mi madre.</p>\
+		<p>- Esa mujer deberia haber muerto aquella noche en las calles como la perra que fue.- dijo el rey mientras se reia.</p>\
+		<p>- ¡Te voy a matar!</p>\
+		<p>- ¡Guardias! - gritó el rey Ashnar.</p>\
+		<p>5 caballeros reales se pusieron entre nosotros y el rey, pero me zafé rápidamente de los que iban a por mí y Félix se encargó de entretener a los restantes. \
+		El rey sacó un espadón Claymore de detrás del trono y arremetió contra mí.</p>\
+		<p>Pero antes que nada saqué la daga que me había acompañado durante toda esta aventura y se la lancé al rey haciéndole una pequeña herida en la cara.</p>\
+		<p>- De verdad crees que así vas a conseguir algo pequeño desgraci.... - El rey calló sobre sus rodillas no entendiendo que estaba ocurriendo.</p>\
+		<p>- Esa daga tiene veneno, tu reinado ha terminado viejo loco. - dije con orgullo y odio.</p>\
+		<p>- ¡Mierdaaaaa! - gritó el rey loco antes de morir.</p>\
+		\
+		<p>Así fue como me convertí en Rey, en el nuevo rey loco, Ferdinand I el tirano, sometí a toda la humanidad a mi poder y goberné haciendo lo que quería hasta el final.</p>\
+		<h1>FIN</h1>"		
+	),
+	"rapida": new undum.SimpleSituation(
+		"<p> Decidí armarme rápidamente y fui directo al castillo con Félix, solicité una audiencia con el rey y entre a la sala del trono.</p>\
+		<p>- Vaya, si has conseguido sobrevivir engendro mio. - dijo el rey Ashnar.</p>\
+		<p>- Para tu desgracia sí, vengaré la muerte de mi madre.</p>\
+		<p>- Esa mujer deberia haber muerto aquella noche en las calles como la perra que fue.- dijo el rey mientras se reia.</p>\
+		<p>- ¡Te voy a matar!</p>\
+		<p>- ¡Guardias! - gritó el rey Ashnar.</p>\
+		<p>5 caballeros reales se pusieron entre nosotros y el rey, pero me zafé rápidamente de los que iban a por mí y Félix se encargó de entretener a los restantes. \
+		El rey sacó un espadón Claymore de detrás del trono y arremetió contra mí.</p>\
+		<p>Saqué mi lanza y mi escudo de hierro, intenté parar el golpe del rey loco pero esa Claymore tenía algo especial, no pude contener \
+		el golpe y salí despedido hacia las paredes del palacio, teniendo la mala suerte de estrellarme contra un pincho de la decoración del castillo \
+		y muriendo en el acto. Así fue como no conseguí mi objetivo y morí en vano, el rey loco siguió a sus anchas reinando a placer y haciendo todo tipo de barbaridades sin que nadie pudiera hacer nada. </p>\
+		<h1>FIN</h1>"
 	),
 };
 

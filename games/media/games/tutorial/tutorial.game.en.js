@@ -606,15 +606,23 @@ undum.game.situations = {
 		emperador maligno que secuestra a escondidas a los niños y esclaviza a los hombres para expandir La Hermandad Oscura-explicó Anna. </p>\
 		Yo había oído hablar de esa hermandad pero desconocía el origen de su proveninecia.</p>\
 		<p>-Está bien, os ayudaremos.-exhalté con enorme energía. </p>\
-		<p>-Genial,partiremos al castillo por la noche. Os explicaré el plan por el camino.-respondío Anna</p>\
-		<p>-Ferdinand,¿tienes un momento?. Me gustaría hablar contigo.-dijo con tono dubitativo</p>\
-		<p>-Claro, <a href='mago2'>acompáñame</a>  </p>"		
+		<p>-Genial,partiremos al castillo por la noche. Os explicaré el plan por el camino.-respondió Anna\
+		-Pero antes de eso me gustaría hablar con vosotros de algo.-dijo Anna algo más serio</p>\
+		<p>-Claro, <a href='mago2'>estamos listos.</a></p>"		
 	),
 	"mago2": new undum.SimpleSituation(
-		"<p>-He visto que tienes un don especial para la magia. Va a ser una misión muy difícil y es posible que si logramos matar al emperador\
+		"<p>-Va a ser una misión muy difícil y es posible que si queremos matar al emperador\
 		<img src='media/games/tutorial/baston.jpg' class='float_right'>\
-		alguno de nosotros no continúe con vida. Por eso quiero hacerte entrega de un objeto que ha durado en nuestra familia durante generaciones\
-		. Se trata de un<a href='./baston' class='once'> bastón mágico</a> que te permitirá aumentar tu fuerza en el combate y en tus hechizos. Confío en que sabrás usarlo bien.-concluyó Anna con ahínco</p>"
+		alguno de nosotros no continúe con vida. Es por ello que me gustaría que uno de vosotros se quedara con esto.\
+		Se trata de un que os permitirá aumentar vuestra magia en el combate.\
+		Así igual podéis igualar mi nivel mágico-concluyó Anna con ahínco</p>\
+		<p>Pues o <a href='bastonf'>me quedo con el bastón,</a> o <a href='bastonl'>se lo encomiendo a Lucía</a></p>"
+		
+		),
+
+	"bastonf": new undum.SimpleSituation(
+		"<p>-Muy bien - dije confiado- yo me quedaré con el <a href='./baston' class='once'> bastón mágico</a>.\
+		Con esto creo que estamos <a href='confirm'>listos</a></p>"
 		, {
 			actions: {
 				'baston': function (character, system, action) {
@@ -623,8 +631,36 @@ undum.game.situations = {
 				}
 			}
 		}
-	
+
 		),
+
+	"confirm": new undum.SimpleSituation(
+	"<p>-¿Estáis seguros?- dijo Anna. </p>",
+		{
+				enter: function( character, system, from ) {
+					if( character.qualities.baston ) {
+						system.doLink( "mago3" );
+					} else { 
+						system.doLink( "retry" );
+					}
+				}
+		}
+	),
+
+	"retry": new undum.SimpleSituation(
+	"<p>-Espera, ¿no vas a coger el <a href='bastonf'>bastón</a>? Porque si no <a href='bastonl'>me lo quedo yo</a>-dijo Lucía.</p>"
+	),
+
+	
+	"mago3": new undum.SimpleSituation(
+	"<p>-Vamos</p>"
+	),
+
+	
+	"bastonl": new undum.SimpleSituation(
+	"<p>-Para ti Lucía</p>"
+	),
+
 	"caballero": new undum.SimpleSituation(
 		"<p> Me despedí de mi pueblo y de la gente que apreciaba y partí hacia la ciudad con el resto. Pasaron 5 años desde aquel día. \
 		Me he estado formando durante este tiempo con mi mentor Félix, me ha enseñado muchas técnicas y como moverme en una batalla.</p>\

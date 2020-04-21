@@ -658,8 +658,22 @@ undum.game.situations = {
 
 	
 	"bastonl": new undum.SimpleSituation(
-	"<p>-Para ti Lucía</p>"
+		"<p>-Mejor quédatelo tú Lucía - dije.</p>\
+		<p>-¡Muy bien, no os arrepentiréis! - dijo confiada mientras cogía el bastón.</p>\
+		<p>-¿Ya está todo decidido no? -dijo Anna- Pues vámonos sin más dilación.</p>\
+		<p> El viaje fue arduo, por el camino no nos encontramos muchas complicaciones pero fue bastante largo. Aún así\
+		teníamos que estar listos para la batalla. Iba a ser la más importante de nuestra vida sin lugar a dudas. </p>\
+		<p>Finalmente llegamos al castillo. Era madrugada, así que era el momento perfecto para infiltrarse en el castillo.\
+		Además, con nuestras habilidades mágicas éramos capaces de ver en la oscuridad, por lo que teníamos una clara ventaja respecto\
+		a los guardas del castillo. Por ello, nos plantamos delante de la <a href='entrada'>entrada al castillo.</a></p>"
 	),
+
+	"entrada": new undum.SimpleSituation(
+		"Una vez en la entrada decidimos mirar alrededor. No había ningún guarda cerca, así que no teníamos que preocuparnos por eso.\
+		Desde aquí podíamos probar a <a href='acercarse'>acercarnos a la puerta principal</a>, <a href='vuelta'>dar una vuelta al castillo</a>\
+		, o <a href='magia'>usar los poderes mágicos para colarte en el castillo.</a>"
+	),
+
 
 	"caballeronodaga": new undum.SimpleSituation(
 		"<p> Me despedí de mi pueblo y de la gente que apreciaba y partí hacia la ciudad con el resto. Pasaron 5 años desde aquel día. \

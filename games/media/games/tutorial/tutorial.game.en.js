@@ -522,7 +522,7 @@ undum.game.situations = {
 		<p>Ella bufó como siempre, me encantaba burlarme de ella. Sin darnos cuenta llegamos finalmente a la cantina</p>\
 		<p>-¡Buenos días! ¡Espero que hayáis decidido ya qué vais a hacer! - dijo Félix.</p>\
 		<p>-El tiempo es oro, vamos a ponernos manos a la obra cuanto antes - añadió Anna.</p>\
-		<p>Este es un momento muy importante de mi vida. Elijo volverme un <a href='caballeroSiDaga'>caballero</a> o un mago.\</p>"
+		<p>Este es un momento muy importante de mi vida. Elijo volverme un <a href='caballerosidaga'>caballero</a> o<a href='mago'> un mago.</a>\</p>"
 	),
 	"nodaga": new undum.SimpleSituation(
 		"<p>Los dos varones se disponían a darnos una paliza a los dos, mientras nosotros nos preparábamos para la contienda.\
@@ -589,7 +589,7 @@ undum.game.situations = {
 		<p>Ella bufó como siempre, me encantaba burlarme de ella. Sin darnos cuenta llegamos finalmente a la cantina</p>\
 		<p>-¡Buenos días! ¡Espero que hayáis decidido ya qué vais a hacer! - dijo Félix.</p>\
 		<p>-El tiempo es oro, vamos a ponernos manos a la obra cuanto antes - añadió Anna.</p>\
-		<p>Este es un momento muy importante de mi vida. Elijo volverme un <a href='caballeroNoDaga'>caballero</a> o<a href='mago'> un mago.</a> \</p>"
+		<p>Este es un momento muy importante de mi vida. Elijo volverme un <a href='caballeronodaga'>caballero</a> o<a href='mago'> un mago.</a> \</p>"
 	),
 	"mago": new undum.SimpleSituation(
 		"<p> Me despedí de mi pueblo y de la gente que apreciaba y partí hacia la ciudad con el resto. Pasaron 5 años desde aquel día. \
@@ -661,7 +661,7 @@ undum.game.situations = {
 	"<p>-Para ti Lucía</p>"
 	),
 
-	"caballeroNoDaga": new undum.SimpleSituation(
+	"caballeronodaga": new undum.SimpleSituation(
 		"<p> Me despedí de mi pueblo y de la gente que apreciaba y partí hacia la ciudad con el resto. Pasaron 5 años desde aquel día. \
 		Me he estado formando durante este tiempo con mi mentor Félix, me ha enseñado muchas técnicas y como moverme en una batalla.</p>\
 		\
@@ -687,7 +687,7 @@ undum.game.situations = {
 		pude ver una <a href='sarten'>sarten</a>, un <a href='escudo'>escudo de hierro</a> y una <a href='flecha'>flecha puntiaguda</a>. \</p>"
 	),
 
-	"caballeroSiDaga": new undum.SimpleSituation(
+	"caballerosidaga": new undum.SimpleSituation(
 		"<p> Me despedí de mi pueblo y de la gente que apreciaba y partí hacia la ciudad con el resto. Pasaron 5 años desde aquel día. \
 		Me he estado formando durante este tiempo con mi mentor Félix, me ha enseñado muchas técnicas y como moverme en una batalla.</p>\
 		\
@@ -712,8 +712,23 @@ undum.game.situations = {
 		ya que me eché para atrás y conseguí que el ataque no fuera a más.No tenía mucho más que hacer con el palo restante de la lanza.</p>\
 		<p>Recordé que llevaba encima la daga que encontré aquella vez, así que le lancé lo que me quedaba de lanza a modo de distracción y saqué la daga. \
 		Intenté defenderme de los siguientes golpes con lo que me quedaba de escudo y cuando vi mi oportunidad, realicé un contraataque, \
-		hiriendo en la barriga al agresor y produciendo el efecto de la daga.\</p>"
+		hiriendo en la barriga al agresor y produciendo el efecto de la daga. <a href='continuar'>Continuar.</a></p>"
 	),
+	"continuar": new undum.SimpleSituation(
+		"<p> Habiendo derribado a los dos malhechores que iban a por mí, comprobé cómo iba la situación de Félix contra los dos restantes agresores, para mi sorpresa Félix ya había acabado con ellos hace un rato.</p>\
+		<p>- Te lo dije, en el campo de batalla te supero con creces chavalin. - dijo Félix riendose.</p>\
+		<p>- Solo ha sido suerte viejales. - dije mientras también me reía.</p>\
+		<p>Registramos sus pertenencias para ver si había alguna pista del por qué del ataque, cuando Félix encontró algo:</p>\
+		<p>- Eh Ferdinand, tienes que ver esto, parece una carta donde dice que te asesinen. ¡Es del rey!. </p>\
+		<p>- ¿Pero por qué el rey querría asesinarme? - respondí con asombro. </p>\
+		<p>- Según dice aquí eres el heredero de la corona indirectamente, ya que eres el hijo bastardo de este, el rey Ashnard, también conocido como el rey loco. </p>\
+		<p>Se ve que los rumores de que hace ya años tuvo una escapada bastante sospechosa son ciertos. - concretó Félix. </p>\
+		<p>- Quizás eso explica por qué a mi madre la mataron unos bandidos, ¡Maldito enfermo, me las pagará! - dije muy cabreado.</p>\
+		<p>- ¿Qué piensas hacer? - me dijo Félix.</p>\
+		<p><a href='rapida'>Armarte rapidamente e ir por él</a> o <a href='Lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>\
+"		
+	),
+
 	"sarten": new undum.SimpleSituation(
 		"<img src='media/games/tutorial/sarten.jpg' class='float_left'>\
 		<p>Pude ver el mango saliente de una <a href='./sarten' class='once'> sartén</a> en una de las cajas apiladas que había donde guardamos las armas, la mayoría era menaje y piezas de armas estropeadas. \

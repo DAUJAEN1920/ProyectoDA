@@ -522,7 +522,7 @@ undum.game.situations = {
 		<p>Ella bufó como siempre, me encantaba burlarme de ella. Sin darnos cuenta llegamos finalmente a la cantina</p>\
 		<p>-¡Buenos días! ¡Espero que hayáis decidido ya qué vais a hacer! - dijo Félix.</p>\
 		<p>-El tiempo es oro, vamos a ponernos manos a la obra cuanto antes - añadió Anna.</p>\
-		<p>Este es un momento muy importante de mi vida. Elijo volverme un <a href='caballero'>caballero</a> o un mago.\</p>"
+		<p>Este es un momento muy importante de mi vida. Elijo volverme un <a href='caballeroSiDaga'>caballero</a> o un mago.\</p>"
 	),
 	"nodaga": new undum.SimpleSituation(
 		"<p>Los dos varones se disponían a darnos una paliza a los dos, mientras nosotros nos preparábamos para la contienda.\
@@ -589,7 +589,7 @@ undum.game.situations = {
 		<p>Ella bufó como siempre, me encantaba burlarme de ella. Sin darnos cuenta llegamos finalmente a la cantina</p>\
 		<p>-¡Buenos días! ¡Espero que hayáis decidido ya qué vais a hacer! - dijo Félix.</p>\
 		<p>-El tiempo es oro, vamos a ponernos manos a la obra cuanto antes - añadió Anna.</p>\
-		<p>Este es un momento muy importante de mi vida. Elijo volverme un <a href='caballero'>caballero</a> o<a href='mago'> un mago.</a> \</p>"
+		<p>Este es un momento muy importante de mi vida. Elijo volverme un <a href='caballeroNoDaga'>caballero</a> o<a href='mago'> un mago.</a> \</p>"
 	),
 	"mago": new undum.SimpleSituation(
 		"<p> Me despedí de mi pueblo y de la gente que apreciaba y partí hacia la ciudad con el resto. Pasaron 5 años desde aquel día. \
@@ -661,7 +661,7 @@ undum.game.situations = {
 	"<p>-Para ti Lucía</p>"
 	),
 
-	"caballero": new undum.SimpleSituation(
+	"caballeroNoDaga": new undum.SimpleSituation(
 		"<p> Me despedí de mi pueblo y de la gente que apreciaba y partí hacia la ciudad con el resto. Pasaron 5 años desde aquel día. \
 		Me he estado formando durante este tiempo con mi mentor Félix, me ha enseñado muchas técnicas y como moverme en una batalla.</p>\
 		\
@@ -686,13 +686,41 @@ undum.game.situations = {
 		ya que me eché para atrás y conseguí que el ataque no fuera a más.No tenía mucho más que hacer con el palo restante de la lanza, así que intenté buscar algo con lo que defenderme,\
 		pude ver una <a href='sarten'>sarten</a>, un <a href='escudo'>escudo de hierro</a> y una <a href='flecha'>flecha puntiaguda</a>. \</p>"
 	),
+
+	"caballeroSiDaga": new undum.SimpleSituation(
+		"<p> Me despedí de mi pueblo y de la gente que apreciaba y partí hacia la ciudad con el resto. Pasaron 5 años desde aquel día. \
+		Me he estado formando durante este tiempo con mi mentor Félix, me ha enseñado muchas técnicas y como moverme en una batalla.</p>\
+		\
+		<p>Me encontraba en las caballerizas entrenando con la lanza y el escudo contra Félix.</p>\
+		<p>- Parece que los años te hacen factura Félix, puedo ganarte con los ojos cerrados si quiero. - dije.</p>\
+		<p>- Pero qué dices bufón, vas a morder el polvo por lo que has dicho. - me respondió con enfado.</p>\
+		\
+		<p>Chocamos las lanzas de madera unas cuantas veces más, hasta que el desenlace del combate de entrenamiento fue una victoria por mi parte.</p>\
+		<p>- Vaya vaya, parece que he mejorado. - dije con orgullo.</p>\
+		<p>- No te equivoques, te he dejado ganar, en el campo de batalla no me igualarías, pero en un entrenamiento no tengo ganas de ponerme en serio </p>\
+		<p>- respondió Félix intentando desmerecer mi victoria.</p>\
+		<p>Nos dirigimos a dejar las armas cuando, de pronto entran 4 encapuchados con dagas en mano. </p>\
+		<p>- ¿Quién es Ferdinand? - preguntó el más grande.</p>\
+		<p>- ¿Quién lo pregunta? -  respondí con un mal presentimiento.</p>\
+		<p>- No te hará falta saberlo. En realidad no importa, vais a morir los dos igualmente. - respondió con aire de superioridad </p>\
+		<p>Los cuatro se abalanzan sobre nosotros, pero no contaban con que sabíamos defendernos y ya habíamos calentado con el entrenamiento.\
+		La batalla se repartió en dos encapuchados para cada uno. Me lanzan un cuchillo arrojadizo, pero lo paro con el escudo de madera, el otro hombre me sorprendió \
+		por la derecha intentando dar una cuchillada con la daga, pero mis reflejos actúan y antes de que lo consiga le clavo la lanza de madera en el pecho, la cual se parte\
+		y el hombre grita de dolor mientras caía al suelo. El hombre que me lanzó el cuchillo vino a por mí, era el más grande. </p>\
+		<p>- Veo que no eres tan inútil como pareces pero a ver ahora cómo te defiendes pequeño. - dijo mientras se preparaba para arremeter contra mí.</p>\
+		<p>Lanzó dos reveses contra mí, uno lo paré con el escudo, ya casi destruido por el golpe, pero el otro alcanzó mi pierna, dejándome una herida no muy grave, \
+		ya que me eché para atrás y conseguí que el ataque no fuera a más.No tenía mucho más que hacer con el palo restante de la lanza.</p>\
+		<p>Recordé que llevaba encima la daga que encontré aquella vez, así que le lancé lo que me quedaba de lanza a modo de distracción y saqué la daga. \
+		Intenté defenderme de los siguientes golpes con lo que me quedaba de escudo y cuando vi mi oportunidad, realicé un contraataque, \
+		hiriendo en la barriga al agresor y produciendo el efecto de la daga.\</p>"
+	),
 	"sarten": new undum.SimpleSituation(
 		"<img src='media/games/tutorial/sarten.jpg' class='float_left'>\
 		<p>Pude ver el mango saliente de una <a href='./sarten' class='once'> sartén</a> en una de las cajas apiladas que había donde guardamos las armas, la mayoría era menaje y piezas de armas estropeadas. \
 		<p>Justo antes de que uno de los encapuchados se abalanzase sobre mí, pude esquivarlo y alcanzar la sartén por el mango.</p>\
 		\
 		<p>Nada más girarse para asestarme con la daga, le doy un derechazo con la sartén en la cabeza como si de un partido de tenis se tratara.</p>\
-		<p>El agresor, cayó fulminado al suelo, por lo que aproveché la situación para coger su daga e hincársela al otro encapuchado que tenía media lanza clavada en el <a href='pecho'>pecho</a>.</p>"
+		<p>El agresor, cayó fulminado al suelo <a href='pecho'>pecho</a>.</p>"
 		, {
 			actions: {
 				'sarten': function (character, system, action) {
@@ -702,12 +730,23 @@ undum.game.situations = {
 			}
 		}
 		),
-	"pecho": new undum.SimpleSituation(
-		"<p>Cuando terminé con los dos agresores, me disponía a ayudar a Félix pero en un abrir y cerrar de ojos, había acabado con los otros dos y estaba limpiando su lanza.</p>\
-		<p>-¿Qué demonios ha ocurrido? - pregunté a Félix.</p>\
-		<p>-Parece que hay gente que todavía se acuerda de ti, pero no en el buen sentido -respondió.</p>\
-		<p>-Tenía una valiosa oportunidad de averiguar qué estaba pasando <a href='interrogar'>interrogando</a> al agresor que había dejado inconsciente,\
-		o  <a href='rematarlo'>rematarlo</a> y hacer como si no hubiera pasado nada.</p>"		
+	"escudo": new undum.SimpleSituation(
+		"<p>Cogí el escudo de hierro que tenía detrás mía colgado en la pared, me lo puse en el brazo y lo lancé contra este, le golpee en la frente del encapuchado más grande, haciéndole un instanockeo.</p>\
+		<p>-¡Vengadores Unidos! - Grité.</p>\
+		<p>-¿Pero qué dices? - saltó Félix.</p>\
+		<p>No lo sé, me ha salido del alma. -dije.</p>\
+		<p> Habiendo derribado a los dos malhechores que iban a por mí, comprobé cómo iba la situación de Félix contra los dos restantes agresores, para mi sorpresa Félix ya había acabado con ellos hace un rato.</p>\
+		<p>- Te lo dije, en el campo de batalla te supero con creces chavalin. - dijo Félix riendose.</p>\
+		<p>- Solo ha sido suerte viejales. - dije mientras también me reía.</p>\
+		<p>Registramos sus pertenencias para ver si había alguna pista del por qué del ataque, cuando Félix encontró algo:</p>\
+		<p>- Eh Ferdinand, tienes que ver esto, parece una carta donde dice que te asesinen. ¡Es del rey!. </p>\
+		<p>- ¿Pero por qué el rey querría asesinarme? - respondí con asombro. </p>\
+		<p>- Según dice aquí eres el heredero de la corona indirectamente, ya que eres el hijo bastardo de este, el rey Ashnard, también conocido como el rey loco. </p>\
+		<p>Se ve que los rumores de que hace ya años tuvo una escapada bastante sospechosa son ciertos. - concretó Félix. </p>\
+		<p>- Quizás eso explica por qué a mi madre la mataron unos bandidos, ¡Maldito enfermo, me las pagará! - dije muy cabreado.</p>\
+		<p>- ¿Qué piensas hacer? - me dijo Félix.</p>\
+		<p><a href='rapida'>Armarte rapidamente e ir por él</a> o <a href='Lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>\
+"		
 	),
 };
 

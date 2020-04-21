@@ -760,8 +760,38 @@ undum.game.situations = {
 		<p>Se ve que los rumores de que hace ya años tuvo una escapada bastante sospechosa son ciertos. - concretó Félix. </p>\
 		<p>- Quizás eso explica por qué a mi madre la mataron unos bandidos, ¡Maldito enfermo, me las pagará! - dije muy cabreado.</p>\
 		<p>- ¿Qué piensas hacer? - me dijo Félix.</p>\
-		<p><a href='rapida'>Armarte rapidamente e ir por él</a> o <a href='Lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>\
-"		
+		<p><a href='rapida'>Armarte rapidamente e ir por él</a> o <a href='Lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>"
+		, {
+			actions: {
+				'escudo': function (character, system, action) {
+					system.setQuality("escudo", true);
+					system.setCharacterText("<p>Adquieres un escudo con un dibujo de una estrella en su centro.</p>");
+				}
+			}
+		}
+		),
+	"flecha": new undum.SimpleSituation(
+		"<p> Agarré una flecha que había visto dentro de un carcaj y con un ataque rápido, se la clavé al enorme encapuchado en el ojo, \
+		gritando este de dolor y cayendo hacia atrás.</p>\
+		<p> Habiendo derribado a los dos malhechores que iban a por mí, comprobé cómo iba la situación de Félix contra los dos restantes agresores, para mi sorpresa Félix ya había acabado con ellos hace un rato.</p>\
+		<p>- Te lo dije, en el campo de batalla te supero con creces chavalin. - dijo Félix riendose.</p>\
+		<p>- Solo ha sido suerte viejales. - dije mientras también me reía.</p>\
+		<p>Registramos sus pertenencias para ver si había alguna pista del por qué del ataque, cuando Félix encontró algo:</p>\
+		<p>- Eh Ferdinand, tienes que ver esto, parece una carta donde dice que te asesinen. ¡Es del rey!. </p>\
+		<p>- ¿Pero por qué el rey querría asesinarme? - respondí con asombro. </p>\
+		<p>- Según dice aquí eres el heredero de la corona indirectamente, ya que eres el hijo bastardo de este, el rey Ashnard, también conocido como el rey loco. </p>\
+		<p>Se ve que los rumores de que hace ya años tuvo una escapada bastante sospechosa son ciertos. - concretó Félix. </p>\
+		<p>- Quizás eso explica por qué a mi madre la mataron unos bandidos, ¡Maldito enfermo, me las pagará! - dije muy cabreado.</p>\
+		<p>- ¿Qué piensas hacer? - me dijo Félix.</p>\
+		<p><a href='rapida'>Armarte rapidamente e ir por él</a> o <a href='Lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>"
+		, {
+			actions: {
+				'flecha': function (character, system, action) {
+					system.setQuality("flecha", true);
+					system.setCharacterText("<p>Adquieres una flecha  puntiaguda.</p>");
+				}
+			}
+		}
 	),
 };
 
@@ -779,6 +809,12 @@ undum.game.qualities = {
 	),
 	sarten: new undum.OnOffQuality(
 		"Sarten", { priority: "0004", group: 'inventario', onDisplay: "&#10004;" }
+	),
+	escudo: new undum.OnOffQuality(
+		"Escudo", { priority: "0005", group: 'inventario', onDisplay: "&#10005;" }
+	),
+	flecha: new undum.OnOffQuality(
+		"Flecha", { priority: "0006", group: 'inventario', onDisplay: "&#10006;" }
 	),
 	skill: new undum.IntegerQuality(
 		"Habilidad", { priority: "0001", group: 'stats' }

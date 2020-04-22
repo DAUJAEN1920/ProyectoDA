@@ -525,7 +525,8 @@ undum.game.situations = {
 		<p>Este es un momento muy importante de mi vida. Elijo volverme un <a href='caballerosidaga'>caballero</a> o<a href='mago'> un mago.</a>\</p>"
 	),
 	"nodaga": new undum.SimpleSituation(
-		"<p>Los dos varones se disponían a darnos una paliza a los dos, mientras nosotros nos preparábamos para la contienda.\
+		"<img src='media/games/tutorial/tabernados.png' class='float_right'>\
+		<p>Los dos varones se disponían a darnos una paliza a los dos, mientras nosotros nos preparábamos para la contienda.\
 		Sin previo aviso, una de las dos personas misteriosas apareció en mitad de la pelea.\
 		Mostraba una figura alta y fornida, más de lo que esperaba. Rápidamente sujetó el brazo del borracho, donde se podía ver una sonrisa por debajo de la capucha.</p>\
 		\
@@ -592,12 +593,14 @@ undum.game.situations = {
 		<p>Este es un momento muy importante de mi vida. Elijo volverme un <a href='caballeronodaga'>caballero</a> o<a href='mago'> un mago.</a> \</p>"
 	),
 	"mago": new undum.SimpleSituation(
-		"<p> Me despedí de mi pueblo y de la gente que apreciaba y partí hacia la ciudad con el resto. Pasaron 5 años desde aquel día. \
+		"<img src='media/games/tutorial/mago.png' class='float_right'>\
+		<p> Me despedí de mi pueblo y de la gente que apreciaba y partí hacia la ciudad con el resto. Pasaron 5 años desde aquel día. \
 		<p>Me he estado formando durante este tiempo con mi maestra Anna,la cual me ha enseñado muchas técnicas y conjuros para usar durante la batalla.</p>\
 		\
 		<p>Estuve practicando y aprendiendo nuevos hechizos durante meses en una sala de entrenamiento junto a Lucía, bajo supervisión de nuestra maestra.</p>\
 		<p>- Vaya, parece que has mejorado Lucía, mas nunca llegarás a mi nivel de poder. -comenté en tono burlesco.</p>\
 		<p>- No me subestimes Ferdie , te vas a enterar. -respondió Lucía acompañado de un hechizo <a href='https://elderscrolls.fandom.com/es/wiki/Proyectil_%C3%ADgneo'>proyectil ígneo.</a></p>\
+		<img src='media/games/tutorial/pigneo.png' class='float_right'>\
 		<p> Afortunadamente mi elevado conocimiento en la hechicería me hizo inmune a su ataque utilizando el hechizo `circulo de protección`.</p>\
 		<p>-Ya basta.-exclamó Anna con autoridad.</p>\
 		<p>-Creo que ya estáis listos para encaminar con nosotros una misión especial-añadió. </p>\
@@ -659,6 +662,7 @@ undum.game.situations = {
 	<p>-Vale, lo haremos como hemos ensayado.- comentó Anna</p>\
 	<p>- Lucía y yo lanzamos un conjuro de alteración: <a href='https://elderscrolls.fandom.com/es/wiki/Par%C3%A1lisis_masiva\
 	'>(Parálisis masiva) </a , para evitar que pudieran pedir refuerzos, o iniciar una pelea. Consiguientemente nos acercamos a los soldados, y le clavamos un puñal en el corazón.</p>\
+	<img src='media/games/tutorial/saloncastillo.jpg' class='float_right'>\
 	<p>Nos disponemos a entrar en el castillo mientras Anna y Felix esconden los cadáveres en un foso cerca del lugar. Dentro del castillo nos encontramos en el \
 	salón principal donde encontramos más soldados. No contamos con ello pero debíamos librarnos de ellos para poder pasar, siendo lo más sigilosos posibles </p>\
 	<p> Lucía propone lanzar un hechizo de <a href='invisibilidad'>invisibilidad</a>, mientras yo insisto en que es mejor usar <a href='runa'>runa de frenesí</a>(Hechizo que nos permite tener la misma apariencia que un objetivo)</p>\ </p>"
@@ -666,6 +670,7 @@ undum.game.situations = {
 
 	"invisibilidad": new undum.SimpleSituation(
 		"<p>-Genial, nos haremos invisibles</p>\
+		<img src='media/games/tutorial/escalera.jpg' class='float_right'>\
 		<p>Lanzamos el hechizo y nos movemos con sigilo subiendo las escaleras y abriendo la puerta del rellano mientras vigilamos que no hay ningún guardia cerca. </p>\
 		<p>-Justamente al llegar a la puerta, un soldado se dirige hacia nuestra dirección, por lo que tenemos que evitar que nos detecte desplazándonos un poco al lado. El guardia\
 		percibe en el ambiente una sensación extraña por lo que teníamos que intentar que no nos detectara de cualquier manera. En ese momento, 2 guardias más se acercan a su posición.</p>\
@@ -692,6 +697,7 @@ undum.game.situations = {
 		"<p>-Gracias por la ayuda- les dije.</p>\
 		<p>-Así es- respondió Felix.</p>\
 		<p>-Vamos, no tenemos tiempo que perder-respondió Lucía enérgica.</p>\
+		<img src='media/games/tutorial/pasillocastillo.jpg' class='float_right'>\
 		<p>En ese momento recorremos todo el pasillo hasta la habitación del emperador. Al llegar, Lucía la abre con poca discrección mientras nosotros vigilábamos.\
 		 En ese momento, vio un grupo de 12 soldados de la Hermandad Oscura apuntándole con ballestas, al mando del emperador.</p>\
 		<p>-¡DISPARAD!-ordenó el emperador.</p>\
@@ -717,7 +723,8 @@ undum.game.situations = {
 	),
 
 	"contmago3": new undum.SimpleSituation(
-		"<p>Dejé todo y marché hacia las montañas del Norte donde llevo una vida pacífica y tranquila</p>\
+		"<img src='media/games/tutorial/montanas.jpg' class='float_right'>\
+		<p>Dejé todo y marché hacia las montañas del Norte donde llevo una vida pacífica y tranquila</p>\
 		<p>Actualmente estoy casado con una mujer maravillosa,Freida ,con la que he podido tener 2 fantásticos hijos, Leia y Skywalker </p>\
 		<h1>FIN</h1>"
 
@@ -729,6 +736,7 @@ undum.game.situations = {
 		<p>-¿Ya está todo decidido no? -dijo Anna- Pues vámonos sin más dilación.</p>\
 		<p> El viaje fue arduo, por el camino no nos encontramos muchas complicaciones pero fue bastante largo. Aún así\
 		teníamos que estar listos para la batalla. Iba a ser la más importante de nuestra vida sin lugar a dudas. </p>\
+		<img src='media/games/tutorial/porton.jpg' class='float_right'>\
 		<p>Finalmente llegamos al castillo. Era madrugada, así que era el momento perfecto para infiltrarse en el castillo.\
 		Además, con nuestras habilidades mágicas éramos capaces de ver en la oscuridad, por lo que teníamos una clara ventaja respecto\
 		a los guardas del castillo. Por ello, nos plantamos delante de la <a href='entrada'>entrada al castillo.</a></p>"
@@ -754,12 +762,14 @@ undum.game.situations = {
 	),
 
 	"puerta1": new undum.SimpleSituation(
-		"<p>Me fijo en que la puerta posee una cerradura... Puedo intentar <a href='abrir'>abrirla con la llave</a>. Aún así, soy un mago, así que \
+		"<img src='media/games/tutorial/cerradura.jpg' class='float_right'>\
+		<p>Me fijo en que la puerta posee una cerradura... Puedo intentar <a href='abrir'>abrirla con la llave</a>. Aún así, soy un mago, así que \
 		puedo <a href='puertam'>intentar destruir la puerta.</a> Si no supongo que tendré que <a href='entrada'>volver a la entrada.</a></p>"
 	),
 
 	"puerta2": new undum.SimpleSituation(
-		"<p>Me fijo en que la puerta posee una cerradura, pero no tengo la llave para abrirla. Aún así, eres un mago, así que \
+		"<img src='media/games/tutorial/cerradura.jpg' class='float_right'>\
+		<p>Me fijo en que la puerta posee una cerradura, pero no tengo la llave para abrirla. Aún así, eres un mago, así que \
 		puedo <a href='puertam'>intentar destruir la puerta.</a> Si no supongo que tendré que <a href='entrada'>volver a la entrada.</a></p>"
 	),
 
@@ -770,6 +780,7 @@ undum.game.situations = {
 		<p>La bola de fuego destruyó la puerta por completo, pero a los pocos segundos numerosos guardas del interior del castillo llegaron a la entrada. \
 		Intentamos escabullirnos pero unos magos nos atacaron desde las ventanas del castillo mientras tratábamos de huir, creando un muro de fuego \
 		que impedía nuestra huida. Numerosos guardas se abalanzaron y acabaron con nostros... Parece que todo salió mal.</p>\
+		<img src='media/games/tutorial/muerto.png' class='float_right'>\
 		<p><h1>HAS MUERTO</h1></p>"
 	),
 
@@ -778,6 +789,7 @@ undum.game.situations = {
 		que había dentro. Llegamos a la parte más alta sin mucha complicación, pero todavía no había rastro de nuestro objetivo.</p>\
 		<p>-Parece que nos toca escalar eso - dije señalando la torre, que era lo único que nos faltaba por explorar.</p>\
 		<p>-Sí, coincido. - dijo Anna- Es altamente probable que nuestro objetivo se encuentre en lo más alto de la torre.</p>\
+		<img src='media/games/tutorial/torre.jpg' class='float_right'>\
 		<p>No podíamos abrir la puerta a esa torre, pero vimos numerosas hendiduras en la torre, así que decidimos empezar a \
 		escalar. Hacía frío y era bastante complicado escalar la torre, pero poco a poco y con ayuda de nuestra magia fuimos capaces de llegar \
 		a lo más alto. Allí miramos por la ventana, y vimos como Tito Mede estaba sentado en su trono.</p>\
@@ -790,6 +802,7 @@ undum.game.situations = {
 		"<p>Decidimos dar una vuelta alrededor del castillo para estudiarlo mejor. El castillo era bastante alto, pero no parecía tener gran superficie. \
 		A lo lejos vislunmbramos un par de guardas vigilando los alrededores. Debido a que es de noche todavía no nos ven, así que decidimos alejarnos \
 		un poco y escondernos en la maleza. ¿Qué hacemos contra esos guardias?</p>\
+		<img src='media/games/tutorial/noche.jpg' class='float_right'>\
 		<p>-Oye, <a href='luciad'>yo puedo distraer a uno de ellos</a>. Mientras tú puedes encargarte del otro.</p>\
 		<p>Podía ser peligroso de todos modos, así que pensé en <a href='peleas'>enfrentearme a ellos solo</a>. Sabía que era\
 		fuerte y no quería poner a Lucía en peligro. Si no, estábamos a tiempo de <a href='entrada>volver a la entrada.</a>, o si tenemos \
@@ -804,6 +817,7 @@ undum.game.situations = {
 		Sin embargo, no tuve en cuenta la velocidad de los guardas, que se me abalanzaron antes de poder lanzar mi hechizo.</p>\
 		<p>Intenté escabullirme de su ataque, pero la espada me cortó la pierna, reduciendo mi movilidad. No pude hacer nada\
 		frente al siguiente ataque... Debí haber sido más precabido...</p>\
+		<img src='media/games/tutorial/muerto.png' class='float_right'>\
 		<p><h1>HAS MUERTO</h1></p>"
 	),
 
@@ -814,6 +828,7 @@ undum.game.situations = {
 		Avanzamos sin dilación, pero el camino estaba en muy mal estado y se desprendió gran parte del camino haciendo un estruendo.</p>\
 		<p>Los guardas cercanos se percataron y llegaron rápidamente a nuestra posición. Intentamos pelear pero estaban demasiado cerca\
 		y no podíamos hacer ninguna magia desde esta distancia. La misión fue un fracaso...</p>\
+		<img src='media/games/tutorial/muerto.png' class='float_right'>\
 		<p><h1>HAS MUERTO</h1></p>"
 	),
 
@@ -828,6 +843,8 @@ undum.game.situations = {
 		<p>-Todo según el plan - dijo Anna confiada </p>\
 		<p>No podíamos hacer nada con el guarda congelado, así que examinamos al guarda. Aunque el cuerpo estaba destrozado, esperábamos encontrar \
 		algo de utilidad. Tras buscar un poco, encontramos una <a href='./llave' class='once'> llave</a> y un <a href='./mapa' class='once'> mapa</a> en su posesión. \
+		<img src='media/games/tutorial/mapa.jpg' class='float_right'>\
+		<img src='media/games/tutorial/llaves.jpg' class='float_right'>\
 		Ahora que habíamos acabado con la vigilancia, podíamos <a href='entrada2'>volver a la entrada,</a> o seguir por <a href='escondite'>el camino que los guardas estaban vigilando.</a></p>",
 		{
 			actions: {
@@ -876,7 +893,8 @@ undum.game.situations = {
 	),
 
 	"nada": new undum.SimpleSituation(
-		"<p>La habitación de la ventana parecía normal. No había nada que llamase especial atención. Intenté forzar \
+		"<img src='media/games/tutorial/hab.jpg' class='float_right'>\
+		<p>La habitación de la ventana parecía normal. No había nada que llamase especial atención. Intenté forzar \
 		la puerta, pero no tenía ningún tipo de cerradura, parecía que estaba cerrada por el otro lado. Era muy raro, \
 		pero no veía nada interesante, así que decidí ir a la ventana y hacerle señales a Lucía.</p>\
 		<p>Al ver mi señal, usó el bastón y me trajo <a href='entrada'>de vuelta a la entrada</p>"
@@ -899,7 +917,8 @@ undum.game.situations = {
 	),
 
 	"nada2": new undum.SimpleSituation(
-		"<p>La habitación de la ventana parecía normal. No había nada que llamase especial atención. Intenté forzar \
+		"<img src='media/games/tutorial/hab.jpg' class='float_right'>\
+		<p>La habitación de la ventana parecía normal. No había nada que llamase especial atención. Intenté forzar \
 		la puerta, pero no tenía ningún tipo de cerradura, parecía que estaba cerrada por el otro lado. Era muy raro, \
 		pero no veía nada interesante, así que decidí ir a la ventana y hacerle señales a Lucía.</p>\
 		<p>Al ver mi señal, usó el bastón y me trajo <a href='entrada2'>de vuelta a la entrada</p>"
@@ -909,6 +928,7 @@ undum.game.situations = {
 		"<p>La habitación de la ventana parecía normal. No había nada que llamase especial atención. Intenté forzar \
 		la puerta, pero no tenía ningún tipo de cerradura, parecía que estaba cerrada por el otro lado. Era muy raro...\
 		Decidí mirar el mapa del castillo, y parecía que había una sala secreta detrás de una pared donde había una estantería.</p>\
+		<img src='media/games/tutorial/estante.jpg' class='float_right'>\
 		<p>Quité la estantería del medio, y efectivamente había una puerta que llevaba a una pequeña sala. Allí había un libro \
 		que destacaba por encima de todo. En la portada ponía<a href='./theworld' class='once'> 'The World'</a>, y parecía que era un hechizo muy potente. \
 		En cualquier caso, no había mucho más que hacer, así que me fui por la ventana, y le hice señales a Lucía.</p>\
@@ -931,7 +951,8 @@ undum.game.situations = {
 
 
 	"caballeronodaga": new undum.SimpleSituation(
-		"<p> Me despedí de mi pueblo y de la gente que apreciaba y partí hacia la ciudad con el resto. Pasaron 5 años desde aquel día. \
+		"<img src='media/games/tutorial/caba.png' class='float_right'>\
+		<p> Me despedí de mi pueblo y de la gente que apreciaba y partí hacia la ciudad con el resto. Pasaron 5 años desde aquel día. \
 		Me he estado formando durante este tiempo con mi mentor Félix, me ha enseñado muchas técnicas y como moverme en una batalla.</p>\
 		\
 		<p>Me encontraba en las caballerizas entrenando con la lanza y el escudo contra Félix.</p>\
@@ -1025,6 +1046,7 @@ undum.game.situations = {
 		),
 	"escudo": new undum.SimpleSituation(
 		"<p>Cogí el <a href='./escudo' class='once'> escudo de hierro </a>que tenía detrás mía colgado en la pared, me lo puse en el brazo y lo lancé contra este, le golpee en la frente del encapuchado más grande, haciéndole un instanockeo.</p>\
+		<img src='media/games/tutorial/escudo.png' class='float_left'>\
 		<p>-¡Vengadores Unidos! - Grité.</p>\
 		<p>-¿Pero qué dices? - saltó Félix.</p>\
 		<p>No lo sé, me ha salido del alma. -dije.</p>\
@@ -1049,7 +1071,8 @@ undum.game.situations = {
 		}
 		),
 	"flecha": new undum.SimpleSituation(
-		"<p> Agarré una <a href='./flecha' class='once'> flecha </a>que había visto dentro de un carcaj y con un ataque rápido, se la clavé al enorme encapuchado en el ojo, \
+		"<img src='media/games/tutorial/flecha.png' class='float_left'>\
+		<p> Agarré una <a href='./flecha' class='once'> flecha </a>que había visto dentro de un carcaj y con un ataque rápido, se la clavé al enorme encapuchado en el ojo, \
 		gritando este de dolor y cayendo hacia atrás.</p>\
 		<p> Habiendo derribado a los dos malhechores que iban a por mí, comprobé cómo iba la situación de Félix contra los dos restantes agresores, para mi sorpresa Félix ya había acabado con ellos hace un rato.</p>\
 		<p>- Te lo dije, en el campo de batalla te supero con creces chavalin. - dijo Félix riendose.</p>\
@@ -1086,6 +1109,7 @@ undum.game.situations = {
 		<p>- ¡Mierdaaaaa! - gritó el rey loco antes de morir.</p>\
 		\
 		<p>Así fue como me convertí en Rey, en el nuevo rey loco, Ferdinand I el tirano, sometí a toda la humanidad a mi poder y goberné haciendo lo que quería hasta el final.</p>\
+		<img src='media/games/tutorial/finrey.png' class='float_left'>\
 		<h1>FIN</h1>"		
 	),
 	"rapida": new undum.SimpleSituation(
@@ -1100,7 +1124,8 @@ undum.game.situations = {
 		<p>Saqué mi lanza y mi escudo de hierro, intenté parar el golpe del rey loco pero esa Claymore tenía algo especial, no pude contener \
 		el golpe y salí despedido hacia las paredes del palacio, teniendo la mala suerte de estrellarme contra un pincho de la decoración del castillo \
 		y muriendo en el acto. Así fue como no conseguí mi objetivo y morí en vano, el rey loco siguió a sus anchas reinando a placer y haciendo todo tipo de barbaridades sin que nadie pudiera hacer nada. </p>\
-		<h1>FIN</h1>"
+		<h1>FIN</h1>\
+		<img src='media/games/tutorial/rip.png' class='float_left'>"
 	),
 };
 

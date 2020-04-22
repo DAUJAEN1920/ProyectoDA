@@ -753,10 +753,38 @@ undum.game.situations = {
 		}
 	),
 
-	"puerta2": new undum.SimpleSituation(
-		"<p>Me fijo en que la puerta posee una cerradura, pero no posees la llave para abrirla. Aún así, eres un mago, así que \
+	"puerta1": new undum.SimpleSituation(
+		"<p>Me fijo en que la puerta posee una cerradura... Puedo intentar <a href='abrir'>abrirla con la llave</a>. Aún así, soy un mago, así que \
 		puedo <a href='puertam'>intentar destruir la puerta.</a> Si no supongo que tendré que <a href='entrada'>volver a la entrada.</a></p>"
 	),
+
+	"puerta2": new undum.SimpleSituation(
+		"<p>Me fijo en que la puerta posee una cerradura, pero no tengo la llave para abrirla. Aún así, eres un mago, así que \
+		puedo <a href='puertam'>intentar destruir la puerta.</a> Si no supongo que tendré que <a href='entrada'>volver a la entrada.</a></p>"
+	),
+
+	"puertam": new undum.SimpleSituation(
+		"<p>-Ya que estamos aquí vamos a entrar mediante la fuerza bruta - dije mientras preparaba un hechizo ígneo.</p>\
+		<p>-¡¿Estás seguro de que es buena idea?! - dijo alarmada Lucía</p>\
+		<p>-¡Pues claro! ¿Qué podría salir mal?</p>\
+		<p>La bola de fuego destruyó la puerta por completo, pero a los pocos segundos numerosos guardas del interior del castillo llegaron a la entrada. \
+		Intentamos escabullirnos pero unos magos nos atacaron desde las ventanas del castillo mientras tratábamos de huir, creando un muro de fuego \
+		que impedía nuestra huida. Numerosos guardas se abalanzaron y acabaron con nostros... Parece que todo salió mal.</p>\
+		<p><h1>HAS MUERTO</h1></p>"
+	),
+
+	"abrir": new undum.SimpleSituation(
+		"<p>Abrí la puerta con la llave, y nos infiltramos en el castillo. Avanzamos rápidamente por el castillo, esquivando los guardas\
+		que había dentro. Llegamos a la parte más alta sin mucha complicación, pero todavía no había rastro de nuestro objetivo.</p>\
+		<p>-Parece que nos toca escalar eso - dije señalando la torre, que era lo único que nos faltaba por explorar.</p>\
+		<p>-Sí, coincido. - dijo Anna- Es altamente probable que nuestro objetivo se encuentre en lo más alto de la torre.</p>\
+		<p>No podíamos abrir la puerta a esa torre, pero vimos numerosas hendiduras en la torre, así que decidimos empezar a \
+		escalar. Hacía frío y era bastante complicado escalar la torre, pero poco a poco y con ayuda de nuestra magia fuimos capaces de llegar \
+		a lo más alto. Allí miramos por la ventana, y vimos como Tito Mede estaba sentado en su trono.</p>\
+		<p>Esta era la batalla final, teníamos <a href='preludio'>que decidir cómo actuar.</a></p>"
+	),
+
+
 
 	"vuelta": new undum.SimpleSituation(
 		"<p>Decidimos dar una vuelta alrededor del castillo para estudiarlo mejor. El castillo era bastante alto, pero no parecía tener gran superficie. \
@@ -764,8 +792,29 @@ undum.game.situations = {
 		un poco y escondernos en la maleza. ¿Qué hacemos contra esos guardias?</p>\
 		<p>-Oye, <a href='luciad'>yo puedo distraer a uno de ellos</a>. Mientras tú puedes encargarte del otro.</p>\
 		<p>Podía ser peligroso de todos modos, así que pensé en <a href='peleas'>enfrentearme a ellos solo</a>. Sabía que era\
-		fuerte y no quería poner a Lucía en peligro. Si no estábamos a tiempo de <a href='entrada>volver a la entrada.</a>, o si tenemos \
+		fuerte y no quería poner a Lucía en peligro. Si no, estábamos a tiempo de <a href='entrada>volver a la entrada.</a>, o si tenemos \
 		suerte, podemos <a href='colarse'>colarnos detrás de los guardas,</a> ya que sospechaba que tenían que estar guardando algo.</p>"
+	),
+
+	
+	"peleas": new undum.SimpleSituation(
+		"<p>-Mejor me enfrentaré yo a ellos sólo - dije con confianza - no quiero poneros en peligro </p> \
+		<p>-¡Me niego!¡Es muy peligroso, y no soy alguien de quién tengas que preocuparte, sé pelear!</p> \
+		<p>Ignoré su comentario y salí corriendo hacia los guardas. Una vez me avistaron, comencé a invocar una magia ígnea. \
+		Sin embargo, no tuve en cuenta la velocidad de los guardas, que se me abalanzaron antes de poder lanzar mi hechizo.</p>\
+		<p>Intenté escabullirme de su ataque, pero la espada me cortó la pierna, reduciendo mi movilidad. No pude hacer nada\
+		frente al siguiente ataque... Debí haber sido más precabido...</p>\
+		<p><h1>HAS MUERTO</h1></p>"
+	),
+
+	"colarse": new undum.SimpleSituation(
+		"<p>-Creo que es mejor que les ignoremos e intentemos colarnos - dije - Tiene que haber algo bueno detrás si lo están guardando.</p> \
+		<p>-Está bien - dijo Anna - Pero aseguraos de que no os vean</p> \
+		<p>Logramos colocarnos detrás de ellos. Parecía un camino ruinoso que llevaba a algún tipo de entrada trasera. \
+		Avanzamos sin dilación, pero el camino estaba en muy mal estado y se desprendió gran parte del camino haciendo un estruendo.</p>\
+		<p>Los guardas cercanos se percataron y llegaron rápidamente a nuestra posición. Intentamos pelear pero estaban demasiado cerca\
+		y no podíamos hacer ninguna magia desde esta distancia. La misión fue un fracaso...</p>\
+		<p><h1>HAS MUERTO</h1></p>"
 	),
 
 	"luciad": new undum.SimpleSituation(
@@ -785,20 +834,101 @@ undum.game.situations = {
 				'llave': function (character, system, action) {
 					system.setQuality("llave", true);
 					system.setCharacterText("<p>Una llave que puede servir para abrir alguna puerta.</p>");
-				}
-				
-			}
-			
-		},
-		{
-			actions: {
-			'mapa': function (character, system, action) {
+				},
+				'mapa': function (character, system, action) {
 					system.setQuality("mapa", true);
 					system.setCharacterText("<p>Un mapa del castillo.</p>");
 				}
 			}
 		}
 	),
+
+	"escondite": new undum.SimpleSituation(
+		"<p>-Vamos a colarnos por ahí - dije - Tiene que haber algo bueno detrás si lo estaban vigilando.</p>\
+		<p>-Está bien - dijo Anna - Pero aseguraos de que no os vean</p>\
+		<p>Parecía un camino ruinoso que llevaba a algún tipo de entrada trasera. \
+		Avanzamos sin dilación, pero el camino estaba en muy mal estado y se desprendió gran parte del camino haciendo un estruendo.</p>\
+		<p>Por suerte ya no había enemigos por nuestros alrededores, así que logramos colarnos dentro del castillo sin mayor problema.\
+		Era una entrada por las alcantarillas, así que intentamos infiltramos por ahí. Sin embargo no encontramos ningún método para avanzar...</p>\
+		<p>-¡Menuda pérdida de tiempo! -dijo cabreada Lucía - Supongo que no tenemos más opción que <a href='entrada2'>volver a la entrada</a></p>"
+	),
+
+	"entrada2": new undum.SimpleSituation(
+		"<p>Una vez en la entrada decidimos mirar alrededor. No había ningún guarda cerca, así que no teníamos que preocuparnos por eso.\
+		Desde aquí podíamos probar a <a href='acercarse'>acercarnos a la puerta principal</a>, <a href='vuelta2'>dar una vuelta al castillo</a>\
+		, o <a href='magia2'>usar los poderes mágicos para colarte en el castillo.</a></p>"
+	),
+
+	"magia": new undum.SimpleSituation(
+		"<p>-Oye, creo que puedes usar el bastón para llevarme hasta esa ventana - le dije a Lucía.</p>\
+		<p>-Bueno, supongo que podemos intentar ver que hay ahí, aunque estarás solo - dijo algo preocupada Lucía.</p>\
+		<p>-No pasará nada, si no encuentro nada me daré la vuelta - dije para calmarla.</p>\
+		<p>Lucía finalmente asintió, y usó los poderes del bastón para teletransportarme a la ventana.",
+		{
+				enter: function( character, system, from ) {
+					if( character.qualities.mapa ) {
+						system.doLink( "secreto" );
+					} else { 
+						system.doLink( "nada" );
+					}
+				}
+		}
+	),
+
+	"nada": new undum.SimpleSituation(
+		"<p>La habitación de la ventana parecía normal. No había nada que llamase especial atención. Intenté forzar \
+		la puerta, pero no tenía ningún tipo de cerradura, parecía que estaba cerrada por el otro lado. Era muy raro, \
+		pero no veía nada interesante, así que decidí ir a la ventana y hacerle señales a Lucía.</p>\
+		<p>Al ver mi señal, usó el bastón y me trajo <a href='entrada'>de vuelta a la entrada</p>"
+		),
+
+	"magia2": new undum.SimpleSituation(
+		"<p>-Oye, creo que puedes usar el bastón para llevarme hasta esa ventana - le dije a Lucía.</p>\
+		<p>-Bueno, supongo que podemos intentar ver que hay ahí, aunque estarás solo - dijo algo preocupada Lucía.</p>\
+		<p>-No pasará nada, si no encuentro nada me daré la vuelta - dije para calmarla.</p>\
+		<p>Lucía finalmente asintió, y usó los poderes del bastón para teletransportarme a la ventana.",
+		{
+				enter: function( character, system, from ) {
+					if( character.qualities.mapa ) {
+						system.doLink( "secreto" );
+					} else { 
+						system.doLink( "nada2" );
+					}
+				}
+		}
+	),
+
+	"nada2": new undum.SimpleSituation(
+		"<p>La habitación de la ventana parecía normal. No había nada que llamase especial atención. Intenté forzar \
+		la puerta, pero no tenía ningún tipo de cerradura, parecía que estaba cerrada por el otro lado. Era muy raro, \
+		pero no veía nada interesante, así que decidí ir a la ventana y hacerle señales a Lucía.</p>\
+		<p>Al ver mi señal, usó el bastón y me trajo <a href='entrada2'>de vuelta a la entrada</p>"
+		),
+
+	"secreto": new undum.SimpleSituation(
+		"<p>La habitación de la ventana parecía normal. No había nada que llamase especial atención. Intenté forzar \
+		la puerta, pero no tenía ningún tipo de cerradura, parecía que estaba cerrada por el otro lado. Era muy raro...\
+		Decidí mirar el mapa del castillo, y parecía que había una sala secreta detrás de una pared donde había una estantería.</p>\
+		<p>Quité la estantería del medio, y efectivamente había una puerta que llevaba a una pequeña sala. Allí había un libro \
+		que destacaba por encima de todo. En la portada ponía<a href='./theworld' class='once'> 'The World'</a>, y parecía que era un hechizo muy potente. \
+		En cualquier caso, no había mucho más que hacer, así que me fui por la ventana, y le hice señales a Lucía.</p>\
+		<p>Al ver mi señal, usó el bastón y me trajo <a href='entrada2'>de vuelta a la entrada</p>", 
+		{
+			actions: {
+				'theworld': function (character, system, action) {
+					system.setQuality("The World", true);
+					system.setCharacterText("<p>Sientes que alberga un extraño poder que altera el tiempo...</p>");
+				}
+			}
+		}
+		),
+
+
+	"vuelta2": new undum.SimpleSituation(
+		"<p>No había nada más de interés alrededor del castillo salvo <a href='escondite'>el camino que los guardas estaban vigilando.</a>\
+		La otra opción era <a href='entrada2'>volver a la entrada.</a></p>"
+	),
+
 
 	"caballeronodaga": new undum.SimpleSituation(
 		"<p> Me despedí de mi pueblo y de la gente que apreciaba y partí hacia la ciudad con el resto. Pasaron 5 años desde aquel día. \
@@ -1000,6 +1130,9 @@ undum.game.qualities = {
 	),
 	mapa: new undum.OnOffQuality(
 		"Mapa", { priority: "0008", group: 'inventario', onDisplay: "&#10008;" }
+	),
+	theworld: new undum.OnOffQUality(
+		"The World", { priority: "0009", group: 'inventario', onDisplay: "&#10009;" }
 	),
 	skill: new undum.IntegerQuality(
 		"Habilidad", { priority: "0001", group: 'stats' }

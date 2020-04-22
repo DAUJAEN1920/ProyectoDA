@@ -44,7 +44,7 @@ undum.game.situations = {
 		<p>- Bueno, hab&#237a pensado que hoy podr&#237as acompa&#241arme para cuidar del ganado - dijo Luc&#237a - Necesitaremos provisiones para las fiestas venideras y un poco de ayuda no estar&#237a mal.</p>\
         \
         <p class='transient'>Ya ten&#237a planeado ir a por el cultivo, pues hoy era el d&#237a de la recolecta. No s&#233 qu&#233 decidir entre <a href='sit1'>acompa&#241ar a\
-        Luc&#237a</a> o <a href='sitcultivo'>ir al cultivo</a> </p>"
+        Luc&#237a</a> o <a href='sitcultivo'>Ir al cultivo</a> </p>"
 	),
 
 	// NB: The 'hub' situation which is the main list of topics, is
@@ -653,9 +653,75 @@ undum.game.situations = {
 
 	
 	"mago3": new undum.SimpleSituation(
-	"<p>-Vamos</p>"
+		"<p>-Vamos</p>\
+	<p>Estaba muy nervioso, era nuestra primera misión como magos. A Lucía también se le notaba bastante nerviosa, se le podían ver las gotas de sudor \
+	deslizándose por su frente a kilómetros. Llegamos al castillo unas pocas horas después de nuestra salida. Podíamos ver 2 guardias vigilando la puerta principal</p>\
+	<p>-Vale, lo haremos como hemos ensayado.- comentó Anna</p>\
+	<p>- Lucía y yo lanzamos un conjuro de alteración: <a href='https://elderscrolls.fandom.com/es/wiki/Par%C3%A1lisis_masiva\
+	'>(Parálisis masiva) </a , para evitar que pudieran pedir refuerzos, o iniciar una pelea. Consiguientemente nos acercamos a los soldados, y le clavamos un puñal en el corazón.</p>\
+	<p>Nos disponemos a entrar en el castillo mientras Anna y Felix esconden los cadáveres en un foso cerca del lugar. Dentro del castillo nos encontramos en el \
+	salón principal donde encontramos más soldados. No contamos con ello pero debíamos librarnos de ellos para poder pasar, siendo lo más sigilosos posibles </p>\
+	<p> Lucía propone lanzar un hechizo de <a href='invisibilidad'>invisibilidad</a>, mientras yo insisto en que es mejor usar <a href='runa'>runa de frenesí</a>(Hechizo que nos permite tener la misma apariencia que un objetivo)</p>\ </p>"
 	),
 
+	"invisibilidad": new undum.SimpleSituation(
+		"<p>-Genial, nos haremos invisibles</p>\
+		<p>Lanzamos el hechizo y nos movemos con sigilo subiendo las escaleras y abriendo la puerta del rellano mientras vigilamos que no hay ningún guardia cerca. </p>\
+		<p>-Justamente al llegar a la puerta, un soldado se dirige hacia nuestra dirección, por lo que tenemos que evitar que nos detecte desplazándonos un poco al lado. El guardia\
+		percibe en el ambiente una sensación extraña por lo que teníamos que intentar que no nos detectara de cualquier manera. En ese momento, 2 guardias más se acercan a su posición.</p>\
+		<p>+¿Quiénes sois?, No me suenan vuestras caras-Preguntó el guardia que casi nos detecta</p>\
+		<p>-Venimos para sustituirte en la guardia nocturna. Puedes retirarte soldado - respondió uno de los dos guardias</p>\
+		<p>+Esto es un poco extraño, el emperador me ordenó que vigil...- </p>\
+		<p>Sin dejar que terminara la frase, uno de los soldados lo asesina a sangre fría degoyándole la garganta con un puñal.</p>\
+		<p>-Salid de ahí- nos susurró uno de los guardias</p>\
+		<p>-De repente los guardias empiezan a sufrir una transformación en otras personas. Eran <a href='contmago'>Anna y Felix </a></p>\
+		</p>"
+	),
+
+	"runa": new undum.SimpleSituation(
+		"<p>-Genial, nos haremos pasar por soldados</p>\
+			<p>Una vez convertidos en soldados nos disponemos a subir las escaleras y abrir la puerta del rellano, sin tratar de levantar muchas sospechas.</p>\
+			<p>Al llegar a la puerta, un soldado se nos quedó fijamente mirando y optó por acercarse hacia nosotros.</p>\
+		<p>+¿Quiénes sois?, No me suenan vuestras caras-Preguntó el guardia</p>\
+		<p>-Somos nuevos reclutas, el emperador nos comandó ocuparnos del turno nocturno hoy-respondió Lucía</p>\
+		<p>+Que extraño, estas cosas siempre me las notifica el emper...</p>\
+		<p>En ese momento, una hoja de daga sobresalío del orificio de su boca, desplomándose en el suelo.Tras su cuerpo se encontraban <a href='contmago'>Anna, y Felix </a>con la daga en la mano</p>\
+</p>"
+	),
+	"contmago": new undum.SimpleSituation(
+		"<p>-Gracias por la ayuda- les dije.</p>\
+		<p>-Así es- respondió Felix.</p>\
+		<p>-Vamos, no tenemos tiempo que perder-respondió Lucía enérgica.</p>\
+		<p>En ese momento recorremos todo el pasillo hasta la habitación del emperador. Al llegar, Lucía la abre con poca discrección mientras nosotros vigilábamos.\
+		 En ese momento, vio un grupo de 12 soldados de la Hermandad Oscura apuntándole con ballestas, al mando del emperador.</p>\
+		<p>-¡DISPARAD!-ordenó el emperador.</p>\
+		<p>-Las flechas impactaron en el pecho, brazos y cabeza de Lucía, arrebatándole así su vida.</p>\
+		<p>-Al fijarme en el sonido de las ballestas, vi el cuerpo de Lucía desplomarse en el suelo. Una ira se apoderó de mí, haciendo que entrara en la habitación y quemara a todos mediante el hechizo \
+		<a href='https://elderscrolls.fandom.com/es/wiki/Tormenta_de_fuego'>tormenta de fuego </a>.</p>\
+		<p>Lamentablemente, el emperador había escapado por la ventana, así que corro tras él para acabar <a href='contmago2'> con esto de una vez por todas.</a></p>\
+		<p></p>\
+</p>"
+	),
+	"contmago2": new undum.SimpleSituation(
+		"<p>Logré alcanzarle debido a su avanzada edad.</p>\
+		<p>-¿En serio vas a matarme con tus hechizos?, pelea con tu arma como un hombre-dijo el emperador </p>\
+		<p>-Quiero que sufras. Vas a pagar lo que le has hecho a Lucía- respondí</p>\
+		<p>Saqué mi bastón y él su espada daédrica y comenzamos un frenetico duelo.Paraba muy bien mis golpes de ira. En uno de esos golpes contratacó\
+		con una estocada en el hombro que me dejó malherido.</p>\
+		<p>¿Tus últimas palabras?- dijo riendo el emperador</p>\
+		<p>Me levanté, presiendo la herida para que no perdiera mucha sangre</p>\
+		<p>¿Sabes?,toda mi vida he sufrido pérdidas de mis seres queridos. Pero nunca he podido vengar su muerte. Me has arrebatado lo único que me quedaba y vas a morir por ello.-</p>\
+		<p>El emperador se dispuso a darme el golpe de gracia, pero logro esquivarlo en el último momento. Gracias a un cabezazo, logro arrebatarle su espada la cual se la clavo en el corazón lentamente.</p>\
+		<p>Uso un hechizo de curación para recuperarme y decido <a href='contmago3'> huir</a> dejando atrás a Anna y a Felix </p>\
+</p>"
+	),
+
+	"contmago3": new undum.SimpleSituation(
+		"<p>Dejé todo y marché hacia las montañas del Norte donde llevo una vida pacífica y tranquila</p>\
+		<p>Actualmente estoy casado con una mujer maravillosa,Freida ,con la que he podido tener 2 fantásticos hijos, Leia y Skywalker </p>\
+		<h1>FIN</h1>"
+
+	),
 	
 	"bastonl": new undum.SimpleSituation(
 		"<p>-Mejor quédatelo tú Lucía - dije.</p>\
@@ -692,45 +758,14 @@ undum.game.situations = {
 		puedo <a href='puertam'>intentar destruir la puerta.</a> Si no supongo que tendré que <a href='entrada'>volver a la entrada.</a></p>"
 	),
 
-	"puertam": new undum.SimpleSituation(
-		"<p>-Ya que estamos aquí vamos a entrar mediante la fuerza bruta - dije mientras preparaba un hechizo ígneo.</p>\
-		<p>-¡¿Estás seguro de que es buena idea?! - dijo alarmada Lucía</p>\
-		<p>-¡Pues claro! ¿Qué podría salir mal?</p>\
-		<p>La bola de fuego destruyó la puerta por completo, pero a los pocos segundos numerosos guardas del interior del castillo llegaron a la entrada. \
-		Intentamos escabullirnos pero unos magos nos atacaron desde las ventanas del castillo mientras tratábamos de huir, creando un muro de fuego \
-		que impedía nuestra huida. Numerosos guardas se abalanzaron y acabaron con nostros... Parece que todo salió mal.</p>\
-		<p><h1>HAS MUERTO</h1></p>"
-	),
-
 	"vuelta": new undum.SimpleSituation(
 		"<p>Decidimos dar una vuelta alrededor del castillo para estudiarlo mejor. El castillo era bastante alto, pero no parecía tener gran superficie. \
 		A lo lejos vislunmbramos un par de guardas vigilando los alrededores. Debido a que es de noche todavía no nos ven, así que decidimos alejarnos \
 		un poco y escondernos en la maleza. ¿Qué hacemos contra esos guardias?</p>\
 		<p>-Oye, <a href='luciad'>yo puedo distraer a uno de ellos</a>. Mientras tú puedes encargarte del otro.</p>\
 		<p>Podía ser peligroso de todos modos, así que pensé en <a href='peleas'>enfrentearme a ellos solo</a>. Sabía que era\
-		fuerte y no quería poner a Lucía en peligro. Si no, estábamos a tiempo de <a href='entrada>volver a la entrada.</a>, o si tenemos \
+		fuerte y no quería poner a Lucía en peligro. Si no estábamos a tiempo de <a href='entrada>volver a la entrada.</a>, o si tenemos \
 		suerte, podemos <a href='colarse'>colarnos detrás de los guardas,</a> ya que sospechaba que tenían que estar guardando algo.</p>"
-	),
-
-	
-	"peleas": new undum.SimpleSituation(
-		"<p>-Mejor me enfrentaré yo a ellos sólo - dije con confianza - no quiero poneros en peligro </p> \
-		<p>-¡Me niego!¡Es muy peligroso, y no soy alguien de quién tengas que preocuparte, sé pelear!</p> \
-		<p>Ignoré su comentario y salí corriendo hacia los guardas. Una vez me avistaron, comencé a invocar una magia ígnea. \
-		Sin embargo, no tuve en cuenta la velocidad de los guardas, que se me abalanzaron antes de poder lanzar mi hechizo.</p>\
-		<p>Intenté escabullirme de su ataque, pero la espada me cortó la pierna, reduciendo mi movilidad. No pude hacer nada\
-		frente al siguiente ataque... Debí haber sido más precabido...</p>\
-		<p><h1>HAS MUERTO</h1></p>"
-	),
-
-	"colarse": new undum.SimpleSituation(
-		"<p>-Creo que es mejor que les ignoremos e intentemos colarnos - dije - Tiene que haber algo bueno detrás si lo están guardando.</p> \
-		<p>-Está bien - dijo Anna - Pero aseguraos de que no os vean</p> \
-		<p>Logramos colocarnos detrás de ellos. Parecía un camino ruinoso que llevaba a algún tipo de entrada trasera. \
-		Avanzamos sin dilación, pero el camino estaba en muy mal estado y se desprendió gran parte del camino haciendo un estruendo.</p>\
-		<p>Los guardas cercanos se percataron y llegaron rápidamente a nuestra posición. Intentamos pelear pero estaban demasiado cerca\
-		y no podíamos hacer ninguna magia desde esta distancia. La misión fue un fracaso...</p>\
-		<p><h1>HAS MUERTO</h1></p>"
 	),
 
 	"luciad": new undum.SimpleSituation(
@@ -750,24 +785,19 @@ undum.game.situations = {
 				'llave': function (character, system, action) {
 					system.setQuality("llave", true);
 					system.setCharacterText("<p>Una llave que puede servir para abrir alguna puerta.</p>");
-				},
-				'mapa': function (character, system, action) {
+				}
+				
+			}
+			
+		},
+		{
+			actions: {
+			'mapa': function (character, system, action) {
 					system.setQuality("mapa", true);
 					system.setCharacterText("<p>Un mapa del castillo.</p>");
 				}
 			}
 		}
-	),
-
-	"entrada2": new undum.SimpleSituation(
-		"<p>Una vez en la entrada decidimos mirar alrededor. No había ningún guarda cerca, así que no teníamos que preocuparnos por eso.\
-		Desde aquí podíamos probar a <a href='acercarse'>acercarnos a la puerta principal</a>, <a href='vuelta2'>dar una vuelta al castillo</a>\
-		, o <a href='magia'>usar los poderes mágicos para colarte en el castillo.</a></p>"
-	),
-
-	"vuelta2": new undum.SimpleSituation(
-		"<p>No había nada más de interés alrededor del castillo salvo <a href='escondite'>el camino que los guardas estaban vigilando.</a>\
-		La otra opción era <a href='entrada2'>volver a la entrada.</a></p>"
 	),
 
 	"caballeronodaga": new undum.SimpleSituation(
@@ -834,7 +864,7 @@ undum.game.situations = {
 		<p>Se ve que los rumores de que hace ya años tuvo una escapada bastante sospechosa son ciertos. - concretó Félix. </p>\
 		<p>- Quizás eso explica por qué a mi madre la mataron unos bandidos, ¡Maldito enfermo, me las pagará! - dije muy cabreado.</p>\
 		<p>- ¿Qué piensas hacer? - me dijo Félix.</p>\
-		<p><a href='dagarapida'>Armarte rapidamente e ir por él</a> o <a href='lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>\
+		<p><a href='dagarapida'>Armarte rapidamente e ir por él</a> o <a href='dagalucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>\
 "		
 	),
 
@@ -853,7 +883,7 @@ undum.game.situations = {
 		<p>Se ve que los rumores de que hace ya años tuvo una escapada bastante sospechosa son ciertos. - concretó Félix. </p>\
 		<p>- Quizás eso explica por qué a mi madre la mataron unos bandidos, ¡Maldito enfermo, me las pagará! - dije muy cabreado.</p>\
 		<p>- ¿Qué piensas hacer? - me dijo Félix.</p>\
-		<p><a href='rapida'>Armarte rapidamente e ir por él</a> o <a href='lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>"
+		<p><a href='rapida'>Armarte rapidamente e ir por él</a> o <a href='Lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>"
 		, {
 			actions: {
 				'sarten': function (character, system, action) {
@@ -878,7 +908,7 @@ undum.game.situations = {
 		<p>Se ve que los rumores de que hace ya años tuvo una escapada bastante sospechosa son ciertos. - concretó Félix. </p>\
 		<p>- Quizás eso explica por qué a mi madre la mataron unos bandidos, ¡Maldito enfermo, me las pagará! - dije muy cabreado.</p>\
 		<p>- ¿Qué piensas hacer? - me dijo Félix.</p>\
-		<p><a href='rapida'>Armarte rapidamente e ir por él</a> o <a href='lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>"
+		<p><a href='rapida'>Armarte rapidamente e ir por él</a> o <a href='Lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>"
 		, {
 			actions: {
 				'escudo': function (character, system, action) {
@@ -901,7 +931,7 @@ undum.game.situations = {
 		<p>Se ve que los rumores de que hace ya años tuvo una escapada bastante sospechosa son ciertos. - concretó Félix. </p>\
 		<p>- Quizás eso explica por qué a mi madre la mataron unos bandidos, ¡Maldito enfermo, me las pagará! - dije muy cabreado.</p>\
 		<p>- ¿Qué piensas hacer? - me dijo Félix.</p>\
-		<p><a href='rapida'>Armarte rapidamente e ir por él</a> o <a href='lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>"
+		<p><a href='rapida'>Armarte rapidamente e ir por él</a> o <a href='Lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>"
 		, {
 			actions: {
 				'flecha': function (character, system, action) {
@@ -940,34 +970,6 @@ undum.game.situations = {
 		<p>Saqué mi lanza y mi escudo de hierro, intenté parar el golpe del rey loco pero esa Claymore tenía algo especial, no pude contener \
 		el golpe y salí despedido hacia las paredes del palacio, teniendo la mala suerte de estrellarme contra un pincho de la decoración del castillo \
 		y muriendo en el acto. Así fue como no conseguí mi objetivo y morí en vano, el rey loco siguió a sus anchas reinando a placer y haciendo todo tipo de barbaridades sin que nadie pudiera hacer nada. </p>\
-		<h1>HAS MUERTO</h1>"
-	),
-	"lucia": new undum.SimpleSituation(
-		"<p> Me dirigí inmediatamente a la sede de magia donde estaban Lucía y Anna, nada más verlas les dije:</p>\
-		<p>- Os necesito a las dos ahora mismo, prepararos cuanto antes.</p>\
-		<p>- ¿Pero qué pasa? ¿Por qué tanta prisa Ferdi? - dijo Lucía - Ni siquiera nos has saludado y ya quieres que vayamos contigo.</p>\
-		<p>- No hay tiempo, voy a derrocar a mi padre, el rey Loco.</p>\
-		<p>- Ni siquiera con mi poder tendríamos fácil eso que planteas lo sabes ¿no?  - respondió Anna.</p>\
-		<p>- Y… un momento, ¿tu padre? - dijo Lucía con asombro.</p>\
-		<p>- Lo acabo de descubrir, él ha mandado asesinos para silenciarme y no dejar prueba de lo que hizo. </p>\
-		<p>- Bueno… Yo te acompaño. - respondió Lucía - No voy a permitir que te maten. </p>\
-		<p>- Pues que remedio, habrá que ir - dijo Anna.</p>\
-		\
-		<p>Ya preparados nos dispusimos a ir directos al castillo, llegamos hasta la sala del trono, donde innumerables guardias estaban esperandonos,\
-		Félix, Anna y Lucía se encargaron de entretenerlos y mientras, yo me colaba entre sus filas y para ir directo a por el rey. Llego hasta estar a unos pasos frente a él.</p>\
-		<p>- Vaya si has conseguido sobrevivir. - dijo el rey Ashnar.</p>\
-		<p>- Para tu desgracia sí, ¡vengaré la muerte de mi madre!.</p>\
-		<p>- A ver que puedes hacer pequeño engendro - respondió Ashnar.</p>\
-		<p>Me dispuse a atacar con mi escudo y lanza  cuando el rey sacó en espadón Claymore de detrás del trono y arremetió contra mí.\
-		El golpe fue tal que mi escudo se rompió y yo salí despedido, pensaba que se había terminado todo, no iba a poder encajar el golpe\
-		contra la pared, cuando de pronto unas corrientes de aire consiguieron pararme, eran de Lucía.</p>\
-		<p>- Ya te dije que no iba a dejar que murieses. - dijo alegremente.</p>\
-		<p>- Me has salvado la vida Lucía, pero todavía hay que terminar el trabajo.</p>\
-		<p>Me recompuse y fui directo de nuevo a por el rey, intento esquivar una tajada pero la espada es demasiado largo, no puedo esquivarlo bien, cuando Lucía vuelve a salvarme poniendo un pilar de hielo entre la espada y yo, dejándome libre de encajar un golpe al rey.</p>\
-		<p>- ¡¿Pero qué?! - exclamó el rey loco al recibir su golpe el pilar en vez de yo.</p>\
-		<¡Esto se acabó Ashnar! - le grité mientras lanzaba mi lanza a su pecho. </p>\
-		<p>El golpe dió de lleno, Ashnar soltó sangre por la boca por el daño causado pero no se daba por vencido, estaba indefenso, cuando Lucía lanzó un hechizo de estacas de piedra que atravesaron su pecho, cayendo derrotado, ahora sí, gracias a su hechizo y mi lanza.</p>\
-		<p>Después de terminar con el rey loco me ofrecieron ser el nuevo rey, pero lo rechacé. El reino tras ver que no había un heredero se convirtió en una democracia. Félix y Anna vivieron lo que les quedaba de vida siendo mercenarios. Y yo viví una vida tranquila con Lucía en nuestro pueblo natal, donde nos acogieron tras la victoria celebrándolo con una gran fiesta.</p>\
 		<h1>FIN</h1>"
 	),
 };

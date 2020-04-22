@@ -669,9 +669,32 @@ undum.game.situations = {
 	),
 
 	"entrada": new undum.SimpleSituation(
-		"Una vez en la entrada decidimos mirar alrededor. No había ningún guarda cerca, así que no teníamos que preocuparnos por eso.\
+		"<p>Una vez en la entrada decidimos mirar alrededor. No había ningún guarda cerca, así que no teníamos que preocuparnos por eso.\
 		Desde aquí podíamos probar a <a href='acercarse'>acercarnos a la puerta principal</a>, <a href='vuelta'>dar una vuelta al castillo</a>\
-		, o <a href='magia'>usar los poderes mágicos para colarte en el castillo.</a>"
+		, o <a href='magia'>usar los poderes mágicos para colarte en el castillo.</a></p>"
+	),
+
+	"acercarse": new undum.SimpleSituation(
+		"<p>Veo una puerta gigantesca.</p>",
+		{
+				enter: function( character, system, from ) {
+					if( character.qualities.llave ) {
+						system.doLink( "puerta1" );
+					} else { 
+						system.doLink( "puerta2" );
+					}
+				}
+		}
+	),
+
+	"puerta2": new undum.SimpleSituation(
+		"<p>Me fijo en que la puerta posee una cerradura, pero no posees la llave para abrirla. Aún así, eres un mago, así que \
+		puedo <a href='puertam'>intentar destruir la puerta.</a> Si no supongo que tendré que <a href='entrada'>volver a la entrada.</a></p>"
+	),
+
+	"puerta2": new undum.SimpleSituation(
+		"<p>Me fijo en que la puerta posee una cerradura, pero no posees la llave para abrirla. Aún así, eres un mago, así que \
+		puedo <a href='puertam'>intentar destruir la puerta.</a> Si no supongo que tendré que <a href='entrada'>volver a la entrada.</a></p>"
 	),
 
 
@@ -869,6 +892,9 @@ undum.game.qualities = {
 	),
 	flecha: new undum.OnOffQuality(
 		"Flecha", { priority: "0006", group: 'inventario', onDisplay: "&#10006;" }
+	),
+	llave: new undum.OnOffQuality(
+		"Llave", { priority: "0007", group: 'inventario', onDisplay: "&#10007;" }
 	),
 	skill: new undum.IntegerQuality(
 		"Habilidad", { priority: "0001", group: 'stats' }

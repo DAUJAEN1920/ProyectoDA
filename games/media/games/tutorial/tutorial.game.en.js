@@ -692,11 +692,47 @@ undum.game.situations = {
 		puedo <a href='puertam'>intentar destruir la puerta.</a> Si no supongo que tendré que <a href='entrada'>volver a la entrada.</a></p>"
 	),
 
-	"puerta2": new undum.SimpleSituation(
-		"<p>Me fijo en que la puerta posee una cerradura, pero no posees la llave para abrirla. Aún así, eres un mago, así que \
-		puedo <a href='puertam'>intentar destruir la puerta.</a> Si no supongo que tendré que <a href='entrada'>volver a la entrada.</a></p>"
+	"vuelta": new undum.SimpleSituation(
+		"<p>Decidimos dar una vuelta alrededor del castillo para estudiarlo mejor. El castillo era bastante alto, pero no parecía tener gran superficie. \
+		A lo lejos vislunmbramos un par de guardas vigilando los alrededores. Debido a que es de noche todavía no nos ven, así que decidimos alejarnos \
+		un poco y escondernos en la maleza. ¿Qué hacemos contra esos guardias?</p>\
+		<p>-Oye, <a href='luciad'>yo puedo distraer a uno de ellos</a>. Mientras tú puedes encargarte del otro.</p>\
+		<p>Podía ser peligroso de todos modos, así que pensé en <a href='peleas'>enfrentearme a ellos solo</a>. Sabía que era\
+		fuerte y no quería poner a Lucía en peligro. Si no estábamos a tiempo de <a href='entrada>volver a la entrada.</a>, o si tenemos \
+		suerte, podemos <a href='colarse'>colarnos detrás de los guardas,</a> ya que sospechaba que tenían que estar guardando algo.</p>"
 	),
 
+	"luciad": new undum.SimpleSituation(
+		"<p>-Está bien, pero no hagas nada peligroso - Cofiaba en sus habilidades porque tenía el bastón mágico.</p>\
+		<p>Lucía asintió y se adelantó. Se escondió en un árbol muy alto, y empezó a usar un hechizo que asemejaba el grito de unos cuervos. \
+		Uno de los guardas fue hacia el bosque, dejando expuesto al otro guarda.</p>\
+		<p>-Es una oportunidad de oro - dijo Anna sonriendo.</p>\
+		<p>No podía estar más de acuerdo, así que decidimos lanzarle dos ondas al guarda que se había quedado solo, haciéndole cortes profundos mientras gritaba. \
+		Los gritos alertaron al guarda que había caído en la distracción de Lucía, pero su destino ya estaba sellado. \
+		Con una floritura Lucía cayó encima del guarda y usó magia de hielo para congelarlo.</p>\
+		<p>-Todo según el plan - dijo Anna confiada </p>\
+		<p>No podíamos hacer nada con el guarda congelado, así que examinamos al guarda. Aunque el cuerpo estaba destrozado, esperábamos encontrar \
+		algo de utilidad. Tras buscar un poco, encontramos una <a href='./llave' class='once'> llave</a> y un <a href='./mapa' class='once'> mapa</a> en su posesión. \
+		Ahora que habíamos acabado con la vigilancia, podíamos <a href='entrada2'>volver a la entrada,</a> o seguir por <a href='escondite'>el camino que los guardas estaban vigilando.</a></p>",
+		{
+			actions: {
+				'llave': function (character, system, action) {
+					system.setQuality("llave", true);
+					system.setCharacterText("<p>Una llave que puede servir para abrir alguna puerta.</p>");
+				}
+				
+			}
+			
+		},
+		{
+			actions: {
+			'mapa': function (character, system, action) {
+					system.setQuality("mapa", true);
+					system.setCharacterText("<p>Un mapa del castillo.</p>");
+				}
+			}
+		}
+	),
 
 	"caballeronodaga": new undum.SimpleSituation(
 		"<p> Me despedí de mi pueblo y de la gente que apreciaba y partí hacia la ciudad con el resto. Pasaron 5 años desde aquel día. \
@@ -895,6 +931,9 @@ undum.game.qualities = {
 	),
 	llave: new undum.OnOffQuality(
 		"Llave", { priority: "0007", group: 'inventario', onDisplay: "&#10007;" }
+	),
+	mapa: new undum.OnOffQuality(
+		"Mapa", { priority: "0008", group: 'inventario', onDisplay: "&#10008;" }
 	),
 	skill: new undum.IntegerQuality(
 		"Habilidad", { priority: "0001", group: 'stats' }

@@ -1167,9 +1167,9 @@ undum.game.qualities = {
 	baston: new undum.OnOffQuality(
 		"Bastón", { priority: "0003", group: 'inventario', onDisplay: "&#10003;" }
 	),
-	stamina: new undum.NumericQuality(
-		"Resistencia", { priority: "0002", group: 'stats' }
-	)
+	progreso: new undum.NumericQuality(
+        "Progreso", {priority:"0002", group:'stats'}
+    )
 }; {
 
 }
@@ -1198,6 +1198,6 @@ undum.game.init = function (character, system) {
 	system.setQuality("mapa", false)
 	system.setQuality("theworld", false)
 	system.setQuality("baston", false)
-	character.qualities.stamina = 12;
+	character.qualities.progreso = 0;
 	system.setCharacterText("<p>¡Disfruta de esta trepidante aventura!</p>");
 };

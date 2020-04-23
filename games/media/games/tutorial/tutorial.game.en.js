@@ -134,16 +134,28 @@ undum.game.situations = {
 		<img src='media/games/tutorial/taberna.jpg' class='float_left'>\
 		<p>-&#161Lo siento lo siento lo siento...! - Se le escucha decir mientras se acerca a la taberna.</p>\
 		\
-		<p>Hum, no s&#233 si<a href='sitaberna1'> ech&#225rselo en cara de mofa,</a> o<a href='sitaberna2'> echar pelillos a la mar.</a></p>"
-		, {
-			actions: {
-				'daga': function (character, system, action) {
+		<p>Hum, no s&#233 si<a href='./aumento-progreso-aventura1'> ech&#225rselo en cara de mofa,</a> o <a href='./aumento-progreso-aventura2'> echar pelillos a la mar.</a></p>"
+		,
+		 {
+			 actions: {
+				 "aumento-progreso-aventura1": function(character, system, action) {
+					 system.doLink("sitaberna1");
+				 },
+				 "aumento-progreso-aventura2": function(character, system, action) {
+					system.doLink("sitaberna2");
+				},
+				 'daga': function (character, system, action) {
 					system.setQuality("daga", true);
 					system.setCharacterText("<p> La daga te induce un poder interior tan intenso que sientes la fuerza del verdadero Thor\
 					corriendo por tus venas</p>");
 				}
-			}
-		}
+			 },
+			 exit: function(character, system, to) {
+				 system.animateQuality(
+					 'progreso', character.qualities.progreso+25
+				 );
+			 }
+		 }
 	),
 
 	sit1b: new undum.SimpleSituation(
@@ -195,18 +207,29 @@ undum.game.situations = {
 		\
 		<p>-&#161Lo siento lo siento lo siento...! - Se le escucha decir mientras se acerca a la taberna.</p>\
 		\
-		<p>Hum, no s&#233 si<a href='sitaberna1'> ech&#225rselo en cara de mofa,</a> o<a href='sitaberna2'> echar pelillos a la mar.</a></p>"
-		, {
-			actions: {
-				'daga': function (character, system, action) {
+		<p>Hum, no s&#233 si<a href='./aumento-progreso-aventura1'> ech&#225rselo en cara de mofa,</a> o <a href='./aumento-progreso-aventura2'> echar pelillos a la mar.</a></p>"
+		,
+		 {
+			 actions: {
+				 "aumento-progreso-aventura1": function(character, system, action) {
+					 system.doLink("sitaberna1");
+				 },
+				 "aumento-progreso-aventura2": function(character, system, action) {
+					system.doLink("sitaberna2");
+				},
+				 'daga': function (character, system, action) {
 					system.setQuality("daga", true);
 					system.setCharacterText("<p> La daga te induce un poder interior tan intenso que sientes la fuerza del verdadero Thor\
 					corriendo por tus venas</p>");
 				}
-			}
-		}
+			 },
+			 exit: function(character, system, to) {
+				 system.animateQuality(
+					 'progreso', character.qualities.progreso+25
+				 );
+			 }
+		 }
 	),
-
 	sitcultivo: new undum.SimpleSituation(
 		"<h1>Ir al cultivo</h1>\
 		<p>Decido seguir arando el campo. Los brazos me pesaban del cansancio y el atardecer estaba llegando,\
@@ -242,16 +265,28 @@ undum.game.situations = {
 		\
 		<p>-&#161Lo siento lo siento lo siento...! - Se le escucha decir mientras se acerca a la taberna.</p>\
 		\
-		<p>Hum, no s&#233 si<a href='sitaberna1'> ech&#225rselo en cara en plan broma,</a> o<a href='sitaberna2'> echar pelillos a la mar.</a></p>"
-		, {
-			actions: {
-				'daga': function (character, system, action) {
+		<p>Hum, no s&#233 si<a href='./aumento-progreso-aventura1'> ech&#225rselo en cara de mofa,</a> o <a href='./aumento-progreso-aventura2'> echar pelillos a la mar.</a></p>"
+		,
+		 {
+			 actions: {
+				 "aumento-progreso-aventura1": function(character, system, action) {
+					 system.doLink("sitaberna1");
+				 },
+				 "aumento-progreso-aventura2": function(character, system, action) {
+					system.doLink("sitaberna2");
+				},
+				 'daga': function (character, system, action) {
 					system.setQuality("daga", true);
 					system.setCharacterText("<p> La daga te induce un poder interior tan intenso que sientes la fuerza del verdadero Thor\
 					corriendo por tus venas</p>");
 				}
-			}
-		}
+			 },
+			 exit: function(character, system, to) {
+				 system.animateQuality(
+					 'progreso', character.qualities.progreso+25
+				 );
+			 }
+		 }
 	),
 
 	sitaberna1: new undum.SimpleSituation(
@@ -523,7 +558,23 @@ undum.game.situations = {
 		<p>Ella bufó como siempre, me encantaba burlarme de ella. Sin darnos cuenta llegamos finalmente a la cantina</p>\
 		<p>-¡Buenos días! ¡Espero que hayáis decidido ya qué vais a hacer! - dijo Félix.</p>\
 		<p>-El tiempo es oro, vamos a ponernos manos a la obra cuanto antes - añadió Anna.</p>\
-		<p>Este es un momento muy importante de mi vida. Elijo volverme un <a href='caballerosidaga'>caballero</a> o<a href='mago'> un mago.</a>\</p>"
+		<p>Este es un momento muy importante de mi vida. Elijo volverme un <a href='./aumento-progreso-aventura3'> caballero</a> o <a href='./aumento-progreso-aventura4'> un mago.</a></p>"
+		,
+		 {
+			 actions: {
+				 "aumento-progreso-aventura3": function(character, system, action) {
+					 system.doLink("caballerosidaga");
+				 },
+				 "aumento-progreso-aventura4": function(character, system, action) {
+					system.doLink("mago");
+				}
+			 },
+			 exit: function(character, system, to) {
+				 system.animateQuality(
+					 'progreso', character.qualities.progreso+25
+				 );
+			 }
+		 }
 	),
 	"nodaga": new undum.SimpleSituation(
 		"<img src='media/games/tutorial/tabernados.png' class='float_right'>\
@@ -591,7 +642,23 @@ undum.game.situations = {
 		<p>Ella bufó como siempre, me encantaba burlarme de ella. Sin darnos cuenta llegamos finalmente a la cantina</p>\
 		<p>-¡Buenos días! ¡Espero que hayáis decidido ya qué vais a hacer! - dijo Félix.</p>\
 		<p>-El tiempo es oro, vamos a ponernos manos a la obra cuanto antes - añadió Anna.</p>\
-		<p>Este es un momento muy importante de mi vida. Elijo volverme un <a href='caballeronodaga'>caballero</a> o<a href='mago'> un mago.</a> \</p>"
+		<p>Este es un momento muy importante de mi vida. Elijo volverme un <a href='./aumento-progreso-aventura5'> caballero</a> o <a href='./aumento-progreso-aventura6'> un mago.</a></p>"
+		,
+		 {
+			 actions: {
+				 "aumento-progreso-aventura5": function(character, system, action) {
+					 system.doLink("caballeronodaga");
+				 },
+				 "aumento-progreso-aventura6": function(character, system, action) {
+					system.doLink("mago");
+				}
+			 },
+			 exit: function(character, system, to) {
+				 system.animateQuality(
+					 'progreso', character.qualities.progreso+25
+				 );
+			 }
+		 }
 	),
 	"mago": new undum.SimpleSituation(
 		"<img src='media/games/tutorial/mago.png' class='float_right'>\
@@ -667,6 +734,13 @@ undum.game.situations = {
 	<p>Nos disponemos a entrar en el castillo mientras Anna y Felix esconden los cadáveres en un foso cerca del lugar. Dentro del castillo nos encontramos en el \
 	salón principal donde encontramos más soldados. No contamos con ello pero debíamos librarnos de ellos para poder pasar, siendo lo más sigilosos posibles </p>\
 	<p> Lucía propone lanzar un hechizo de <a href='invisibilidad'>invisibilidad</a>, mientras yo insisto en que es mejor usar <a href='runa'>runa de frenesí</a>(Hechizo que nos permite tener la misma apariencia que un objetivo)</p>\ </p>"
+	,{
+		exit: function(character, system, to) {
+		system.animateQuality(
+			'progreso', character.qualities.progreso+25
+		);
+	}
+	}
 	),
 
 	"invisibilidad": new undum.SimpleSituation(
@@ -721,7 +795,15 @@ undum.game.situations = {
 		<p>El emperador se dispuso a darme el golpe de gracia, pero logro esquivarlo en el último momento. Gracias a un cabezazo, logro arrebatarle su espada la cual se la clavo en el corazón lentamente.</p>\
 		<p>Uso un hechizo de curación para recuperarme y decido <a href='contmago3'> huir</a> dejando atrás a Anna y a Felix </p>\
 </p>"
-	),
+,
+{
+	exit: function(character, system, to) {
+		system.animateQuality(
+			'progreso', character.qualities.progreso+25
+		);
+	}
+}
+),
 
 	"contmago3": new undum.SimpleSituation(
 		"<img src='media/games/tutorial/montanas.jpg' class='float_right'>\
@@ -765,14 +847,38 @@ undum.game.situations = {
 	"puerta1": new undum.SimpleSituation(
 		"<img src='media/games/tutorial/cerradura.jpg' class='float_right'>\
 		<p>Me fijo en que la puerta posee una cerradura... Puedo intentar <a href='abrir'>abrirla con la llave</a>. Aún así, soy un mago, así que \
-		puedo <a href='puertam'>intentar destruir la puerta.</a> Si no supongo que tendré que <a href='entrada'>volver a la entrada.</a></p>"
-	),
+		puedo <a href='./aumento-progreso-aventura7'> intentar destruir la puerta.</a> Si no supongo que tendré que <a href='entrada'>volver a la entrada.</a></p>",
+		{
+			actions: {
+				"aumento-progreso-aventura7": function(character, system, action) {
+					system.doLink("puertam");
+				}
+			},
+			exit: function(character, system, to) {
+				system.animateQuality(
+					'progreso', character.qualities.progreso+25
+				);
+			}
+		}
+   ),
 
 	"puerta2": new undum.SimpleSituation(
 		"<img src='media/games/tutorial/cerradura.jpg' class='float_right'>\
 		<p>Me fijo en que la puerta posee una cerradura, pero no tengo la llave para abrirla. Aún así, eres un mago, así que \
-		puedo <a href='puertam'>intentar destruir la puerta.</a> Si no supongo que tendré que <a href='entrada'>volver a la entrada.</a></p>"
-	),
+		puedo <a href='./aumento-progreso-aventura8'> intentar destruir la puerta.</a> Si no supongo que tendré que <a href='entrada'>volver a la entrada.</a></p>",
+		{
+			actions: {
+				"aumento-progreso-aventura8": function(character, system, action) {
+					system.doLink("puertam");
+				}
+			},
+			exit: function(character, system, to) {
+				system.animateQuality(
+					'progreso', character.qualities.progreso+25
+				);
+			}
+		}
+   ),
 
 	"puertam": new undum.SimpleSituation(
 		"<p>-Ya que estamos aquí vamos a entrar mediante la fuerza bruta - dije mientras preparaba un hechizo ígneo.</p>\
@@ -805,10 +911,25 @@ undum.game.situations = {
 		un poco y escondernos en la maleza. ¿Qué hacemos contra esos guardias?</p>\
 		<img src='media/games/tutorial/noche.jpg' class='float_right'>\
 		<p>-Oye, <a href='luciad'>yo puedo distraer a uno de ellos</a>. Mientras tú puedes encargarte del otro.</p>\
-		<p>Podía ser peligroso de todos modos, así que pensé en <a href='peleas'>enfrentearme a ellos solo</a>. Sabía que era\
+		<p>Podía ser peligroso de todos modos, así que pensé en <a href='./aumento-progreso-aventura9'>enfrentearme a ellos solo</a>. Sabía que era\
 		fuerte y no quería poner a Lucía en peligro. Si no, estábamos a tiempo de <a href='entrada>volver a la entrada.</a>, o si tenemos \
-		suerte, podemos <a href='colarse'>colarnos detrás de los guardas,</a> ya que sospechaba que tenían que estar guardando algo.</p>"
-	),
+		suerte, podemos <a href='./aumento-progreso-aventura10'>colarnos detrás de los guardas,</a> ya que sospechaba que tenían que estar guardando algo.</p>"		,
+		{
+			actions: {
+				"aumento-progreso-aventura9": function(character, system, action) {
+					system.doLink("peleas");
+				},
+				"aumento-progreso-aventura10": function(character, system, action) {
+					system.doLink("colarse");
+				}
+			},
+			exit: function(character, system, to) {
+				system.animateQuality(
+					'progreso', character.qualities.progreso+25
+				);
+			}
+		}
+   ),
 
 	
 	"peleas": new undum.SimpleSituation(
@@ -977,6 +1098,14 @@ undum.game.situations = {
 		<p>Lanzó dos reveses contra mí, uno lo paré con el escudo, ya casi destruido por el golpe, pero el otro alcanzó mi pierna, dejándome una herida no muy grave, \
 		ya que me eché para atrás y conseguí que el ataque no fuera a más.No tenía mucho más que hacer con el palo restante de la lanza, así que intenté buscar algo con lo que defenderme,\
 		pude ver una <a href='sarten'>sarten</a>, un <a href='escudo'>escudo de hierro</a> y una <a href='flecha'>flecha puntiaguda</a>. \</p>"
+		,
+{
+	exit: function(character, system, to) {
+		system.animateQuality(
+			'progreso', character.qualities.progreso+25
+		);
+	}
+}
 	),
 
 	"caballerosidaga": new undum.SimpleSituation(
@@ -1007,6 +1136,14 @@ undum.game.situations = {
 		<p>Recordé que llevaba encima la daga que encontré aquella vez, así que le lancé lo que me quedaba de lanza a modo de distracción y saqué la daga. \
 		Intenté defenderme de los siguientes golpes con lo que me quedaba de escudo y cuando vi mi oportunidad, realicé un contraataque, \
 		hiriendo en la barriga al agresor y produciendo el efecto de la daga. <a href='continuar'>Continuar.</a></p>"
+		,
+		{
+			exit: function(character, system, to) {
+				system.animateQuality(
+					'progreso', character.qualities.progreso+25
+				);
+			}
+		}
 	),
 	"continuar": new undum.SimpleSituation(
 		"<img src='media/games/tutorial/pradera.jpg' class='float_right'>\
@@ -1020,10 +1157,21 @@ undum.game.situations = {
 		<p>Se ve que los rumores de que hace ya años tuvo una escapada bastante sospechosa son ciertos. - concretó Félix. </p>\
 		<p>- Quizás eso explica por qué a mi madre la mataron unos bandidos, ¡Maldito enfermo, me las pagará! - dije muy cabreado.</p>\
 		<p>- ¿Qué piensas hacer? - me dijo Félix.</p>\
-		<p><a href='dagarapida'>Armarte rapidamente e ir por él</a> o <a href='dagalucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>\
-"		
-	),
-
+		<p><a href='aumento-progreso-aventura11'>Armarte rapidamente e ir por él</a> o <a href='dagalucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>\
+",
+{
+	actions: {
+		"aumento-progreso-aventura11": function(character, system, action) {
+			system.doLink("dagarapida");
+		}
+	},
+	exit: function(character, system, to) {
+		system.animateQuality(
+			'progreso', character.qualities.progreso+25
+		);
+	}
+}
+),
 	"sarten": new undum.SimpleSituation(
 		"<img src='media/games/tutorial/sarten.jpg' class='float_left'>\
 		<p>Pude ver el mango saliente de una <a href='./sarten' class='once'> sartén</a> en una de las cajas apiladas que había donde guardamos las armas, la mayoría era menaje y piezas de armas estropeadas. \
@@ -1039,16 +1187,25 @@ undum.game.situations = {
 		<p>Se ve que los rumores de que hace ya años tuvo una escapada bastante sospechosa son ciertos. - concretó Félix. </p>\
 		<p>- Quizás eso explica por qué a mi madre la mataron unos bandidos, ¡Maldito enfermo, me las pagará! - dije muy cabreado.</p>\
 		<p>- ¿Qué piensas hacer? - me dijo Félix.</p>\
-		<p><a href='rapida'>Armarte rapidamente e ir por él</a> o <a href='Lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>"
-		, {
+		<p><a href='aumento-progreso-aventura15'>Armarte rapidamente e ir por él</a> o <a href='Lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>"
+		,
+		{
 			actions: {
+				"aumento-progreso-aventura15": function(character, system, action) {
+					system.doLink("rapida");
+				},
 				'sarten': function (character, system, action) {
-					system.setQuality("sarten", true);
-					system.setCharacterText("<p>Adquieres una sartén que seguro que en otro tiempo tuvo una mejor vida.</p>");
-				}
+				   system.setQuality("sarten", true);
+				   system.setCharacterText("<p>Adquieres una sartén que seguro que en otro tiempo tuvo una mejor vida.</p>");
+			   }
+			},
+			exit: function(character, system, to) {
+				system.animateQuality(
+					'progreso', character.qualities.progreso+25
+				);
 			}
 		}
-		),
+   ),
 	"escudo": new undum.SimpleSituation(
 		"<p>Cogí el <a href='./escudo' class='once'> escudo de hierro </a>que tenía detrás mía colgado en la pared, me lo puse en el brazo y lo lancé contra este, le golpee en la frente del encapuchado más grande, haciéndole un instanockeo.</p>\
 		<img src='media/games/tutorial/escudo.png' class='float_left'>\
@@ -1065,16 +1222,25 @@ undum.game.situations = {
 		<p>Se ve que los rumores de que hace ya años tuvo una escapada bastante sospechosa son ciertos. - concretó Félix. </p>\
 		<p>- Quizás eso explica por qué a mi madre la mataron unos bandidos, ¡Maldito enfermo, me las pagará! - dije muy cabreado.</p>\
 		<p>- ¿Qué piensas hacer? - me dijo Félix.</p>\
-		<p><a href='rapida'>Armarte rapidamente e ir por él</a> o <a href='Lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>"
-		, {
+		<p><a href='aumento-progreso-aventura14'>Armarte rapidamente e ir por él</a> o <a href='Lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>"
+		,
+		{
 			actions: {
+				"aumento-progreso-aventura14": function(character, system, action) {
+					system.doLink("rapida");
+				},
 				'escudo': function (character, system, action) {
-					system.setQuality("escudo", true);
-					system.setCharacterText("<p>Adquieres un escudo con un dibujo de una estrella en su centro.</p>");
-				}
+				   system.setQuality("escudo", true);
+				   system.setCharacterText("<p>Adquieres un escudo con un dibujo de una estrella en su centro.</p>");
+			   }
+			},
+			exit: function(character, system, to) {
+				system.animateQuality(
+					'progreso', character.qualities.progreso+25
+				);
 			}
 		}
-		),
+   ),
 	"flecha": new undum.SimpleSituation(
 		"<img src='media/games/tutorial/flecha.png' class='float_left'>\
 		<p> Agarré una <a href='./flecha' class='once'> flecha </a>que había visto dentro de un carcaj y con un ataque rápido, se la clavé al enorme encapuchado en el ojo, \
@@ -1089,15 +1255,24 @@ undum.game.situations = {
 		<p>Se ve que los rumores de que hace ya años tuvo una escapada bastante sospechosa son ciertos. - concretó Félix. </p>\
 		<p>- Quizás eso explica por qué a mi madre la mataron unos bandidos, ¡Maldito enfermo, me las pagará! - dije muy cabreado.</p>\
 		<p>- ¿Qué piensas hacer? - me dijo Félix.</p>\
-		<p><a href='rapida'>Armarte rapidamente e ir por él</a> o <a href='Lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>"
-		, {
-			actions: {
-				'flecha': function (character, system, action) {
+		<p><a href='aumento-progreso-aventura13'>Armarte rapidamente e ir por él</a> o <a href='Lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>"
+		,
+		 {
+			 actions: {
+				 "aumento-progreso-aventura13": function(character, system, action) {
+					 system.doLink("rapida");
+				 },
+				 'flecha': function (character, system, action) {
 					system.setQuality("flecha", true);
 					system.setCharacterText("<p>Adquieres una flecha  puntiaguda.</p>");
 				}
-			}
-		}
+			 },
+			 exit: function(character, system, to) {
+				 system.animateQuality(
+					 'progreso', character.qualities.progreso+25
+				 );
+			 }
+		 }
 	),
 	"dagarapida": new undum.SimpleSituation(
 		"<p> Decidí armarme rápidamente y fui directo al castillo con Félix, solicité una audiencia con el rey y entre a la sala del trono.</p>\

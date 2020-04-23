@@ -380,7 +380,7 @@ undum.game.situations = {
 	\
 	<p>- Pues debo darte la razón, -afirmó Lucía después de echar un trago de hidromiel - este sitio no está naaada mal. </p>\
 	\
-	<p>- Te lo dije, deberías hacerme caso más a menud- dije en tono orgulloso. </p>\
+	<p>- Te lo dije, deberías hacerme caso más a menudo- dije en tono orgulloso. </p>\
 	\
 	<p>-Je, es verdad. Ya no eres aquel enclenque al que no le podías confiar nada. </p>\
 	\
@@ -479,7 +479,8 @@ undum.game.situations = {
 		}
 	),
 	"sidaga": new undum.SimpleSituation(
-		"<p>Los 2 borrachos me acorralaron, lentamente pero no podía conseguir escapar. En ese momento recordé la daga \
+		"<img src='media/games/tutorial/tabernados.png' class='float_right'>\
+		<p>Los 2 borrachos me acorralaron, lentamente pero no podía conseguir escapar. En ese momento recordé la daga \
 		que encontré anteriormente. La saqué rápidamente y me defendí como pude, haciendole un rasguño a uno de los borrachos.\
 		El hombre gritó y se desplomó casi al instante, al ver esto el otro borracho salió corriendo.\
 		<p>- ¿Pero qué? Si solo le he hecho un rasguño.</p> \
@@ -600,7 +601,7 @@ undum.game.situations = {
 		<p>Estuve practicando y aprendiendo nuevos hechizos durante meses en una sala de entrenamiento junto a Lucía, bajo supervisión de nuestra maestra.</p>\
 		<p>- Vaya, parece que has mejorado Lucía, mas nunca llegarás a mi nivel de poder. -comenté en tono burlesco.</p>\
 		<p>- No me subestimes Ferdie , te vas a enterar. -respondió Lucía acompañado de un hechizo <a href='https://elderscrolls.fandom.com/es/wiki/Proyectil_%C3%ADgneo'>proyectil ígneo.</a></p>\
-		<img src='media/games/tutorial/pigneo.png' class='float_right'>\
+		<img src='media/games/tutorial/pigneo.jpg' class='float_right'>\
 		<p> Afortunadamente mi elevado conocimiento en la hechicería me hizo inmune a su ataque utilizando el hechizo `circulo de protección`.</p>\
 		<p>-Ya basta.-exclamó Anna con autoridad.</p>\
 		<p>-Creo que ya estáis listos para encaminar con nosotros una misión especial-añadió. </p>\
@@ -936,7 +937,7 @@ undum.game.situations = {
 		{
 			actions: {
 				'theworld': function (character, system, action) {
-					system.setQuality("The World", true);
+					system.setQuality("theworld", true);
 					system.setCharacterText("<p>Sientes que alberga un extraño poder que altera el tiempo...</p>");
 				}
 			}
@@ -959,6 +960,7 @@ undum.game.situations = {
 		<p>- Parece que los años te hacen factura Félix, puedo ganarte con los ojos cerrados si quiero. - dije.</p>\
 		<p>- Pero qué dices bufón, vas a morder el polvo por lo que has dicho. - me respondió con enfado.</p>\
 		\
+		<img src='media/games/tutorial/pradera.jpg' class='float_right'>\
 		<p>Chocamos las lanzas de madera unas cuantas veces más, hasta que el desenlace del combate de entrenamiento fue una victoria por mi parte.</p>\
 		<p>- Vaya vaya, parece que he mejorado. - dije con orgullo.</p>\
 		<p>- No te equivoques, te he dejado ganar, en el campo de batalla no me igualarías, pero en un entrenamiento no tengo ganas de ponerme en serio </p>\
@@ -978,13 +980,15 @@ undum.game.situations = {
 	),
 
 	"caballerosidaga": new undum.SimpleSituation(
-		"<p> Me despedí de mi pueblo y de la gente que apreciaba y partí hacia la ciudad con el resto. Pasaron 5 años desde aquel día. \
+		"<img src='media/games/tutorial/caba.png' class='float_right'>\
+		<p> Me despedí de mi pueblo y de la gente que apreciaba y partí hacia la ciudad con el resto. Pasaron 5 años desde aquel día. \
 		Me he estado formando durante este tiempo con mi mentor Félix, me ha enseñado muchas técnicas y como moverme en una batalla.</p>\
 		\
 		<p>Me encontraba en las caballerizas entrenando con la lanza y el escudo contra Félix.</p>\
 		<p>- Parece que los años te hacen factura Félix, puedo ganarte con los ojos cerrados si quiero. - dije.</p>\
 		<p>- Pero qué dices bufón, vas a morder el polvo por lo que has dicho. - me respondió con enfado.</p>\
 		\
+		<img src='media/games/tutorial/pradera.jpg' class='float_right'>\
 		<p>Chocamos las lanzas de madera unas cuantas veces más, hasta que el desenlace del combate de entrenamiento fue una victoria por mi parte.</p>\
 		<p>- Vaya vaya, parece que he mejorado. - dije con orgullo.</p>\
 		<p>- No te equivoques, te he dejado ganar, en el campo de batalla no me igualarías, pero en un entrenamiento no tengo ganas de ponerme en serio </p>\
@@ -1005,7 +1009,8 @@ undum.game.situations = {
 		hiriendo en la barriga al agresor y produciendo el efecto de la daga. <a href='continuar'>Continuar.</a></p>"
 	),
 	"continuar": new undum.SimpleSituation(
-		"<p> Habiendo derribado a los dos malhechores que iban a por mí, comprobé cómo iba la situación de Félix contra los dos restantes agresores, para mi sorpresa Félix ya había acabado con ellos hace un rato.</p>\
+		"<img src='media/games/tutorial/pradera.jpg' class='float_right'>\
+		<p> Habiendo derribado a los dos malhechores que iban a por mí, comprobé cómo iba la situación de Félix contra los dos restantes agresores, para mi sorpresa Félix ya había acabado con ellos hace un rato.</p>\
 		<p>- Te lo dije, en el campo de batalla te supero con creces chavalin. - dijo Félix riendose.</p>\
 		<p>- Solo ha sido suerte viejales. - dije mientras también me reía.</p>\
 		<p>Registramos sus pertenencias para ver si había alguna pista del por qué del ataque, cuando Félix encontró algo:</p>\
@@ -1142,39 +1147,28 @@ undum.game.qualities = {
 		"Daga", { priority: "0003", group: 'inventario', onDisplay: "&#10003;" }
 	),
 	sarten: new undum.OnOffQuality(
-		"Sarten", { priority: "0004", group: 'inventario', onDisplay: "&#10004;" }
+		"Sartén", { priority: "0003", group: 'inventario', onDisplay: "&#10003;" }
 	),
 	escudo: new undum.OnOffQuality(
-		"Escudo", { priority: "0005", group: 'inventario', onDisplay: "&#10005;" }
+		"Escudo", { priority: "0003", group: 'inventario', onDisplay: "&#10003;" }
 	),
 	flecha: new undum.OnOffQuality(
-		"Flecha", { priority: "0006", group: 'inventario', onDisplay: "&#10006;" }
+		"Flecha", { priority: "0003", group: 'inventario', onDisplay: "&#10003;" }
 	),
 	llave: new undum.OnOffQuality(
-		"Llave", { priority: "0007", group: 'inventario', onDisplay: "&#10007;" }
+		"Llave", { priority: "0003", group: 'inventario', onDisplay: "&#10003;" }
 	),
 	mapa: new undum.OnOffQuality(
-		"Mapa", { priority: "0008", group: 'inventario', onDisplay: "&#10008;" }
+		"Mapa", { priority: "0003", group: 'inventario', onDisplay: "&#10003;" }
 	),
-	theworld: new undum.OnOffQUality(
-		"The World", { priority: "0009", group: 'inventario', onDisplay: "&#10009;" }
+	theworld: new undum.OnOffQuality(
+		"The World", { priority: "0003", group: 'inventario', onDisplay: "&#10003;" }
 	),
-	skill: new undum.IntegerQuality(
-		"Habilidad", { priority: "0001", group: 'stats' }
+	baston: new undum.OnOffQuality(
+		"Bastón", { priority: "0003", group: 'inventario', onDisplay: "&#10003;" }
 	),
 	stamina: new undum.NumericQuality(
 		"Resistencia", { priority: "0002", group: 'stats' }
-	),
-	luck: new undum.FudgeAdjectivesQuality( // Fudge as in the FUDGE RPG
-		"<span title='Skill, Stamina and Luck are reverently borrowed from the Fighting Fantasy series of gamebooks. The words representing Luck are from the FUDGE RPG. This tooltip is illustrating that you can use any HTML in the label for a quality (in this case a span containing a title attribute).'>Fortuna</span>",
-		{ priority: "0003", group: 'stats' }
-	),
-
-	inspiration: new undum.NonZeroIntegerQuality(
-		"Inspiración", { priority: "0001", group: 'progress' }
-	),
-	novice: new undum.OnOffQuality(
-		"Novicio", { priority: "0002", group: 'progress', onDisplay: "&#10003;" }
 	)
 }; {
 
@@ -1189,7 +1183,6 @@ undum.game.qualities = {
 undum.game.qualityGroups = {
 	inventario: new undum.QualityGroup('Inventario', { priority: "0001" }),
 	stats: new undum.QualityGroup(null, { priority: "0001" }),
-	progress: new undum.QualityGroup('Progreso', { priority: "0002" })
 };
 
 
@@ -1199,10 +1192,12 @@ undum.game.qualityGroups = {
 undum.game.init = function (character, system) {
 	system.setQuality("daga", false)
 	system.setQuality("sarten", false)
-	character.qualities.skill = 12;
+	system.setQuality("escudo", false)
+	system.setQuality("flecha", false)
+	system.setQuality("llave", false)
+	system.setQuality("mapa", false)
+	system.setQuality("theworld", false)
+	system.setQuality("baston", false)
 	character.qualities.stamina = 12;
-	character.qualities.luck = 0;
-	character.qualities.novice = 1;
-	character.qualities.inspiration = 0;
 	system.setCharacterText("<p>¡Disfruta de esta trepidante aventura!</p>");
 };

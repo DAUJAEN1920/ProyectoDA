@@ -1157,7 +1157,7 @@ undum.game.situations = {
 		<p>Se ve que los rumores de que hace ya años tuvo una escapada bastante sospechosa son ciertos. - concretó Félix. </p>\
 		<p>- Quizás eso explica por qué a mi madre la mataron unos bandidos, ¡Maldito enfermo, me las pagará! - dije muy cabreado.</p>\
 		<p>- ¿Qué piensas hacer? - me dijo Félix.</p>\
-		<p><a href='aumento-progreso-aventura11'>Armarte rapidamente e ir por él</a> o <a href='dagalucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>\
+		<p><a href='./aumento-progreso-aventura11'>Armarte rapidamente e ir por él</a> o <a href='lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>\
 ",
 {
 	actions: {
@@ -1187,13 +1187,14 @@ undum.game.situations = {
 		<p>Se ve que los rumores de que hace ya años tuvo una escapada bastante sospechosa son ciertos. - concretó Félix. </p>\
 		<p>- Quizás eso explica por qué a mi madre la mataron unos bandidos, ¡Maldito enfermo, me las pagará! - dije muy cabreado.</p>\
 		<p>- ¿Qué piensas hacer? - me dijo Félix.</p>\
-		<p><a href='aumento-progreso-aventura15'>Armarte rapidamente e ir por él</a> o <a href='Lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>"
+		<p><a href='./aumento-progreso-aventura15'>Armarte rapidamente e ir por él</a> o <a href='lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>"
 		,
 		{
 			actions: {
 				"aumento-progreso-aventura15": function(character, system, action) {
 					system.doLink("rapida");
 				},
+
 				'sarten': function (character, system, action) {
 				   system.setQuality("sarten", true);
 				   system.setCharacterText("<p>Adquieres una sartén que seguro que en otro tiempo tuvo una mejor vida.</p>");
@@ -1222,7 +1223,7 @@ undum.game.situations = {
 		<p>Se ve que los rumores de que hace ya años tuvo una escapada bastante sospechosa son ciertos. - concretó Félix. </p>\
 		<p>- Quizás eso explica por qué a mi madre la mataron unos bandidos, ¡Maldito enfermo, me las pagará! - dije muy cabreado.</p>\
 		<p>- ¿Qué piensas hacer? - me dijo Félix.</p>\
-		<p><a href='aumento-progreso-aventura14'>Armarte rapidamente e ir por él</a> o <a href='Lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>"
+		<p><a href='./aumento-progreso-aventura14'>Armarte rapidamente e ir por él</a> o <a href='lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>"
 		,
 		{
 			actions: {
@@ -1255,7 +1256,7 @@ undum.game.situations = {
 		<p>Se ve que los rumores de que hace ya años tuvo una escapada bastante sospechosa son ciertos. - concretó Félix. </p>\
 		<p>- Quizás eso explica por qué a mi madre la mataron unos bandidos, ¡Maldito enfermo, me las pagará! - dije muy cabreado.</p>\
 		<p>- ¿Qué piensas hacer? - me dijo Félix.</p>\
-		<p><a href='aumento-progreso-aventura13'>Armarte rapidamente e ir por él</a> o <a href='Lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>"
+		<p><a href='./aumento-progreso-aventura13'>Armarte rapidamente e ir por él</a> o <a href='Lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>"
 		,
 		 {
 			 actions: {

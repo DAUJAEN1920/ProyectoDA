@@ -44,7 +44,7 @@ undum.game.situations = {
 		<p>- Bueno, hab&#237a pensado que hoy podr&#237as acompa&#241arme para cuidar del ganado - dijo Luc&#237a - Necesitaremos provisiones para las fiestas venideras y un poco de ayuda no estar&#237a mal.</p>\
         \
         <p class='transient'>Ya ten&#237a planeado ir a por el cultivo, pues hoy era el d&#237a de la recolecta. No s&#233 qu&#233 decidir entre <a href='sit1'>acompa&#241ar a\
-        Luc&#237a</a> o <a href='sitcultivo'>Ir al cultivo</a> </p>"
+        Luc&#237a</a> o <a href='sitcultivo'>ir al cultivo</a> </p>"
 	),
 
 	// NB: The 'hub' situation which is the main list of topics, is
@@ -822,7 +822,19 @@ undum.game.situations = {
 		<img src='media/games/tutorial/porton.jpg' class='float_right'>\
 		<p>Finalmente llegamos al castillo. Era madrugada, así que era el momento perfecto para infiltrarse en el castillo.\
 		Además, con nuestras habilidades mágicas éramos capaces de ver en la oscuridad, por lo que teníamos una clara ventaja respecto\
-		a los guardas del castillo. Por ello, nos plantamos delante de la <a href='entrada'>entrada al castillo.</a></p>"
+		a los guardas del castillo. Por ello, nos plantamos delante de la <a href='./aumento-progreso-aventura7'>entrada al castillo.</a></p>",
+		{
+			actions: {
+				"aumento-progreso-aventura7": function(character, system, action) {
+					system.doLink("entrada");
+				}
+			},
+			exit: function(character, system, to) {
+				system.animateQuality(
+					'progreso', character.qualities.progreso+25
+				);
+			}
+		}
 	),
 
 	"entrada": new undum.SimpleSituation(
@@ -847,29 +859,23 @@ undum.game.situations = {
 	"puerta1": new undum.SimpleSituation(
 		"<img src='media/games/tutorial/cerradura.jpg' class='float_right'>\
 		<p>Me fijo en que la puerta posee una cerradura... Puedo intentar <a href='abrir'>abrirla con la llave</a>. Aún así, soy un mago, así que \
-		puedo <a href='./aumento-progreso-aventura7'> intentar destruir la puerta.</a> Si no supongo que tendré que <a href='entrada'>volver a la entrada.</a></p>",
-		{
-			actions: {
-				"aumento-progreso-aventura7": function(character, system, action) {
-					system.doLink("puertam");
-				}
-			},
-			exit: function(character, system, to) {
-				system.animateQuality(
-					'progreso', character.qualities.progreso+25
-				);
-			}
-		}
+		puedo <a href='puertam'> intentar destruir la puerta.</a> Si no supongo que tendré que <a href='entrada'>volver a la entrada.</a></p>",
+		
    ),
 
 	"puerta2": new undum.SimpleSituation(
 		"<img src='media/games/tutorial/cerradura.jpg' class='float_right'>\
 		<p>Me fijo en que la puerta posee una cerradura, pero no tengo la llave para abrirla. Aún así, eres un mago, así que \
-		puedo <a href='./aumento-progreso-aventura8'> intentar destruir la puerta.</a> Si no supongo que tendré que <a href='entrada'>volver a la entrada.</a></p>",
+		puedo <a href='puertam'> intentar destruir la puerta.</a> Si no supongo que tendré que <a href='entrada'>volver a la entrada.</a></p>",
+		
+   ),
+
+	"puertam": new undum.SimpleSituation(
+		"<p>-Ya que estamos aquí <a href='./aumento-progreso-aventura13'>vamos a entrar mediante la fuerza bruta</a> - dije mientras preparaba un hechizo ígneo.</p>",
 		{
 			actions: {
-				"aumento-progreso-aventura8": function(character, system, action) {
-					system.doLink("puertam");
+				"aumento-progreso-aventura13": function(character, system, action) {
+					system.doLink("puertam2");
 				}
 			},
 			exit: function(character, system, to) {
@@ -878,11 +884,10 @@ undum.game.situations = {
 				);
 			}
 		}
-   ),
 
-	"puertam": new undum.SimpleSituation(
-		"<p>-Ya que estamos aquí vamos a entrar mediante la fuerza bruta - dije mientras preparaba un hechizo ígneo.</p>\
-		<p>-¡¿Estás seguro de que es buena idea?! - dijo alarmada Lucía</p>\
+		),
+	"puertam2": new undum.SimpleSituation(
+		"<p>-¡¿Estás seguro de que es buena idea?! - dijo alarmada Lucía</p>\
 		<p>-¡Pues claro! ¿Qué podría salir mal?</p>\
 		<p>La bola de fuego destruyó la puerta por completo, pero a los pocos segundos numerosos guardas del interior del castillo llegaron a la entrada. \
 		Intentamos escabullirnos pero unos magos nos atacaron desde las ventanas del castillo mientras tratábamos de huir, creando un muro de fuego \
@@ -903,24 +908,21 @@ undum.game.situations = {
 		<p>Esta era la batalla final, teníamos <a href='preludio'>que decidir cómo actuar.</a></p>"
 	),
 
-
-
-	"vuelta": new undum.SimpleSituation(
-		"<p>Decidimos dar una vuelta alrededor del castillo para estudiarlo mejor. El castillo era bastante alto, pero no parecía tener gran superficie. \
-		A lo lejos vislunmbramos un par de guardas vigilando los alrededores. Debido a que es de noche todavía no nos ven, así que decidimos alejarnos \
-		un poco y escondernos en la maleza. ¿Qué hacemos contra esos guardias?</p>\
-		<img src='media/games/tutorial/noche.jpg' class='float_right'>\
-		<p>-Oye, <a href='luciad'>yo puedo distraer a uno de ellos</a>. Mientras tú puedes encargarte del otro.</p>\
-		<p>Podía ser peligroso de todos modos, así que pensé en <a href='./aumento-progreso-aventura9'>enfrentearme a ellos solo</a>. Sabía que era\
-		fuerte y no quería poner a Lucía en peligro. Si no, estábamos a tiempo de <a href='entrada>volver a la entrada.</a>, o si tenemos \
-		suerte, podemos <a href='./aumento-progreso-aventura10'>colarnos detrás de los guardas,</a> ya que sospechaba que tenían que estar guardando algo.</p>"		,
+	"preludio": new undum.SimpleSituation(
+		"<p>-Muy bien, es la batalla final - Estaba mucho más nervioso de lo que quería admitir. Habíamos tardado tanto que ya \
+		estaba amaneciendo - ¿Alguna idea para proceder?</p>\
+		<p>-Creo que <a href='./aumento-progreso-aventura11'>Lucía debería enfrentarse a él.</a> Ella tiene el bastón mágico a fin de cuentas. Nosotros \
+		podemos ayudarla con algo de apoyo.</p>\
+		<p>-Estoy lista, puedo hacerlo - dijo con algo más de seriedad de la habitual Lucía.</p>\
+		<p>La otra opción era que <a href='./aumento-progreso-aventura12'>yo fuera el que empezara el ataque,</a> pero sin un as en la manga creo que no sería muy buena idea.\
+		Pero tampoco me parecía buena idea que ella peleara... ¿Qué debería hacer?</p>",
 		{
 			actions: {
-				"aumento-progreso-aventura9": function(character, system, action) {
-					system.doLink("peleas");
+				"aumento-progreso-aventura11": function(character, system, action) {
+					system.doLink("luciaf");
 				},
-				"aumento-progreso-aventura10": function(character, system, action) {
-					system.doLink("colarse");
+				"aumento-progreso-aventura12": function(character, system, action) {
+					system.doLink("batallaf");
 				}
 			},
 			exit: function(character, system, to) {
@@ -929,12 +931,110 @@ undum.game.situations = {
 				);
 			}
 		}
+	),
+
+	"luciaf": new undum.SimpleSituation(
+		"<p>-...Confiamos en ti Lucía - dije finalmente.</p>\
+		<p>Sin decir nada, Lucía asintió. Dio la vuelta a la torre, y entró por la otra ventana, dejándonos a nosotros en la que estaba más \
+		cercana a Tito Mede. Por supuesto él se percató de la llegada de Lucía.</p>\
+		<p>-Sentía la presencia de unas ratas inmundas... Pero no esperaba que fuera una simple chiquilla - dijo con tono de superioridad.</p>\
+		<p>-¡Tus fechorías acaban aquí! - gritó Lucía.</p>\
+		<p>Rápidamente, la confrontación comenzó. Aquel bastón que tenía Lucía aumentaba exponencialmente su poder, pero Tito Mede era \
+		extremadamente poderoso. Sentía rabia de no ser yo el que estaba peleando, pero Anna se aferró a mi brazo para asegurarse de que \
+		no hiciera ninguna estupidez. Teníamos que esperar al momento adecuado...</p>\
+		<p>Tras unos intercambios de magia, finalmente Lucía acertó su magia de hielo, paralizando temporalmente a Tito Mede.</p>\
+		<p>-Humph, eso no es nada - dijo mientras erigía una barrera mágica que le protegía de los ataques frontales de Lucía.</p>\
+		<p>-Es nuestra oportunidad - dije finalmente.</p>\
+		<p>Con un gran estruendo, rompí la ventana. Tito Mede se giró con cara de asombro, pero no pudo hacer nada ante el ataque \
+		sorpresa que le hicimos. Las llamas consumieron su cuerpo, que se desvanecía lentamente...</p>\
+		<img src='media/games/tutorial/castilloroto.png' class='float_right'>\
+		<p>El combate dejó estragos en la torre, que parecía que se iba a derrumbar. Salimos como pudimos, mientras observavamos como \
+		el castillo se derruía por completo...</p>\
+		<p>La misión acabó siendo un éxito. Esta no era nada más que una de las muchas misiones que haría como mercenario a lo largo \
+		de mi vida, pero... igual es una historia para otro momento.</p>\
+		<p><h1>FIN</h1></p>"
+	
+	),
+
+	"batallaf": new undum.SimpleSituation(
+		"<p>-No -dije- Yo lo haré.</p>\
+		<p>-Espero que tengas algún plan chaval - dijo Anna.</p>\
+		<p>Sonreí mientras asentía, y di la vuelta a la torre para entrar por la ventana más lejana a Tito Mede</p>",
+		{
+				enter: function( character, system, from ) {
+					if( character.qualities.theworld ) {
+						system.doLink( "finalsecreto" );
+					} else { 
+						system.doLink( "fenelchat" );
+					}
+				}
+		}
+	),
+
+	"fenelchat": new undum.SimpleSituation(
+		"<p>-Sentía la presencia de unas ratas inmundas... Pero no esperaba que fuera un simple chaval - dijo con tono de superioridad.</p>\
+		<p>Tenía una sonrisa como si supiera lo que estaba haciendo, pero nada más lejos de la realidad. Mi magia no era nada comparada a la de \
+		Tito Mede... Realmente no sé que se me pasaba por la cabeza... Un brillo de luz es lo único que vi, antes de sentir como la vida se iba de mi cuerpo.</p>\
+		<img src='media/games/tutorial/muerto.png' class='float_right'>\
+		<p><h1>HAS MUERTO</h1></p>"
+	),
+
+	"finalsecreto": new undum.SimpleSituation(
+		"<p>-Sentía la presencia de unas ratas inmundas... Pero no esperaba que fuera un simple chaval - dijo con tono de superioridad.</p>\
+		<p>Sin titubear, comencé a avanzar hacia él.</p>\
+		<p>-Maldito seas... ¡Tito Mede! - grité mientras seguía andando.</p>\
+		<p>-¿Oh?¿Te acercas a mí?¿En vez de salir corriendo, vienes hacia mí? - dijo en tono burlón Tito Mede.</p>\
+		<p>-No puedo pegarte una paliza si no me acerco - respondí.</p>\
+		<p>-Ho ho... Entonces acércate todo lo que quieras... - dijo mientras sonreía Tito Mede.</p>\
+		<p>Cuando llegué a una distancia cercana, grité desde lo más profundo de mis pulmones.</p>\
+		<p>-¡Para el tiempo, The World!</p>\
+		<p>Y el mundo se paró. Sólo yo podía moverme en el tiempo parado. El hechizo era muy potente sin lugar a dudas, pero \
+		solo podía moverme lo que equivaldría a unos 5 segundos si el tiempo estuviera moviéndose. En ese tiempo, y a completo quemarropa, \
+		lancé mi hechizo ígneo más poderoso.</p>\
+		<p>-Y el tiempo vuelve a moverse.</p>\
+		<p>El tiempo dejó de estar paralizado, y volvimos a una realidad en la que Tito Mede gritaba mientras se calcinaba...</p>\
+		<p>-¡No... No puede... ser...!¡Soy Tito Mede!¡Soy...! - dijo mientras agonizaba.</p>\
+		<p>-¿Sabes por qué has perdido, Tito Mede? Por un único motivo... Me sacaste de quicio - dije en sus últimos momentos.</p>\
+		<img src='media/games/tutorial/castilloroto.png' class='float_right'>\
+		<p>El combate dejó estragos en la torre, que parecía que se iba a derrumbar. Salimos como pudimos, mientras observavamos como \
+		el castillo se derruía por completo...</p>\
+		<p>La misión acabó siendo un éxito. Esta no era nada más que una de las muchas misiones que haría como mercenario a lo largo \
+		de mi vida, pero... igual es una historia para otro momento.</p>\
+		<p><h1>FIN</h1></p>"
+	),
+
+	
+	"vuelta": new undum.SimpleSituation(
+		"<p>Decidimos dar una vuelta alrededor del castillo para estudiarlo mejor. El castillo era bastante alto, pero no parecía tener gran superficie. \
+		A lo lejos vislunmbramos un par de guardas vigilando los alrededores. Debido a que es de noche todavía no nos ven, así que decidimos alejarnos \
+		un poco y escondernos en la maleza. ¿Qué hacemos contra esos guardias?</p>\
+		<img src='media/games/tutorial/noche.jpg' class='float_right'>\
+		<p>-Oye, <a href='luciad'>yo puedo distraer a uno de ellos</a>. Mientras tú puedes encargarte del otro.</p>\
+		<p>Podía ser peligroso de todos modos, así que pensé en <a href='peleas'>enfrentearme a ellos solo</a>. Sabía que era\
+		fuerte y no quería poner a Lucía en peligro. Si no, podíamos intentar <a href='colarse'>colarnos por detrás de los guardas.</a></p>"		,
+		
    ),
 
 	
 	"peleas": new undum.SimpleSituation(
-		"<p>-Mejor me enfrentaré yo a ellos sólo - dije con confianza - no quiero poneros en peligro </p> \
-		<p>-¡Me niego!¡Es muy peligroso, y no soy alguien de quién tengas que preocuparte, sé pelear!</p> \
+		"<p>-Mejor me <a href='./aumento-progreso-aventura9'>enfrentaré yo a ellos sólo</a> - dije con confianza - no quiero poneros en peligro.</p>",
+		{
+			actions: {
+				"aumento-progreso-aventura9": function(character, system, action) {
+					system.doLink("peleas2");
+				}
+			},
+			exit: function(character, system, to) {
+				system.animateQuality(
+					'progreso', character.qualities.progreso+25
+				);
+			}
+		}
+
+		),
+
+	"peleas2": new undum.SimpleSituation(
+		"<p>-¡Me niego!¡Es muy peligroso, y no soy alguien de quién tengas que preocuparte, sé pelear!</p> \
 		<p>Ignoré su comentario y salí corriendo hacia los guardas. Una vez me avistaron, comencé a invocar una magia ígnea. \
 		Sin embargo, no tuve en cuenta la velocidad de los guardas, que se me abalanzaron antes de poder lanzar mi hechizo.</p>\
 		<p>Intenté escabullirme de su ataque, pero la espada me cortó la pierna, reduciendo mi movilidad. No pude hacer nada\
@@ -944,8 +1044,24 @@ undum.game.situations = {
 	),
 
 	"colarse": new undum.SimpleSituation(
-		"<p>-Creo que es mejor que les ignoremos e intentemos colarnos - dije - Tiene que haber algo bueno detrás si lo están guardando.</p> \
-		<p>-Está bien - dijo Anna - Pero aseguraos de que no os vean</p> \
+		"<p>-Creo que es mejor que <a href='./aumento-progreso-aventura10'>les ignoremos e intentemos colarnos</a> - dije - Tiene que haber algo bueno detrás si lo están guardando.</p>",
+		{
+			actions: {
+				"aumento-progreso-aventura10": function(character, system, action) {
+					system.doLink("colarse2");
+				}
+			},
+			exit: function(character, system, to) {
+				system.animateQuality(
+					'progreso', character.qualities.progreso+25
+				);
+			}
+		}
+
+		),
+
+	"colarse2": new undum.SimpleSituation(
+		"<p>-Está bien - dijo Anna - Pero aseguraos de que no os vean</p>\
 		<p>Logramos colocarnos detrás de ellos. Parecía un camino ruinoso que llevaba a algún tipo de entrada trasera. \
 		Avanzamos sin dilación, pero el camino estaba en muy mal estado y se desprendió gran parte del camino haciendo un estruendo.</p>\
 		<p>Los guardas cercanos se percataron y llegaron rápidamente a nuestra posición. Intentamos pelear pero estaban demasiado cerca\

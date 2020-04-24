@@ -1256,7 +1256,7 @@ undum.game.situations = {
 		<p>Se ve que los rumores de que hace ya años tuvo una escapada bastante sospechosa son ciertos. - concretó Félix. </p>\
 		<p>- Quizás eso explica por qué a mi madre la mataron unos bandidos, ¡Maldito enfermo, me las pagará! - dije muy cabreado.</p>\
 		<p>- ¿Qué piensas hacer? - me dijo Félix.</p>\
-		<p><a href='./aumento-progreso-aventura13'>Armarte rapidamente e ir por él</a> o <a href='Lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>"
+		<p><a href='./aumento-progreso-aventura13'>Armarte rapidamente e ir por él</a> o <a href='lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>"
 		,
 		 {
 			 actions: {
@@ -1307,6 +1307,35 @@ undum.game.situations = {
 		y muriendo en el acto. Así fue como no conseguí mi objetivo y morí en vano, el rey loco siguió a sus anchas reinando a placer y haciendo todo tipo de barbaridades sin que nadie pudiera hacer nada. </p>\
 		<h1>FIN</h1>\
 		<img src='media/games/tutorial/rip.png' class='float_left'>"
+	),
+	"lucia": new undum.SimpleSituation(
+		"<p> Me dirigí inmediatamente a la sede de magia donde estaban Lucía y Anna, nada más verlas les dije:</p>\
+		 <p>- Os necesito a las dos ahora mismo, prepararos cuanto antes.</p>\
+		 <p>- ¿Pero qué pasa? ¿Por qué tanta prisa Ferdi? - dijo Lucía - Ni siquiera nos has saludado y ya quieres que vayamos contigo.</p>\
+		 <p>- No hay tiempo, voy a derrocar a mi padre, el rey Loco.</p>\
+		 <p>- Ni siquiera con mi poder tendríamos fácil eso que planteas lo sabes ¿no?  - respondió Anna.</p>\
+		 <p>- Y… un momento, ¿tu padre? - dijo Lucía con asombro.</p>\
+		 <p>- Lo acabo de descubrir, él ha mandado asesinos para silenciarme y no dejar prueba de lo que hizo.</p>\
+		 <p>- Bueno… Yo te acompaño. - respondió Lucía - No voy a permitir que te maten.</p>\
+		 <p>- Pues que remedio, habrá que ir - dijo Anna.</p>\
+		 \
+		 <p>Ya preparados nos dispusimos a ir directos al castillo, llegamos hasta la sala del trono, donde innumerables guardias estaban esperandonos,\
+		 <p>Félix, Anna y Lucía se encargaron de entretenerlos y mientras, yo me colaba entre sus filas y para ir directo a por el rey. Llego hasta estar a unos pasos frente a él.\
+		 <p>- Vaya si has conseguido sobrevivir. - dijo el rey Ashnar.</p>\
+		 <p>- Para tu desgracia sí, ¡vengaré la muerte de mi madre!.</p>\
+		 <p>- A ver que puedes hacer pequeño engendro - respondió Ashnar.</p>\
+		 <p>Me dispuse a atacar con mi escudo y lanza  cuando el rey sacó en espadón Claymore de detrás del trono y arremetió contra mí.\
+		 El golpe fue tal que mi escudo se rompió y yo salí despedido, pensaba que se había terminado todo, no iba a poder encajar el golpe contra la pared, cuando de pronto unas corrientes de aire consiguieron pararme, eran de Lucía.</p>\
+		 <p>- Ya te dije que no iba a dejar que murieses. - dijo alegremente.</p>\
+		 <p>- Me has salvado la vida Lucía, pero todavía hay que terminar el trabajo.</p>\
+		 <p>Me recompuse y fui directo de nuevo a por el rey, intento esquivar una tajada pero la espada es demasiado largo, no puedo esquivarlo bien, cuando Lucía vuelve a salvarme poniendo un pilar de hielo entre la espada y yo, dejándome libre de encajar un golpe al rey.</p>\
+		 <p>- ¡¿Pero qué?! - exclamó el rey loco al recibir su golpe el pilar en vez de yo.</p>\
+		 <p>- ¡Esto se acabó Ashnar! - le grité mientras lanzaba mi lanza a su pecho. </p>\
+		 <p>El golpe dió de lleno, Ashnar soltó sangre por la boca por el daño causado pero no se daba por vencido, estaba indefenso, cuando Lucía lanzó un hechizo de estacas de piedra que atravesaron su pecho, cayendo derrotado, ahora sí, gracias a su hechizo y mi lanza.</p>\
+		 \
+		 <p>Después de terminar con el rey loco me ofrecieron ser el nuevo rey, pero lo rechacé. El reino tras ver que no había un heredero se convirtió en una democracia. Félix y Anna vivieron lo que les quedaba de vida siendo mercenarios. Y yo viví una vida tranquila con Lucía en nuestro pueblo natal, donde nos acogieron tras la victoria celebrándolo con una gran fiesta.</p>\
+		<h1>FIN</h1>\
+		<img src='media/games/tutorial/village.jpg' class='float_left'>"
 	),
 };
 

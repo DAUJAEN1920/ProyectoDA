@@ -122,5 +122,5 @@ Como ya hemos dicho en el Sprint Review tuvimos ciertos problemas con los objeto
 
 
 ![Trello](sprintbacklog3.PNG)
-![Trello](historiasususprint.PNG)
+![Trello](historiaususprint.PNG)
 

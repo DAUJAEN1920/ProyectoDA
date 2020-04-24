@@ -44,7 +44,7 @@ undum.game.situations = {
 		<p>- Bueno, hab&#237a pensado que hoy podr&#237as acompa&#241arme para cuidar del ganado - dijo Luc&#237a - Necesitaremos provisiones para las fiestas venideras y un poco de ayuda no estar&#237a mal.</p>\
         \
         <p class='transient'>Ya ten&#237a planeado ir a por el cultivo, pues hoy era el d&#237a de la recolecta. No s&#233 qu&#233 decidir entre <a href='sit1'>acompa&#241ar a\
-        Luc&#237a</a> o <a href='sitcultivo'>Ir al cultivo</a> </p>"
+        Luc&#237a</a> o <a href='sitcultivo'>ir al cultivo</a> </p>"
 	),
 
 	// NB: The 'hub' situation which is the main list of topics, is
@@ -134,16 +134,28 @@ undum.game.situations = {
 		<img src='media/games/tutorial/taberna.jpg' class='float_left'>\
 		<p>-&#161Lo siento lo siento lo siento...! - Se le escucha decir mientras se acerca a la taberna.</p>\
 		\
-		<p>Hum, no s&#233 si<a href='sitaberna1'> ech&#225rselo en cara de mofa,</a> o<a href='sitaberna2'> echar pelillos a la mar.</a></p>"
-		, {
-			actions: {
-				'daga': function (character, system, action) {
+		<p>Hum, no s&#233 si<a href='./aumento-progreso-aventura1'> ech&#225rselo en cara de mofa,</a> o <a href='./aumento-progreso-aventura2'> echar pelillos a la mar.</a></p>"
+		,
+		 {
+			 actions: {
+				 "aumento-progreso-aventura1": function(character, system, action) {
+					 system.doLink("sitaberna1");
+				 },
+				 "aumento-progreso-aventura2": function(character, system, action) {
+					system.doLink("sitaberna2");
+				},
+				 'daga': function (character, system, action) {
 					system.setQuality("daga", true);
 					system.setCharacterText("<p> La daga te induce un poder interior tan intenso que sientes la fuerza del verdadero Thor\
 					corriendo por tus venas</p>");
 				}
-			}
-		}
+			 },
+			 exit: function(character, system, to) {
+				 system.animateQuality(
+					 'progreso', character.qualities.progreso+25
+				 );
+			 }
+		 }
 	),
 
 	sit1b: new undum.SimpleSituation(
@@ -195,18 +207,29 @@ undum.game.situations = {
 		\
 		<p>-&#161Lo siento lo siento lo siento...! - Se le escucha decir mientras se acerca a la taberna.</p>\
 		\
-		<p>Hum, no s&#233 si<a href='sitaberna1'> ech&#225rselo en cara de mofa,</a> o<a href='sitaberna2'> echar pelillos a la mar.</a></p>"
-		, {
-			actions: {
-				'daga': function (character, system, action) {
+		<p>Hum, no s&#233 si<a href='./aumento-progreso-aventura1'> ech&#225rselo en cara de mofa,</a> o <a href='./aumento-progreso-aventura2'> echar pelillos a la mar.</a></p>"
+		,
+		 {
+			 actions: {
+				 "aumento-progreso-aventura1": function(character, system, action) {
+					 system.doLink("sitaberna1");
+				 },
+				 "aumento-progreso-aventura2": function(character, system, action) {
+					system.doLink("sitaberna2");
+				},
+				 'daga': function (character, system, action) {
 					system.setQuality("daga", true);
 					system.setCharacterText("<p> La daga te induce un poder interior tan intenso que sientes la fuerza del verdadero Thor\
 					corriendo por tus venas</p>");
 				}
-			}
-		}
+			 },
+			 exit: function(character, system, to) {
+				 system.animateQuality(
+					 'progreso', character.qualities.progreso+25
+				 );
+			 }
+		 }
 	),
-
 	sitcultivo: new undum.SimpleSituation(
 		"<h1>Ir al cultivo</h1>\
 		<p>Decido seguir arando el campo. Los brazos me pesaban del cansancio y el atardecer estaba llegando,\
@@ -242,16 +265,28 @@ undum.game.situations = {
 		\
 		<p>-&#161Lo siento lo siento lo siento...! - Se le escucha decir mientras se acerca a la taberna.</p>\
 		\
-		<p>Hum, no s&#233 si<a href='sitaberna1'> ech&#225rselo en cara en plan broma,</a> o<a href='sitaberna2'> echar pelillos a la mar.</a></p>"
-		, {
-			actions: {
-				'daga': function (character, system, action) {
+		<p>Hum, no s&#233 si<a href='./aumento-progreso-aventura1'> ech&#225rselo en cara de mofa,</a> o <a href='./aumento-progreso-aventura2'> echar pelillos a la mar.</a></p>"
+		,
+		 {
+			 actions: {
+				 "aumento-progreso-aventura1": function(character, system, action) {
+					 system.doLink("sitaberna1");
+				 },
+				 "aumento-progreso-aventura2": function(character, system, action) {
+					system.doLink("sitaberna2");
+				},
+				 'daga': function (character, system, action) {
 					system.setQuality("daga", true);
 					system.setCharacterText("<p> La daga te induce un poder interior tan intenso que sientes la fuerza del verdadero Thor\
 					corriendo por tus venas</p>");
 				}
-			}
-		}
+			 },
+			 exit: function(character, system, to) {
+				 system.animateQuality(
+					 'progreso', character.qualities.progreso+25
+				 );
+			 }
+		 }
 	),
 
 	sitaberna1: new undum.SimpleSituation(
@@ -380,7 +415,7 @@ undum.game.situations = {
 	\
 	<p>- Pues debo darte la razón, -afirmó Lucía después de echar un trago de hidromiel - este sitio no está naaada mal. </p>\
 	\
-	<p>- Te lo dije, deberías hacerme caso más a menud- dije en tono orgulloso. </p>\
+	<p>- Te lo dije, deberías hacerme caso más a menudo- dije en tono orgulloso. </p>\
 	\
 	<p>-Je, es verdad. Ya no eres aquel enclenque al que no le podías confiar nada. </p>\
 	\
@@ -479,7 +514,8 @@ undum.game.situations = {
 		}
 	),
 	"sidaga": new undum.SimpleSituation(
-		"<p>Los 2 borrachos me acorralaron, lentamente pero no podía conseguir escapar. En ese momento recordé la daga \
+		"<img src='media/games/tutorial/tabernados.png' class='float_right'>\
+		<p>Los 2 borrachos me acorralaron, lentamente pero no podía conseguir escapar. En ese momento recordé la daga \
 		que encontré anteriormente. La saqué rápidamente y me defendí como pude, haciendole un rasguño a uno de los borrachos.\
 		El hombre gritó y se desplomó casi al instante, al ver esto el otro borracho salió corriendo.\
 		<p>- ¿Pero qué? Si solo le he hecho un rasguño.</p> \
@@ -522,10 +558,27 @@ undum.game.situations = {
 		<p>Ella bufó como siempre, me encantaba burlarme de ella. Sin darnos cuenta llegamos finalmente a la cantina</p>\
 		<p>-¡Buenos días! ¡Espero que hayáis decidido ya qué vais a hacer! - dijo Félix.</p>\
 		<p>-El tiempo es oro, vamos a ponernos manos a la obra cuanto antes - añadió Anna.</p>\
-		<p>Este es un momento muy importante de mi vida. Elijo volverme un <a href='caballero'>caballero</a> o un mago.\</p>"
+		<p>Este es un momento muy importante de mi vida. Elijo volverme un <a href='./aumento-progreso-aventura3'> caballero</a> o <a href='./aumento-progreso-aventura4'> un mago.</a></p>"
+		,
+		 {
+			 actions: {
+				 "aumento-progreso-aventura3": function(character, system, action) {
+					 system.doLink("caballerosidaga");
+				 },
+				 "aumento-progreso-aventura4": function(character, system, action) {
+					system.doLink("mago");
+				}
+			 },
+			 exit: function(character, system, to) {
+				 system.animateQuality(
+					 'progreso', character.qualities.progreso+25
+				 );
+			 }
+		 }
 	),
 	"nodaga": new undum.SimpleSituation(
-		"<p>Los dos varones se disponían a darnos una paliza a los dos, mientras nosotros nos preparábamos para la contienda.\
+		"<img src='media/games/tutorial/tabernados.png' class='float_right'>\
+		<p>Los dos varones se disponían a darnos una paliza a los dos, mientras nosotros nos preparábamos para la contienda.\
 		Sin previo aviso, una de las dos personas misteriosas apareció en mitad de la pelea.\
 		Mostraba una figura alta y fornida, más de lo que esperaba. Rápidamente sujetó el brazo del borracho, donde se podía ver una sonrisa por debajo de la capucha.</p>\
 		\
@@ -538,11 +591,6 @@ undum.game.situations = {
 		Poco a poco la taberna empezó a calmarse, hasta que lo único que se oía era la risa de aquel hombre encapuchado.\
 		Sin percatarnos, la otra figura encapuchada se acercó y le dió un golpe en la cabeza.</p>\
 		\
-		<p>-¡Auch! - dijo el hombre encapuchado mientras se llevaba la mano a donde le habían golpeado.</p>\
-		<p>-Que falta de delicadeza... - la voz del otro encapuchado era la de una mujer - De verdad, a veces me pregunto si vamos a poder ir a algún sitio sin dar la nota -  dijo mientras suspiraba.</p>\
-		\
-		<p>-Venga mujer, no te pongas así… Ya sabes el dicho, no hay mal que no se lleve torta.</p>\
-		<p>-Ugh, tu y tus chistes, me tenéis enferma... - dijo mientras abandonaban la taberna como si nada hubiera pasado.</p>\
 		<p>-¡Auch! - dijo el hombre encapuchado mientras se llevaba la mano a donde le habían golpeado.</p>\
 		<p>-Que falta de delicadeza... - la voz del otro encapuchado era la de una mujer - De verdad, a veces me pregunto si vamos a poder ir a algún sitio sin dar la nota -  dijo mientras suspiraba.</p>\
 		\
@@ -582,7 +630,7 @@ undum.game.situations = {
 		<p>-Si queréis conocer el bello arte de la magia - dijo Anna - yo os haré magos de verdad.</p>\
 		<p>-¿¡Magos!? - dijo ilusionada Lucía - ¿¡Nosotros?!</p>\
 		<p>-Incluso si no tenéis talento para la magia, con una profesora como yo estoy segura de que podréis ser magos si os lo proponéis.</p>\
-		<p>Después de esa conversación, cada uno se fue por su camino… Me despedí de Lucía y fue a mi casa. No tenía mucho que pensar, sabía que\
+		<p>Después de esa conversación, cada uno se fue por su camino… Me despedí de Lucía y fui a mi casa. No tenía mucho que pensar, sabía que\
 		era una oportunidad de oro, y no la iba a desaprovechar. La única duda que tenía era que clase de entrenamiento prefería.<\p>\
 		\
 		<p>A la mañana siguiente me preparé, y me dirigí de nuevo a la cantina, donde nos esperaban nuestros amigos mercenarios.\
@@ -594,16 +642,562 @@ undum.game.situations = {
 		<p>Ella bufó como siempre, me encantaba burlarme de ella. Sin darnos cuenta llegamos finalmente a la cantina</p>\
 		<p>-¡Buenos días! ¡Espero que hayáis decidido ya qué vais a hacer! - dijo Félix.</p>\
 		<p>-El tiempo es oro, vamos a ponernos manos a la obra cuanto antes - añadió Anna.</p>\
-		<p>Este es un momento muy importante de mi vida. Elijo volverme un <a href='caballero'>caballero</a> o un mago.\</p>"
+		<p>Este es un momento muy importante de mi vida. Elijo volverme un <a href='./aumento-progreso-aventura5'> caballero</a> o <a href='./aumento-progreso-aventura6'> un mago.</a></p>"
+		,
+		 {
+			 actions: {
+				 "aumento-progreso-aventura5": function(character, system, action) {
+					 system.doLink("caballeronodaga");
+				 },
+				 "aumento-progreso-aventura6": function(character, system, action) {
+					system.doLink("mago");
+				}
+			 },
+			 exit: function(character, system, to) {
+				 system.animateQuality(
+					 'progreso', character.qualities.progreso+25
+				 );
+			 }
+		 }
 	),
-	"caballero": new undum.SimpleSituation(
-		"<p> Me despedí de mi pueblo y de la gente que apreciaba y partí hacia la ciudad con el resto. Pasaron 5 años desde aquel día. \
+	"mago": new undum.SimpleSituation(
+		"<img src='media/games/tutorial/mago.png' class='float_right'>\
+		<p> Me despedí de mi pueblo y de la gente que apreciaba y partí hacia la ciudad con el resto. Pasaron 5 años desde aquel día. \
+		<p>Me he estado formando durante este tiempo con mi maestra Anna,la cual me ha enseñado muchas técnicas y conjuros para usar durante la batalla.</p>\
+		\
+		<p>Estuve practicando y aprendiendo nuevos hechizos durante meses en una sala de entrenamiento junto a Lucía, bajo supervisión de nuestra maestra.</p>\
+		<p>- Vaya, parece que has mejorado Lucía, mas nunca llegarás a mi nivel de poder. -comenté en tono burlesco.</p>\
+		<p>- No me subestimes Ferdie , te vas a enterar. -respondió Lucía acompañado de un hechizo <a href='https://elderscrolls.fandom.com/es/wiki/Proyectil_%C3%ADgneo'>proyectil ígneo.</a></p>\
+		<img src='media/games/tutorial/pigneo.jpg' class='float_right'>\
+		<p> Afortunadamente mi elevado conocimiento en la hechicería me hizo inmune a su ataque utilizando el hechizo `circulo de protección`.</p>\
+		<p>-Ya basta.-exclamó Anna con autoridad.</p>\
+		<p>-Creo que ya estáis listos para encaminar con nosotros una misión especial-añadió. </p>\
+		<p>-¿De qué se trata?-interrumpió Lucía.</p>\
+		<p>-Tenemos que encargarnos del emperador <a href='https://elderscrolls.fandom.com/es/wiki/Tito_Mede_II_(Skyrim)'>Tito Mede II</a>, un \
+		emperador maligno que secuestra a escondidas a los niños y esclaviza a los hombres para expandir La Hermandad Oscura-explicó Anna. </p>\
+		Yo había oído hablar de esa hermandad pero desconocía el origen de su proveninecia.</p>\
+		<p>-Está bien, os ayudaremos.-exhalté con enorme energía. </p>\
+		<p>-Genial,partiremos al castillo por la noche. Os explicaré el plan por el camino.-respondió Anna\
+		-Pero antes de eso me gustaría hablar con vosotros de algo.-dijo Anna algo más serio</p>\
+		<p>-Claro, <a href='mago2'>estamos listos.</a></p>"		
+	),
+	"mago2": new undum.SimpleSituation(
+		"<p>-Va a ser una misión muy difícil y es posible que si queremos matar al emperador\
+		<img src='media/games/tutorial/baston.jpg' class='float_right'>\
+		alguno de nosotros no continúe con vida. Es por ello que me gustaría que uno de vosotros se quedara con esto.\
+		Se trata de un que os permitirá aumentar vuestra magia en el combate.\
+		Así igual podéis igualar mi nivel mágico-concluyó Anna con ahínco</p>\
+		<p>Pues o <a href='bastonf'>me quedo con el bastón,</a> o <a href='bastonl'>se lo encomiendo a Lucía</a></p>"
+		
+		),
+
+	"bastonf": new undum.SimpleSituation(
+		"<p>-Muy bien - dije confiado- yo me quedaré con el <a href='./baston' class='once'> bastón mágico</a>.\
+		Con esto creo que estamos <a href='confirm'>listos</a></p>"
+		, {
+			actions: {
+				'baston': function (character, system, action) {
+					system.setQuality("baston", true);
+					system.setCharacterText("<p>Coges el bastón con energía. Sientes su poder y su dureza a la vez que ligero de manipular.</p>");
+				}
+			}
+		}
+
+		),
+
+	"confirm": new undum.SimpleSituation(
+	"<p>-¿Estáis seguros?- dijo Anna. </p>",
+		{
+				enter: function( character, system, from ) {
+					if( character.qualities.baston ) {
+						system.doLink( "mago3" );
+					} else { 
+						system.doLink( "retry" );
+					}
+				}
+		}
+	),
+
+	"retry": new undum.SimpleSituation(
+	"<p>-Espera, ¿no vas a coger el <a href='bastonf'>bastón</a>? Porque si no <a href='bastonl'>me lo quedo yo</a>-dijo Lucía.</p>"
+	),
+
+	
+	"mago3": new undum.SimpleSituation(
+		"<p>-Vamos</p>\
+	<p>Estaba muy nervioso, era nuestra primera misión como magos. A Lucía también se le notaba bastante nerviosa, se le podían ver las gotas de sudor \
+	deslizándose por su frente a kilómetros. Llegamos al castillo unas pocas horas después de nuestra salida. Podíamos ver 2 guardias vigilando la puerta principal</p>\
+	<p>-Vale, lo haremos como hemos ensayado.- comentó Anna</p>\
+	<p>- Lucía y yo lanzamos un conjuro de alteración: <a href='https://elderscrolls.fandom.com/es/wiki/Par%C3%A1lisis_masiva\
+	'>(Parálisis masiva) </a , para evitar que pudieran pedir refuerzos, o iniciar una pelea. Consiguientemente nos acercamos a los soldados, y le clavamos un puñal en el corazón.</p>\
+	<img src='media/games/tutorial/saloncastillo.jpg' class='float_right'>\
+	<p>Nos disponemos a entrar en el castillo mientras Anna y Felix esconden los cadáveres en un foso cerca del lugar. Dentro del castillo nos encontramos en el \
+	salón principal donde encontramos más soldados. No contamos con ello pero debíamos librarnos de ellos para poder pasar, siendo lo más sigilosos posibles </p>\
+	<p> Lucía propone lanzar un hechizo de <a href='invisibilidad'>invisibilidad</a>, mientras yo insisto en que es mejor usar <a href='runa'>runa de frenesí</a>(Hechizo que nos permite tener la misma apariencia que un objetivo)</p>\ </p>"
+	,{
+		exit: function(character, system, to) {
+		system.animateQuality(
+			'progreso', character.qualities.progreso+25
+		);
+	}
+	}
+	),
+
+	"invisibilidad": new undum.SimpleSituation(
+		"<p>-Genial, nos haremos invisibles</p>\
+		<img src='media/games/tutorial/escalera.jpg' class='float_right'>\
+		<p>Lanzamos el hechizo y nos movemos con sigilo subiendo las escaleras y abriendo la puerta del rellano mientras vigilamos que no hay ningún guardia cerca. </p>\
+		<p>-Justamente al llegar a la puerta, un soldado se dirige hacia nuestra dirección, por lo que tenemos que evitar que nos detecte desplazándonos un poco al lado. El guardia\
+		percibe en el ambiente una sensación extraña por lo que teníamos que intentar que no nos detectara de cualquier manera. En ese momento, 2 guardias más se acercan a su posición.</p>\
+		<p>+¿Quiénes sois?, No me suenan vuestras caras-Preguntó el guardia que casi nos detecta</p>\
+		<p>-Venimos para sustituirte en la guardia nocturna. Puedes retirarte soldado - respondió uno de los dos guardias</p>\
+		<p>+Esto es un poco extraño, el emperador me ordenó que vigil...- </p>\
+		<p>Sin dejar que terminara la frase, uno de los soldados lo asesina a sangre fría degoyándole la garganta con un puñal.</p>\
+		<p>-Salid de ahí- nos susurró uno de los guardias</p>\
+		<p>-De repente los guardias empiezan a sufrir una transformación en otras personas. Eran <a href='contmago'>Anna y Felix </a></p>\
+		</p>"
+	),
+
+	"runa": new undum.SimpleSituation(
+		"<p>-Genial, nos haremos pasar por soldados</p>\
+			<p>Una vez convertidos en soldados nos disponemos a subir las escaleras y abrir la puerta del rellano, sin tratar de levantar muchas sospechas.</p>\
+			<p>Al llegar a la puerta, un soldado se nos quedó fijamente mirando y optó por acercarse hacia nosotros.</p>\
+		<p>+¿Quiénes sois?, No me suenan vuestras caras-Preguntó el guardia</p>\
+		<p>-Somos nuevos reclutas, el emperador nos comandó ocuparnos del turno nocturno hoy-respondió Lucía</p>\
+		<p>+Que extraño, estas cosas siempre me las notifica el emper...</p>\
+		<p>En ese momento, una hoja de daga sobresalío del orificio de su boca, desplomándose en el suelo.Tras su cuerpo se encontraban <a href='contmago'>Anna, y Felix </a>con la daga en la mano</p>\
+</p>"
+	),
+	"contmago": new undum.SimpleSituation(
+		"<p>-Gracias por la ayuda- les dije.</p>\
+		<p>-Así es- respondió Felix.</p>\
+		<p>-Vamos, no tenemos tiempo que perder-respondió Lucía enérgica.</p>\
+		<img src='media/games/tutorial/pasillocastillo.jpg' class='float_right'>\
+		<p>En ese momento recorremos todo el pasillo hasta la habitación del emperador. Al llegar, Lucía la abre con poca discrección mientras nosotros vigilábamos.\
+		 En ese momento, vio un grupo de 12 soldados de la Hermandad Oscura apuntándole con ballestas, al mando del emperador.</p>\
+		<p>-¡DISPARAD!-ordenó el emperador.</p>\
+		<p>-Las flechas impactaron en el pecho, brazos y cabeza de Lucía, arrebatándole así su vida.</p>\
+		<p>-Al fijarme en el sonido de las ballestas, vi el cuerpo de Lucía desplomarse en el suelo. Una ira se apoderó de mí, haciendo que entrara en la habitación y quemara a todos mediante el hechizo \
+		<a href='https://elderscrolls.fandom.com/es/wiki/Tormenta_de_fuego'>tormenta de fuego </a>.</p>\
+		<p>Lamentablemente, el emperador había escapado por la ventana, así que corro tras él para acabar <a href='contmago2'> con esto de una vez por todas.</a></p>\
+		<p></p>\
+</p>"
+	),
+	"contmago2": new undum.SimpleSituation(
+		"<p>Logré alcanzarle debido a su avanzada edad.</p>\
+		<p>-¿En serio vas a matarme con tus hechizos?, pelea con tu arma como un hombre-dijo el emperador </p>\
+		<p>-Quiero que sufras. Vas a pagar lo que le has hecho a Lucía- respondí</p>\
+		<p>Saqué mi bastón y él su espada daédrica y comenzamos un frenetico duelo.Paraba muy bien mis golpes de ira. En uno de esos golpes contratacó\
+		con una estocada en el hombro que me dejó malherido.</p>\
+		<p>¿Tus últimas palabras?- dijo riendo el emperador</p>\
+		<p>Me levanté, presiendo la herida para que no perdiera mucha sangre</p>\
+		<p>¿Sabes?,toda mi vida he sufrido pérdidas de mis seres queridos. Pero nunca he podido vengar su muerte. Me has arrebatado lo único que me quedaba y vas a morir por ello.-</p>\
+		<p>El emperador se dispuso a darme el golpe de gracia, pero logro esquivarlo en el último momento. Gracias a un cabezazo, logro arrebatarle su espada la cual se la clavo en el corazón lentamente.</p>\
+		<p>Uso un hechizo de curación para recuperarme y decido <a href='contmago3'> huir</a> dejando atrás a Anna y a Felix </p>\
+</p>"
+,
+{
+	exit: function(character, system, to) {
+		system.animateQuality(
+			'progreso', character.qualities.progreso+25
+		);
+	}
+}
+),
+
+	"contmago3": new undum.SimpleSituation(
+		"<img src='media/games/tutorial/montanas.jpg' class='float_right'>\
+		<p>Dejé todo y marché hacia las montañas del Norte donde llevo una vida pacífica y tranquila</p>\
+		<p>Actualmente estoy casado con una mujer maravillosa,Freida ,con la que he podido tener 2 fantásticos hijos, Leia y Skywalker </p>\
+		<h1>FIN</h1>"
+
+	),
+	
+	"bastonl": new undum.SimpleSituation(
+		"<p>-Mejor quédatelo tú Lucía - dije.</p>\
+		<p>-¡Muy bien, no os arrepentiréis! - dijo confiada mientras cogía el bastón.</p>\
+		<p>-¿Ya está todo decidido no? -dijo Anna- Pues vámonos sin más dilación.</p>\
+		<p> El viaje fue arduo, por el camino no nos encontramos muchas complicaciones pero fue bastante largo. Aún así\
+		teníamos que estar listos para la batalla. Iba a ser la más importante de nuestra vida sin lugar a dudas. </p>\
+		<img src='media/games/tutorial/porton.jpg' class='float_right'>\
+		<p>Finalmente llegamos al castillo. Era madrugada, así que era el momento perfecto para infiltrarse en el castillo.\
+		Además, con nuestras habilidades mágicas éramos capaces de ver en la oscuridad, por lo que teníamos una clara ventaja respecto\
+		a los guardas del castillo. Por ello, nos plantamos delante de la <a href='./aumento-progreso-aventura7'>entrada al castillo.</a></p>",
+		{
+			actions: {
+				"aumento-progreso-aventura7": function(character, system, action) {
+					system.doLink("entrada");
+				}
+			},
+			exit: function(character, system, to) {
+				system.animateQuality(
+					'progreso', character.qualities.progreso+25
+				);
+			}
+		}
+	),
+
+	"entrada": new undum.SimpleSituation(
+		"<p>Una vez en la entrada decidimos mirar alrededor. No había ningún guarda cerca, así que no teníamos que preocuparnos por eso.\
+		Desde aquí podíamos probar a <a href='acercarse'>acercarnos a la puerta principal</a>, <a href='vuelta'>dar una vuelta al castillo</a>\
+		, o <a href='magia'>usar los poderes mágicos para colarte en el castillo.</a></p>"
+	),
+
+	"acercarse": new undum.SimpleSituation(
+		"<p>Veo una puerta gigantesca.</p>",
+		{
+				enter: function( character, system, from ) {
+					if( character.qualities.llave ) {
+						system.doLink( "puerta1" );
+					} else { 
+						system.doLink( "puerta2" );
+					}
+				}
+		}
+	),
+
+	"puerta1": new undum.SimpleSituation(
+		"<img src='media/games/tutorial/cerradura.jpg' class='float_right'>\
+		<p>Me fijo en que la puerta posee una cerradura... Puedo intentar <a href='abrir'>abrirla con la llave</a>. Aún así, soy un mago, así que \
+		puedo <a href='puertam'> intentar destruir la puerta.</a> Si no supongo que tendré que <a href='entrada'>volver a la entrada.</a></p>",
+		
+   ),
+
+	"puerta2": new undum.SimpleSituation(
+		"<img src='media/games/tutorial/cerradura.jpg' class='float_right'>\
+		<p>Me fijo en que la puerta posee una cerradura, pero no tengo la llave para abrirla. Aún así, eres un mago, así que \
+		puedo <a href='puertam'> intentar destruir la puerta.</a> Si no supongo que tendré que <a href='entrada'>volver a la entrada.</a></p>",
+		
+   ),
+
+	"puertam": new undum.SimpleSituation(
+		"<p>-Ya que estamos aquí <a href='./aumento-progreso-aventura13'>vamos a entrar mediante la fuerza bruta</a> - dije mientras preparaba un hechizo ígneo.</p>",
+		{
+			actions: {
+				"aumento-progreso-aventura13": function(character, system, action) {
+					system.doLink("puertam2");
+				}
+			},
+			exit: function(character, system, to) {
+				system.animateQuality(
+					'progreso', character.qualities.progreso+25
+				);
+			}
+		}
+
+		),
+	"puertam2": new undum.SimpleSituation(
+		"<p>-¡¿Estás seguro de que es buena idea?! - dijo alarmada Lucía</p>\
+		<p>-¡Pues claro! ¿Qué podría salir mal?</p>\
+		<p>La bola de fuego destruyó la puerta por completo, pero a los pocos segundos numerosos guardas del interior del castillo llegaron a la entrada. \
+		Intentamos escabullirnos pero unos magos nos atacaron desde las ventanas del castillo mientras tratábamos de huir, creando un muro de fuego \
+		que impedía nuestra huida. Numerosos guardas se abalanzaron y acabaron con nostros... Parece que todo salió mal.</p>\
+		<img src='media/games/tutorial/muerto.png' class='float_right'>\
+		<p><h1>HAS MUERTO</h1></p>"
+	),
+
+	"abrir": new undum.SimpleSituation(
+		"<p>Abrí la puerta con la llave, y nos infiltramos en el castillo. Avanzamos rápidamente por el castillo, esquivando los guardas\
+		que había dentro. Llegamos a la parte más alta sin mucha complicación, pero todavía no había rastro de nuestro objetivo.</p>\
+		<p>-Parece que nos toca escalar eso - dije señalando la torre, que era lo único que nos faltaba por explorar.</p>\
+		<p>-Sí, coincido. - dijo Anna- Es altamente probable que nuestro objetivo se encuentre en lo más alto de la torre.</p>\
+		<img src='media/games/tutorial/torre.jpg' class='float_right'>\
+		<p>No podíamos abrir la puerta a esa torre, pero vimos numerosas hendiduras en la torre, así que decidimos empezar a \
+		escalar. Hacía frío y era bastante complicado escalar la torre, pero poco a poco y con ayuda de nuestra magia fuimos capaces de llegar \
+		a lo más alto. Allí miramos por la ventana, y vimos como Tito Mede estaba sentado en su trono.</p>\
+		<p>Esta era la batalla final, teníamos <a href='preludio'>que decidir cómo actuar.</a></p>"
+	),
+
+	"preludio": new undum.SimpleSituation(
+		"<p>-Muy bien, es la batalla final - Estaba mucho más nervioso de lo que quería admitir. Habíamos tardado tanto que ya \
+		estaba amaneciendo - ¿Alguna idea para proceder?</p>\
+		<p>-Creo que <a href='./aumento-progreso-aventura11'>Lucía debería enfrentarse a él.</a> Ella tiene el bastón mágico a fin de cuentas. Nosotros \
+		podemos ayudarla con algo de apoyo.</p>\
+		<p>-Estoy lista, puedo hacerlo - dijo con algo más de seriedad de la habitual Lucía.</p>\
+		<p>La otra opción era que <a href='./aumento-progreso-aventura12'>yo fuera el que empezara el ataque,</a> pero sin un as en la manga creo que no sería muy buena idea.\
+		Pero tampoco me parecía buena idea que ella peleara... ¿Qué debería hacer?</p>",
+		{
+			actions: {
+				"aumento-progreso-aventura11": function(character, system, action) {
+					system.doLink("luciaf");
+				},
+				"aumento-progreso-aventura12": function(character, system, action) {
+					system.doLink("batallaf");
+				}
+			},
+			exit: function(character, system, to) {
+				system.animateQuality(
+					'progreso', character.qualities.progreso+25
+				);
+			}
+		}
+	),
+
+	"luciaf": new undum.SimpleSituation(
+		"<p>-...Confiamos en ti Lucía - dije finalmente.</p>\
+		<p>Sin decir nada, Lucía asintió. Dio la vuelta a la torre, y entró por la otra ventana, dejándonos a nosotros en la que estaba más \
+		cercana a Tito Mede. Por supuesto él se percató de la llegada de Lucía.</p>\
+		<p>-Sentía la presencia de unas ratas inmundas... Pero no esperaba que fuera una simple chiquilla - dijo con tono de superioridad.</p>\
+		<p>-¡Tus fechorías acaban aquí! - gritó Lucía.</p>\
+		<p>Rápidamente, la confrontación comenzó. Aquel bastón que tenía Lucía aumentaba exponencialmente su poder, pero Tito Mede era \
+		extremadamente poderoso. Sentía rabia de no ser yo el que estaba peleando, pero Anna se aferró a mi brazo para asegurarse de que \
+		no hiciera ninguna estupidez. Teníamos que esperar al momento adecuado...</p>\
+		<p>Tras unos intercambios de magia, finalmente Lucía acertó su magia de hielo, paralizando temporalmente a Tito Mede.</p>\
+		<p>-Humph, eso no es nada - dijo mientras erigía una barrera mágica que le protegía de los ataques frontales de Lucía.</p>\
+		<p>-Es nuestra oportunidad - dije finalmente.</p>\
+		<p>Con un gran estruendo, rompí la ventana. Tito Mede se giró con cara de asombro, pero no pudo hacer nada ante el ataque \
+		sorpresa que le hicimos. Las llamas consumieron su cuerpo, que se desvanecía lentamente...</p>\
+		<img src='media/games/tutorial/castilloroto.png' class='float_right'>\
+		<p>El combate dejó estragos en la torre, que parecía que se iba a derrumbar. Salimos como pudimos, mientras observavamos como \
+		el castillo se derruía por completo...</p>\
+		<p>La misión acabó siendo un éxito. Esta no era nada más que una de las muchas misiones que haría como mercenario a lo largo \
+		de mi vida, pero... igual es una historia para otro momento.</p>\
+		<p><h1>FIN</h1></p>"
+	
+	),
+
+	"batallaf": new undum.SimpleSituation(
+		"<p>-No -dije- Yo lo haré.</p>\
+		<p>-Espero que tengas algún plan chaval - dijo Anna.</p>\
+		<p>Sonreí mientras asentía, y di la vuelta a la torre para entrar por la ventana más lejana a Tito Mede</p>",
+		{
+				enter: function( character, system, from ) {
+					if( character.qualities.theworld ) {
+						system.doLink( "finalsecreto" );
+					} else { 
+						system.doLink( "fenelchat" );
+					}
+				}
+		}
+	),
+
+	"fenelchat": new undum.SimpleSituation(
+		"<p>-Sentía la presencia de unas ratas inmundas... Pero no esperaba que fuera un simple chaval - dijo con tono de superioridad.</p>\
+		<p>Tenía una sonrisa como si supiera lo que estaba haciendo, pero nada más lejos de la realidad. Mi magia no era nada comparada a la de \
+		Tito Mede... Realmente no sé que se me pasaba por la cabeza... Un brillo de luz es lo único que vi, antes de sentir como la vida se iba de mi cuerpo.</p>\
+		<img src='media/games/tutorial/muerto.png' class='float_right'>\
+		<p><h1>HAS MUERTO</h1></p>"
+	),
+
+	"finalsecreto": new undum.SimpleSituation(
+		"<p>-Sentía la presencia de unas ratas inmundas... Pero no esperaba que fuera un simple chaval - dijo con tono de superioridad.</p>\
+		<p>Sin titubear, comencé a avanzar hacia él.</p>\
+		<p>-Maldito seas... ¡Tito Mede! - grité mientras seguía andando.</p>\
+		<p>-¿Oh?¿Te acercas a mí?¿En vez de salir corriendo, vienes hacia mí? - dijo en tono burlón Tito Mede.</p>\
+		<p>-No puedo pegarte una paliza si no me acerco - respondí.</p>\
+		<p>-Ho ho... Entonces acércate todo lo que quieras... - dijo mientras sonreía Tito Mede.</p>\
+		<p>Cuando llegué a una distancia cercana, grité desde lo más profundo de mis pulmones.</p>\
+		<p>-¡Para el tiempo, The World!</p>\
+		<p>Y el mundo se paró. Sólo yo podía moverme en el tiempo parado. El hechizo era muy potente sin lugar a dudas, pero \
+		solo podía moverme lo que equivaldría a unos 5 segundos si el tiempo estuviera moviéndose. En ese tiempo, y a completo quemarropa, \
+		lancé mi hechizo ígneo más poderoso.</p>\
+		<p>-Y el tiempo vuelve a moverse.</p>\
+		<p>El tiempo dejó de estar paralizado, y volvimos a una realidad en la que Tito Mede gritaba mientras se calcinaba...</p>\
+		<p>-¡No... No puede... ser...!¡Soy Tito Mede!¡Soy...! - dijo mientras agonizaba.</p>\
+		<p>-¿Sabes por qué has perdido, Tito Mede? Por un único motivo... Me sacaste de quicio - dije en sus últimos momentos.</p>\
+		<img src='media/games/tutorial/castilloroto.png' class='float_right'>\
+		<p>El combate dejó estragos en la torre, que parecía que se iba a derrumbar. Salimos como pudimos, mientras observavamos como \
+		el castillo se derruía por completo...</p>\
+		<p>La misión acabó siendo un éxito. Esta no era nada más que una de las muchas misiones que haría como mercenario a lo largo \
+		de mi vida, pero... igual es una historia para otro momento.</p>\
+		<p><h1>FIN</h1></p>"
+	),
+
+	
+	"vuelta": new undum.SimpleSituation(
+		"<p>Decidimos dar una vuelta alrededor del castillo para estudiarlo mejor. El castillo era bastante alto, pero no parecía tener gran superficie. \
+		A lo lejos vislunmbramos un par de guardas vigilando los alrededores. Debido a que es de noche todavía no nos ven, así que decidimos alejarnos \
+		un poco y escondernos en la maleza. ¿Qué hacemos contra esos guardias?</p>\
+		<img src='media/games/tutorial/noche.jpg' class='float_right'>\
+		<p>-Oye, <a href='luciad'>yo puedo distraer a uno de ellos</a>. Mientras tú puedes encargarte del otro.</p>\
+		<p>Podía ser peligroso de todos modos, así que pensé en <a href='peleas'>enfrentearme a ellos solo</a>. Sabía que era\
+		fuerte y no quería poner a Lucía en peligro. Si no, podíamos intentar <a href='colarse'>colarnos por detrás de los guardas.</a></p>"		,
+		
+   ),
+
+	
+	"peleas": new undum.SimpleSituation(
+		"<p>-Mejor me <a href='./aumento-progreso-aventura9'>enfrentaré yo a ellos sólo</a> - dije con confianza - no quiero poneros en peligro.</p>",
+		{
+			actions: {
+				"aumento-progreso-aventura9": function(character, system, action) {
+					system.doLink("peleas2");
+				}
+			},
+			exit: function(character, system, to) {
+				system.animateQuality(
+					'progreso', character.qualities.progreso+25
+				);
+			}
+		}
+
+		),
+
+	"peleas2": new undum.SimpleSituation(
+		"<p>-¡Me niego!¡Es muy peligroso, y no soy alguien de quién tengas que preocuparte, sé pelear!</p> \
+		<p>Ignoré su comentario y salí corriendo hacia los guardas. Una vez me avistaron, comencé a invocar una magia ígnea. \
+		Sin embargo, no tuve en cuenta la velocidad de los guardas, que se me abalanzaron antes de poder lanzar mi hechizo.</p>\
+		<p>Intenté escabullirme de su ataque, pero la espada me cortó la pierna, reduciendo mi movilidad. No pude hacer nada\
+		frente al siguiente ataque... Debí haber sido más precabido...</p>\
+		<img src='media/games/tutorial/muerto.png' class='float_right'>\
+		<p><h1>HAS MUERTO</h1></p>"
+	),
+
+	"colarse": new undum.SimpleSituation(
+		"<p>-Creo que es mejor que <a href='./aumento-progreso-aventura10'>les ignoremos e intentemos colarnos</a> - dije - Tiene que haber algo bueno detrás si lo están guardando.</p>",
+		{
+			actions: {
+				"aumento-progreso-aventura10": function(character, system, action) {
+					system.doLink("colarse2");
+				}
+			},
+			exit: function(character, system, to) {
+				system.animateQuality(
+					'progreso', character.qualities.progreso+25
+				);
+			}
+		}
+
+		),
+
+	"colarse2": new undum.SimpleSituation(
+		"<p>-Está bien - dijo Anna - Pero aseguraos de que no os vean</p>\
+		<p>Logramos colocarnos detrás de ellos. Parecía un camino ruinoso que llevaba a algún tipo de entrada trasera. \
+		Avanzamos sin dilación, pero el camino estaba en muy mal estado y se desprendió gran parte del camino haciendo un estruendo.</p>\
+		<p>Los guardas cercanos se percataron y llegaron rápidamente a nuestra posición. Intentamos pelear pero estaban demasiado cerca\
+		y no podíamos hacer ninguna magia desde esta distancia. La misión fue un fracaso...</p>\
+		<img src='media/games/tutorial/muerto.png' class='float_right'>\
+		<p><h1>HAS MUERTO</h1></p>"
+	),
+
+	"luciad": new undum.SimpleSituation(
+		"<p>-Está bien, pero no hagas nada peligroso - Cofiaba en sus habilidades porque tenía el bastón mágico.</p>\
+		<p>Lucía asintió y se adelantó. Se escondió en un árbol muy alto, y empezó a usar un hechizo que asemejaba el grito de unos cuervos. \
+		Uno de los guardas fue hacia el bosque, dejando expuesto al otro guarda.</p>\
+		<p>-Es una oportunidad de oro - dijo Anna sonriendo.</p>\
+		<p>No podía estar más de acuerdo, así que decidimos lanzarle dos ondas al guarda que se había quedado solo, haciéndole cortes profundos mientras gritaba. \
+		Los gritos alertaron al guarda que había caído en la distracción de Lucía, pero su destino ya estaba sellado. \
+		Con una floritura Lucía cayó encima del guarda y usó magia de hielo para congelarlo.</p>\
+		<p>-Todo según el plan - dijo Anna confiada </p>\
+		<p>No podíamos hacer nada con el guarda congelado, así que examinamos al guarda. Aunque el cuerpo estaba destrozado, esperábamos encontrar \
+		algo de utilidad. Tras buscar un poco, encontramos una <a href='./llave' class='once'> llave</a> y un <a href='./mapa' class='once'> mapa</a> en su posesión. \
+		<img src='media/games/tutorial/mapa.jpg' class='float_right'>\
+		<img src='media/games/tutorial/llaves.jpg' class='float_right'>\
+		Ahora que habíamos acabado con la vigilancia, podíamos <a href='entrada2'>volver a la entrada,</a> o seguir por <a href='escondite'>el camino que los guardas estaban vigilando.</a></p>",
+		{
+			actions: {
+				'llave': function (character, system, action) {
+					system.setQuality("llave", true);
+					system.setCharacterText("<p>Una llave que puede servir para abrir alguna puerta.</p>");
+				},
+				'mapa': function (character, system, action) {
+					system.setQuality("mapa", true);
+					system.setCharacterText("<p>Un mapa del castillo.</p>");
+				}
+			}
+		}
+	),
+
+	"escondite": new undum.SimpleSituation(
+		"<p>-Vamos a colarnos por ahí - dije - Tiene que haber algo bueno detrás si lo estaban vigilando.</p>\
+		<p>-Está bien - dijo Anna - Pero aseguraos de que no os vean</p>\
+		<p>Parecía un camino ruinoso que llevaba a algún tipo de entrada trasera. \
+		Avanzamos sin dilación, pero el camino estaba en muy mal estado y se desprendió gran parte del camino haciendo un estruendo.</p>\
+		<p>Por suerte ya no había enemigos por nuestros alrededores, así que logramos colarnos dentro del castillo sin mayor problema.\
+		Era una entrada por las alcantarillas, así que intentamos infiltramos por ahí. Sin embargo no encontramos ningún método para avanzar...</p>\
+		<p>-¡Menuda pérdida de tiempo! -dijo cabreada Lucía - Supongo que no tenemos más opción que <a href='entrada2'>volver a la entrada</a></p>"
+	),
+
+	"entrada2": new undum.SimpleSituation(
+		"<p>Una vez en la entrada decidimos mirar alrededor. No había ningún guarda cerca, así que no teníamos que preocuparnos por eso.\
+		Desde aquí podíamos probar a <a href='acercarse'>acercarnos a la puerta principal</a>, <a href='vuelta2'>dar una vuelta al castillo</a>\
+		, o <a href='magia2'>usar los poderes mágicos para colarte en el castillo.</a></p>"
+	),
+
+	"magia": new undum.SimpleSituation(
+		"<p>-Oye, creo que puedes usar el bastón para llevarme hasta esa ventana - le dije a Lucía.</p>\
+		<p>-Bueno, supongo que podemos intentar ver que hay ahí, aunque estarás solo - dijo algo preocupada Lucía.</p>\
+		<p>-No pasará nada, si no encuentro nada me daré la vuelta - dije para calmarla.</p>\
+		<p>Lucía finalmente asintió, y usó los poderes del bastón para teletransportarme a la ventana.",
+		{
+				enter: function( character, system, from ) {
+					if( character.qualities.mapa ) {
+						system.doLink( "secreto" );
+					} else { 
+						system.doLink( "nada" );
+					}
+				}
+		}
+	),
+
+	"nada": new undum.SimpleSituation(
+		"<img src='media/games/tutorial/hab.jpg' class='float_right'>\
+		<p>La habitación de la ventana parecía normal. No había nada que llamase especial atención. Intenté forzar \
+		la puerta, pero no tenía ningún tipo de cerradura, parecía que estaba cerrada por el otro lado. Era muy raro, \
+		pero no veía nada interesante, así que decidí ir a la ventana y hacerle señales a Lucía.</p>\
+		<p>Al ver mi señal, usó el bastón y me trajo <a href='entrada'>de vuelta a la entrada</p>"
+		),
+
+	"magia2": new undum.SimpleSituation(
+		"<p>-Oye, creo que puedes usar el bastón para llevarme hasta esa ventana - le dije a Lucía.</p>\
+		<p>-Bueno, supongo que podemos intentar ver que hay ahí, aunque estarás solo - dijo algo preocupada Lucía.</p>\
+		<p>-No pasará nada, si no encuentro nada me daré la vuelta - dije para calmarla.</p>\
+		<p>Lucía finalmente asintió, y usó los poderes del bastón para teletransportarme a la ventana.",
+		{
+				enter: function( character, system, from ) {
+					if( character.qualities.mapa ) {
+						system.doLink( "secreto" );
+					} else { 
+						system.doLink( "nada2" );
+					}
+				}
+		}
+	),
+
+	"nada2": new undum.SimpleSituation(
+		"<img src='media/games/tutorial/hab.jpg' class='float_right'>\
+		<p>La habitación de la ventana parecía normal. No había nada que llamase especial atención. Intenté forzar \
+		la puerta, pero no tenía ningún tipo de cerradura, parecía que estaba cerrada por el otro lado. Era muy raro, \
+		pero no veía nada interesante, así que decidí ir a la ventana y hacerle señales a Lucía.</p>\
+		<p>Al ver mi señal, usó el bastón y me trajo <a href='entrada2'>de vuelta a la entrada</p>"
+		),
+
+	"secreto": new undum.SimpleSituation(
+		"<p>La habitación de la ventana parecía normal. No había nada que llamase especial atención. Intenté forzar \
+		la puerta, pero no tenía ningún tipo de cerradura, parecía que estaba cerrada por el otro lado. Era muy raro...\
+		Decidí mirar el mapa del castillo, y parecía que había una sala secreta detrás de una pared donde había una estantería.</p>\
+		<img src='media/games/tutorial/estante.jpg' class='float_right'>\
+		<p>Quité la estantería del medio, y efectivamente había una puerta que llevaba a una pequeña sala. Allí había un libro \
+		que destacaba por encima de todo. En la portada ponía<a href='./theworld' class='once'> 'The World'</a>, y parecía que era un hechizo muy potente. \
+		En cualquier caso, no había mucho más que hacer, así que me fui por la ventana, y le hice señales a Lucía.</p>\
+		<p>Al ver mi señal, usó el bastón y me trajo <a href='entrada2'>de vuelta a la entrada</p>", 
+		{
+			actions: {
+				'theworld': function (character, system, action) {
+					system.setQuality("theworld", true);
+					system.setCharacterText("<p>Sientes que alberga un extraño poder que altera el tiempo...</p>");
+				}
+			}
+		}
+		),
+
+
+	"vuelta2": new undum.SimpleSituation(
+		"<p>No había nada más de interés alrededor del castillo salvo <a href='escondite'>el camino que los guardas estaban vigilando.</a>\
+		La otra opción era <a href='entrada2'>volver a la entrada.</a></p>"
+	),
+
+
+	"caballeronodaga": new undum.SimpleSituation(
+		"<img src='media/games/tutorial/caba.png' class='float_right'>\
+		<p> Me despedí de mi pueblo y de la gente que apreciaba y partí hacia la ciudad con el resto. Pasaron 5 años desde aquel día. \
 		Me he estado formando durante este tiempo con mi mentor Félix, me ha enseñado muchas técnicas y como moverme en una batalla.</p>\
 		\
 		<p>Me encontraba en las caballerizas entrenando con la lanza y el escudo contra Félix.</p>\
 		<p>- Parece que los años te hacen factura Félix, puedo ganarte con los ojos cerrados si quiero. - dije.</p>\
 		<p>- Pero qué dices bufón, vas a morder el polvo por lo que has dicho. - me respondió con enfado.</p>\
 		\
+		<img src='media/games/tutorial/pradera.jpg' class='float_right'>\
 		<p>Chocamos las lanzas de madera unas cuantas veces más, hasta que el desenlace del combate de entrenamiento fue una victoria por mi parte.</p>\
 		<p>- Vaya vaya, parece que he mejorado. - dije con orgullo.</p>\
 		<p>- No te equivoques, te he dejado ganar, en el campo de batalla no me igualarías, pero en un entrenamiento no tengo ganas de ponerme en serio </p>\
@@ -618,7 +1212,246 @@ undum.game.situations = {
 		y el hombre grita de dolor mientras caía al suelo. El hombre que me lanzó el cuchillo vino a por mí, era el más grande. </p>\
 		<p>- Veo que no eres tan inútil como pareces pero a ver ahora cómo te defiendes pequeño. - dijo mientras se preparaba para arremeter contra mí.</p>\
 		<p>Lanzó dos reveses contra mí, uno lo paré con el escudo, ya casi destruido por el golpe, pero el otro alcanzó mi pierna, dejándome una herida no muy grave, \
-		ya que me eché para atrás y conseguí que el ataque no fuera a más. \</p>"
+		ya que me eché para atrás y conseguí que el ataque no fuera a más.No tenía mucho más que hacer con el palo restante de la lanza, así que intenté buscar algo con lo que defenderme,\
+		pude ver una <a href='sarten'>sarten</a>, un <a href='escudo'>escudo de hierro</a> y una <a href='flecha'>flecha puntiaguda</a>. \</p>"
+		,
+{
+	exit: function(character, system, to) {
+		system.animateQuality(
+			'progreso', character.qualities.progreso+25
+		);
+	}
+}
+	),
+
+	"caballerosidaga": new undum.SimpleSituation(
+		"<img src='media/games/tutorial/caba.png' class='float_right'>\
+		<p> Me despedí de mi pueblo y de la gente que apreciaba y partí hacia la ciudad con el resto. Pasaron 5 años desde aquel día. \
+		Me he estado formando durante este tiempo con mi mentor Félix, me ha enseñado muchas técnicas y como moverme en una batalla.</p>\
+		\
+		<p>Me encontraba en las caballerizas entrenando con la lanza y el escudo contra Félix.</p>\
+		<p>- Parece que los años te hacen factura Félix, puedo ganarte con los ojos cerrados si quiero. - dije.</p>\
+		<p>- Pero qué dices bufón, vas a morder el polvo por lo que has dicho. - me respondió con enfado.</p>\
+		\
+		<img src='media/games/tutorial/pradera.jpg' class='float_right'>\
+		<p>Chocamos las lanzas de madera unas cuantas veces más, hasta que el desenlace del combate de entrenamiento fue una victoria por mi parte.</p>\
+		<p>- Vaya vaya, parece que he mejorado. - dije con orgullo.</p>\
+		<p>- No te equivoques, te he dejado ganar, en el campo de batalla no me igualarías, pero en un entrenamiento no tengo ganas de ponerme en serio </p>\
+		<p>- respondió Félix intentando desmerecer mi victoria.</p>\
+		<p>Nos dirigimos a dejar las armas cuando, de pronto entran 4 encapuchados con dagas en mano. </p>\
+		<p>- ¿Quién es Ferdinand? - preguntó el más grande.</p>\
+		<p>- ¿Quién lo pregunta? -  respondí con un mal presentimiento.</p>\
+		<p>- No te hará falta saberlo. En realidad no importa, vais a morir los dos igualmente. - respondió con aire de superioridad </p>\
+		<p>Los cuatro se abalanzan sobre nosotros, pero no contaban con que sabíamos defendernos y ya habíamos calentado con el entrenamiento.\
+		La batalla se repartió en dos encapuchados para cada uno. Me lanzan un cuchillo arrojadizo, pero lo paro con el escudo de madera, el otro hombre me sorprendió \
+		por la derecha intentando dar una cuchillada con la daga, pero mis reflejos actúan y antes de que lo consiga le clavo la lanza de madera en el pecho, la cual se parte\
+		y el hombre grita de dolor mientras caía al suelo. El hombre que me lanzó el cuchillo vino a por mí, era el más grande. </p>\
+		<p>- Veo que no eres tan inútil como pareces pero a ver ahora cómo te defiendes pequeño. - dijo mientras se preparaba para arremeter contra mí.</p>\
+		<p>Lanzó dos reveses contra mí, uno lo paré con el escudo, ya casi destruido por el golpe, pero el otro alcanzó mi pierna, dejándome una herida no muy grave, \
+		ya que me eché para atrás y conseguí que el ataque no fuera a más.No tenía mucho más que hacer con el palo restante de la lanza.</p>\
+		<p>Recordé que llevaba encima la daga que encontré aquella vez, así que le lancé lo que me quedaba de lanza a modo de distracción y saqué la daga. \
+		Intenté defenderme de los siguientes golpes con lo que me quedaba de escudo y cuando vi mi oportunidad, realicé un contraataque, \
+		hiriendo en la barriga al agresor y produciendo el efecto de la daga. <a href='continuar'>Continuar.</a></p>"
+		,
+		{
+			exit: function(character, system, to) {
+				system.animateQuality(
+					'progreso', character.qualities.progreso+25
+				);
+			}
+		}
+	),
+	"continuar": new undum.SimpleSituation(
+		"<img src='media/games/tutorial/pradera.jpg' class='float_right'>\
+		<p> Habiendo derribado a los dos malhechores que iban a por mí, comprobé cómo iba la situación de Félix contra los dos restantes agresores, para mi sorpresa Félix ya había acabado con ellos hace un rato.</p>\
+		<p>- Te lo dije, en el campo de batalla te supero con creces chavalin. - dijo Félix riendose.</p>\
+		<p>- Solo ha sido suerte viejales. - dije mientras también me reía.</p>\
+		<p>Registramos sus pertenencias para ver si había alguna pista del por qué del ataque, cuando Félix encontró algo:</p>\
+		<p>- Eh Ferdinand, tienes que ver esto, parece una carta donde dice que te asesinen. ¡Es del rey!. </p>\
+		<p>- ¿Pero por qué el rey querría asesinarme? - respondí con asombro. </p>\
+		<p>- Según dice aquí eres el heredero de la corona indirectamente, ya que eres el hijo bastardo de este, el rey Ashnard, también conocido como el rey loco. </p>\
+		<p>Se ve que los rumores de que hace ya años tuvo una escapada bastante sospechosa son ciertos. - concretó Félix. </p>\
+		<p>- Quizás eso explica por qué a mi madre la mataron unos bandidos, ¡Maldito enfermo, me las pagará! - dije muy cabreado.</p>\
+		<p>- ¿Qué piensas hacer? - me dijo Félix.</p>\
+		<p><a href='./aumento-progreso-aventura11'>Armarte rapidamente e ir por él</a> o <a href='lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>\
+",
+{
+	actions: {
+		"aumento-progreso-aventura11": function(character, system, action) {
+			system.doLink("dagarapida");
+		}
+	},
+	exit: function(character, system, to) {
+		system.animateQuality(
+			'progreso', character.qualities.progreso+25
+		);
+	}
+}
+),
+	"sarten": new undum.SimpleSituation(
+		"<img src='media/games/tutorial/sarten.jpg' class='float_left'>\
+		<p>Pude ver el mango saliente de una <a href='./sarten' class='once'> sartén</a> en una de las cajas apiladas que había donde guardamos las armas, la mayoría era menaje y piezas de armas estropeadas. \
+		<p>Justo antes de que uno de los encapuchados se abalanzase sobre mí, pude esquivarlo y alcanzar la sartén por el mango.</p>\
+		\
+		<p> Habiendo derribado a los dos malhechores que iban a por mí, comprobé cómo iba la situación de Félix contra los dos restantes agresores, para mi sorpresa Félix ya había acabado con ellos hace un rato.</p>\
+		<p>- Te lo dije, en el campo de batalla te supero con creces chavalin. - dijo Félix riendose.</p>\
+		<p>- Solo ha sido suerte viejales. - dije mientras también me reía.</p>\
+		<p>Registramos sus pertenencias para ver si había alguna pista del por qué del ataque, cuando Félix encontró algo:</p>\
+		<p>- Eh Ferdinand, tienes que ver esto, parece una carta donde dice que te asesinen. ¡Es del rey!. </p>\
+		<p>- ¿Pero por qué el rey querría asesinarme? - respondí con asombro. </p>\
+		<p>- Según dice aquí eres el heredero de la corona indirectamente, ya que eres el hijo bastardo de este, el rey Ashnard, también conocido como el rey loco. </p>\
+		<p>Se ve que los rumores de que hace ya años tuvo una escapada bastante sospechosa son ciertos. - concretó Félix. </p>\
+		<p>- Quizás eso explica por qué a mi madre la mataron unos bandidos, ¡Maldito enfermo, me las pagará! - dije muy cabreado.</p>\
+		<p>- ¿Qué piensas hacer? - me dijo Félix.</p>\
+		<p><a href='./aumento-progreso-aventura15'>Armarte rapidamente e ir por él</a> o <a href='lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>"
+		,
+		{
+			actions: {
+				"aumento-progreso-aventura15": function(character, system, action) {
+					system.doLink("rapida");
+				},
+
+				'sarten': function (character, system, action) {
+				   system.setQuality("sarten", true);
+				   system.setCharacterText("<p>Adquieres una sartén que seguro que en otro tiempo tuvo una mejor vida.</p>");
+			   }
+			},
+			exit: function(character, system, to) {
+				system.animateQuality(
+					'progreso', character.qualities.progreso+25
+				);
+			}
+		}
+   ),
+	"escudo": new undum.SimpleSituation(
+		"<p>Cogí el <a href='./escudo' class='once'> escudo de hierro </a>que tenía detrás mía colgado en la pared, me lo puse en el brazo y lo lancé contra este, le golpee en la frente del encapuchado más grande, haciéndole un instanockeo.</p>\
+		<img src='media/games/tutorial/escudo.png' class='float_left'>\
+		<p>-¡Vengadores Unidos! - Grité.</p>\
+		<p>-¿Pero qué dices? - saltó Félix.</p>\
+		<p>No lo sé, me ha salido del alma. -dije.</p>\
+		<p> Habiendo derribado a los dos malhechores que iban a por mí, comprobé cómo iba la situación de Félix contra los dos restantes agresores, para mi sorpresa Félix ya había acabado con ellos hace un rato.</p>\
+		<p>- Te lo dije, en el campo de batalla te supero con creces chavalin. - dijo Félix riendose.</p>\
+		<p>- Solo ha sido suerte viejales. - dije mientras también me reía.</p>\
+		<p>Registramos sus pertenencias para ver si había alguna pista del por qué del ataque, cuando Félix encontró algo:</p>\
+		<p>- Eh Ferdinand, tienes que ver esto, parece una carta donde dice que te asesinen. ¡Es del rey!. </p>\
+		<p>- ¿Pero por qué el rey querría asesinarme? - respondí con asombro. </p>\
+		<p>- Según dice aquí eres el heredero de la corona indirectamente, ya que eres el hijo bastardo de este, el rey Ashnard, también conocido como el rey loco. </p>\
+		<p>Se ve que los rumores de que hace ya años tuvo una escapada bastante sospechosa son ciertos. - concretó Félix. </p>\
+		<p>- Quizás eso explica por qué a mi madre la mataron unos bandidos, ¡Maldito enfermo, me las pagará! - dije muy cabreado.</p>\
+		<p>- ¿Qué piensas hacer? - me dijo Félix.</p>\
+		<p><a href='./aumento-progreso-aventura14'>Armarte rapidamente e ir por él</a> o <a href='lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>"
+		,
+		{
+			actions: {
+				"aumento-progreso-aventura14": function(character, system, action) {
+					system.doLink("rapida");
+				},
+				'escudo': function (character, system, action) {
+				   system.setQuality("escudo", true);
+				   system.setCharacterText("<p>Adquieres un escudo con un dibujo de una estrella en su centro.</p>");
+			   }
+			},
+			exit: function(character, system, to) {
+				system.animateQuality(
+					'progreso', character.qualities.progreso+25
+				);
+			}
+		}
+   ),
+	"flecha": new undum.SimpleSituation(
+		"<img src='media/games/tutorial/flecha.png' class='float_left'>\
+		<p> Agarré una <a href='./flecha' class='once'> flecha </a>que había visto dentro de un carcaj y con un ataque rápido, se la clavé al enorme encapuchado en el ojo, \
+		gritando este de dolor y cayendo hacia atrás.</p>\
+		<p> Habiendo derribado a los dos malhechores que iban a por mí, comprobé cómo iba la situación de Félix contra los dos restantes agresores, para mi sorpresa Félix ya había acabado con ellos hace un rato.</p>\
+		<p>- Te lo dije, en el campo de batalla te supero con creces chavalin. - dijo Félix riendose.</p>\
+		<p>- Solo ha sido suerte viejales. - dije mientras también me reía.</p>\
+		<p>Registramos sus pertenencias para ver si había alguna pista del por qué del ataque, cuando Félix encontró algo:</p>\
+		<p>- Eh Ferdinand, tienes que ver esto, parece una carta donde dice que te asesinen. ¡Es del rey!. </p>\
+		<p>- ¿Pero por qué el rey querría asesinarme? - respondí con asombro. </p>\
+		<p>- Según dice aquí eres el heredero de la corona indirectamente, ya que eres el hijo bastardo de este, el rey Ashnard, también conocido como el rey loco. </p>\
+		<p>Se ve que los rumores de que hace ya años tuvo una escapada bastante sospechosa son ciertos. - concretó Félix. </p>\
+		<p>- Quizás eso explica por qué a mi madre la mataron unos bandidos, ¡Maldito enfermo, me las pagará! - dije muy cabreado.</p>\
+		<p>- ¿Qué piensas hacer? - me dijo Félix.</p>\
+		<p><a href='./aumento-progreso-aventura13'>Armarte rapidamente e ir por él</a> o <a href='lucia'>buscar a Lucía y Anna</a> para que te ayuden en la pelea</p>"
+		,
+		 {
+			 actions: {
+				 "aumento-progreso-aventura13": function(character, system, action) {
+					 system.doLink("rapida");
+				 },
+				 'flecha': function (character, system, action) {
+					system.setQuality("flecha", true);
+					system.setCharacterText("<p>Adquieres una flecha  puntiaguda.</p>");
+				}
+			 },
+			 exit: function(character, system, to) {
+				 system.animateQuality(
+					 'progreso', character.qualities.progreso+25
+				 );
+			 }
+		 }
+	),
+	"dagarapida": new undum.SimpleSituation(
+		"<p> Decidí armarme rápidamente y fui directo al castillo con Félix, solicité una audiencia con el rey y entre a la sala del trono.</p>\
+		<p>- Vaya, si has conseguido sobrevivir engendro mio. - dijo el rey Ashnar.</p>\
+		<p>- Para tu desgracia sí, vengaré la muerte de mi madre.</p>\
+		<p>- Esa mujer deberia haber muerto aquella noche en las calles como la perra que fue.- dijo el rey mientras se reia.</p>\
+		<p>- ¡Te voy a matar!</p>\
+		<p>- ¡Guardias! - gritó el rey Ashnar.</p>\
+		<p>5 caballeros reales se pusieron entre nosotros y el rey, pero me zafé rápidamente de los que iban a por mí y Félix se encargó de entretener a los restantes. \
+		El rey sacó un espadón Claymore de detrás del trono y arremetió contra mí.</p>\
+		<p>Pero antes que nada saqué la daga que me había acompañado durante toda esta aventura y se la lancé al rey haciéndole una pequeña herida en la cara.</p>\
+		<p>- De verdad crees que así vas a conseguir algo pequeño desgraci.... - El rey calló sobre sus rodillas no entendiendo que estaba ocurriendo.</p>\
+		<p>- Esa daga tiene veneno, tu reinado ha terminado viejo loco. - dije con orgullo y odio.</p>\
+		<p>- ¡Mierdaaaaa! - gritó el rey loco antes de morir.</p>\
+		\
+		<p>Así fue como me convertí en Rey, en el nuevo rey loco, Ferdinand I el tirano, sometí a toda la humanidad a mi poder y goberné haciendo lo que quería hasta el final.</p>\
+		<img src='media/games/tutorial/finrey.png' class='float_left'>\
+		<h1>FIN</h1>"		
+	),
+	"rapida": new undum.SimpleSituation(
+		"<p> Decidí armarme rápidamente y fui directo al castillo con Félix, solicité una audiencia con el rey y entre a la sala del trono.</p>\
+		<p>- Vaya, si has conseguido sobrevivir engendro mio. - dijo el rey Ashnar.</p>\
+		<p>- Para tu desgracia sí, vengaré la muerte de mi madre.</p>\
+		<p>- Esa mujer deberia haber muerto aquella noche en las calles como la perra que fue.- dijo el rey mientras se reia.</p>\
+		<p>- ¡Te voy a matar!</p>\
+		<p>- ¡Guardias! - gritó el rey Ashnar.</p>\
+		<p>5 caballeros reales se pusieron entre nosotros y el rey, pero me zafé rápidamente de los que iban a por mí y Félix se encargó de entretener a los restantes. \
+		El rey sacó un espadón Claymore de detrás del trono y arremetió contra mí.</p>\
+		<p>Saqué mi lanza y mi escudo de hierro, intenté parar el golpe del rey loco pero esa Claymore tenía algo especial, no pude contener \
+		el golpe y salí despedido hacia las paredes del palacio, teniendo la mala suerte de estrellarme contra un pincho de la decoración del castillo \
+		y muriendo en el acto. Así fue como no conseguí mi objetivo y morí en vano, el rey loco siguió a sus anchas reinando a placer y haciendo todo tipo de barbaridades sin que nadie pudiera hacer nada. </p>\
+		<h1>FIN</h1>\
+		<img src='media/games/tutorial/rip.png' class='float_left'>"
+	),
+	"lucia": new undum.SimpleSituation(
+		"<p> Me dirigí inmediatamente a la sede de magia donde estaban Lucía y Anna, nada más verlas les dije:</p>\
+		 <p>- Os necesito a las dos ahora mismo, prepararos cuanto antes.</p>\
+		 <p>- ¿Pero qué pasa? ¿Por qué tanta prisa Ferdi? - dijo Lucía - Ni siquiera nos has saludado y ya quieres que vayamos contigo.</p>\
+		 <p>- No hay tiempo, voy a derrocar a mi padre, el rey Loco.</p>\
+		 <p>- Ni siquiera con mi poder tendríamos fácil eso que planteas lo sabes ¿no?  - respondió Anna.</p>\
+		 <p>- Y… un momento, ¿tu padre? - dijo Lucía con asombro.</p>\
+		 <p>- Lo acabo de descubrir, él ha mandado asesinos para silenciarme y no dejar prueba de lo que hizo.</p>\
+		 <p>- Bueno… Yo te acompaño. - respondió Lucía - No voy a permitir que te maten.</p>\
+		 <p>- Pues que remedio, habrá que ir - dijo Anna.</p>\
+		 \
+		 <p>Ya preparados nos dispusimos a ir directos al castillo, llegamos hasta la sala del trono, donde innumerables guardias estaban esperandonos,\
+		 <p>Félix, Anna y Lucía se encargaron de entretenerlos y mientras, yo me colaba entre sus filas y para ir directo a por el rey. Llego hasta estar a unos pasos frente a él.\
+		 <p>- Vaya si has conseguido sobrevivir. - dijo el rey Ashnar.</p>\
+		 <p>- Para tu desgracia sí, ¡vengaré la muerte de mi madre!.</p>\
+		 <p>- A ver que puedes hacer pequeño engendro - respondió Ashnar.</p>\
+		 <p>Me dispuse a atacar con mi escudo y lanza  cuando el rey sacó en espadón Claymore de detrás del trono y arremetió contra mí.\
+		 El golpe fue tal que mi escudo se rompió y yo salí despedido, pensaba que se había terminado todo, no iba a poder encajar el golpe contra la pared, cuando de pronto unas corrientes de aire consiguieron pararme, eran de Lucía.</p>\
+		 <p>- Ya te dije que no iba a dejar que murieses. - dijo alegremente.</p>\
+		 <p>- Me has salvado la vida Lucía, pero todavía hay que terminar el trabajo.</p>\
+		 <p>Me recompuse y fui directo de nuevo a por el rey, intento esquivar una tajada pero la espada es demasiado largo, no puedo esquivarlo bien, cuando Lucía vuelve a salvarme poniendo un pilar de hielo entre la espada y yo, dejándome libre de encajar un golpe al rey.</p>\
+		 <p>- ¡¿Pero qué?! - exclamó el rey loco al recibir su golpe el pilar en vez de yo.</p>\
+		 <p>- ¡Esto se acabó Ashnar! - le grité mientras lanzaba mi lanza a su pecho. </p>\
+		 <p>El golpe dió de lleno, Ashnar soltó sangre por la boca por el daño causado pero no se daba por vencido, estaba indefenso, cuando Lucía lanzó un hechizo de estacas de piedra que atravesaron su pecho, cayendo derrotado, ahora sí, gracias a su hechizo y mi lanza.</p>\
+		 \
+		 <p>Después de terminar con el rey loco me ofrecieron ser el nuevo rey, pero lo rechacé. El reino tras ver que no había un heredero se convirtió en una democracia. Félix y Anna vivieron lo que les quedaba de vida siendo mercenarios. Y yo viví una vida tranquila con Lucía en nuestro pueblo natal, donde nos acogieron tras la victoria celebrándolo con una gran fiesta.</p>\
+		<h1>FIN</h1>\
+		<img src='media/games/tutorial/village.jpg' class='float_left'>"
 	),
 };
 
@@ -634,23 +1467,30 @@ undum.game.qualities = {
 	daga: new undum.OnOffQuality(
 		"Daga", { priority: "0003", group: 'inventario', onDisplay: "&#10003;" }
 	),
-	skill: new undum.IntegerQuality(
-		"Habilidad", { priority: "0001", group: 'stats' }
+	sarten: new undum.OnOffQuality(
+		"Sartén", { priority: "0003", group: 'inventario', onDisplay: "&#10003;" }
 	),
-	stamina: new undum.NumericQuality(
-		"Resistencia", { priority: "0002", group: 'stats' }
+	escudo: new undum.OnOffQuality(
+		"Escudo", { priority: "0003", group: 'inventario', onDisplay: "&#10003;" }
 	),
-	luck: new undum.FudgeAdjectivesQuality( // Fudge as in the FUDGE RPG
-		"<span title='Skill, Stamina and Luck are reverently borrowed from the Fighting Fantasy series of gamebooks. The words representing Luck are from the FUDGE RPG. This tooltip is illustrating that you can use any HTML in the label for a quality (in this case a span containing a title attribute).'>Fortuna</span>",
-		{ priority: "0003", group: 'stats' }
+	flecha: new undum.OnOffQuality(
+		"Flecha", { priority: "0003", group: 'inventario', onDisplay: "&#10003;" }
 	),
-
-	inspiration: new undum.NonZeroIntegerQuality(
-		"Inspiración", { priority: "0001", group: 'progress' }
+	llave: new undum.OnOffQuality(
+		"Llave", { priority: "0003", group: 'inventario', onDisplay: "&#10003;" }
 	),
-	novice: new undum.OnOffQuality(
-		"Novicio", { priority: "0002", group: 'progress', onDisplay: "&#10003;" }
-	)
+	mapa: new undum.OnOffQuality(
+		"Mapa", { priority: "0003", group: 'inventario', onDisplay: "&#10003;" }
+	),
+	theworld: new undum.OnOffQuality(
+		"The World", { priority: "0003", group: 'inventario', onDisplay: "&#10003;" }
+	),
+	baston: new undum.OnOffQuality(
+		"Bastón", { priority: "0003", group: 'inventario', onDisplay: "&#10003;" }
+	),
+	progreso: new undum.NumericQuality(
+        "Progreso", {priority:"0002", group:'stats'}
+    )
 }; {
 
 }
@@ -664,7 +1504,6 @@ undum.game.qualities = {
 undum.game.qualityGroups = {
 	inventario: new undum.QualityGroup('Inventario', { priority: "0001" }),
 	stats: new undum.QualityGroup(null, { priority: "0001" }),
-	progress: new undum.QualityGroup('Progreso', { priority: "0002" })
 };
 
 
@@ -673,10 +1512,13 @@ undum.game.qualityGroups = {
  * to configure the character at the start of play. */
 undum.game.init = function (character, system) {
 	system.setQuality("daga", false)
-	character.qualities.skill = 12;
-	character.qualities.stamina = 12;
-	character.qualities.luck = 0;
-	character.qualities.novice = 1;
-	character.qualities.inspiration = 0;
+	system.setQuality("sarten", false)
+	system.setQuality("escudo", false)
+	system.setQuality("flecha", false)
+	system.setQuality("llave", false)
+	system.setQuality("mapa", false)
+	system.setQuality("theworld", false)
+	system.setQuality("baston", false)
+	character.qualities.progreso = 0;
 	system.setCharacterText("<p>¡Disfruta de esta trepidante aventura!</p>");
 };

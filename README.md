@@ -85,3 +85,42 @@ En el próximo sprint habrá que añadir todas las mejoras posibles para mejorar
 - Captura de pantalla de las HU del Sprint Backlog una vez acabado el sprint:
 
 ![Trello](HU_SP2F.JPG)
+
+## Sprint 3 (Product Owner - ÁLvaro Ortega Castro):
+
+- Captura del Sprint Backlog:
+
+![Trello](BacklogS3.PNG)
+
+Hemos elegido las historias que son innegociables para tratar de terminar el proyecto. Dependiendo de como se produzca el desarrollo de las tareas, se pueden añadir más durante el sprint retrospective.
+
+- Captura de pantalla de las HU descompuestas en tareas al principio del Sprint:
+
+![Trello](CapturaS3.PNG)
+
+- Capturas de pantalla del Product Backlog y del Sprint Backlog tras las modificaciones realizadas en el Product Backlog Refinement:
+
+![Trello](CapturaS3.PNG)
+![Trello](BacklogS3.PNG)
+
+
+**Conclusiones obtenidas en la Sprint Review:**
+
+Hemos terminado la historia, hemos conseguido crear el inventario de objetos y hemos conseguido implementar la barra de progreso.
+No hemos llegado a implementar el estado del personaje, los puntos de fuerza y que nuestra historia sea responsive design.
+
+Tuvimos complicaciones sobre subir los archivos ya que en una ocasión debido a problemas de Smartgit realizamos un commit and push pero dicho push no ocurrió, lo solucionamos volviendolo a hacer, ya que la historia la hemos hecho en un word compartido por drive aparte, únicamente fue volver a programarlo. 
+También tuvimos complicaciones con los objetos, ya que al interactuar con los objetos mostraban sus respectivas descripciones pero no aparecían en el inventario, la solución de esto fue revisar todo el código y corregir la errata.
+
+
+**Conclusiones obtenidas en la Sprint Retrospective:**
+
+Fuimos justos para la fecha de entrega inicial así que tuvimos que meternos caña y hacerlo todo rapidamente, al menos en cuestión de historia, después de recibir la segunda fecha de entrega fuimos haciendo lo que nos quedaba más tranquilamente, centrandonos en eliminar fallos y revisarlo todo.
+
+Como ya hemos dicho en el Sprint Review tuvimos ciertos problemas con los objetos pero los solucionamos rápidamente.
+
+
+
+![Trello](sprintbacklog3.PNG)
+![Trello](historiaususprint.PNG)
+

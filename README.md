@@ -124,3 +124,32 @@ Como ya hemos dicho en el Sprint Review tuvimos ciertos problemas con los objeto
 ![Trello](sprintbacklog3.PNG)
 ![Trello](historiaususprint.PNG)
 
+## Métricas del proyecto:
+
+**Tabla para los datos de las gráficas del proyecto en su totalidad:**
+
+**Gráficas burndown y burn-up de los PU:**
+
+**Gráficas burndown y burn-up del Valor asociado a las HU:**
+
+**Tabla de velocidades:**
+
+**Tablas (una por cada sprint) con los datos para las gráficas de los sprints:**
+
+**Gráficas burndown y burn-up de los PU o tareas del sprint 1:**
+
+**Gráficas burndown y burn-up de los PU o tareas del sprint 2:**
+
+**Gráficas burndown y burn-up de los PU o tareas del sprint 3:**
+
+**Conclusiones que sacáis a la vista de las tablas y gráficas obtenidas:**
+
+- Conclusiones relativas al proyecto en su totalidad:
+
+- Conclusiones relativas al desarrollo de los sprints:
+
+**Enlace hoja de cálculo Google Drive:**
+https://docs.google.com/spreadsheets/d/1vBKLCRsE3TyzPJkzvnzpTNyRCeVkc88-dNGqoqK4M9M/edit#gid=0
+
+
+

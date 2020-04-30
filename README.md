@@ -175,8 +175,12 @@ Como ya hemos dicho en el Sprint Review tuvimos ciertos problemas con los objeto
 **Conclusiones que sacáis a la vista de las tablas y gráficas obtenidas:**
 
 - Conclusiones relativas al proyecto en su totalidad:
+  
+  La realización del proyecto nos ha ayudado a mejorar nuestro aprendizaje para trabajar en equipo de forma equitativa y así poder hacer un reparto uniforme de las tareas. Aparte de ello hemos aprendido mejor a programar en Java y en HTML, que nos ayudará en nuestra salida profesional. Respecto a la Daily Scrum no tuvimos problema en hacerla hasta que, por temas de coronavirus, tuvimos que reorganizarnos de nuevo, en este caso no la cumplimos del todo. 
 
-- Conclusiones relativas al desarrollo de los sprints:
+- Conclusiones relativas al desarrollo de los sprints: 
+
+En primer lugar, en lo relativo al sprint 1, nos confiamos, al pensar que era una programación muy monótona, y lo dejamos todo al último día. No obstante lo sacamos sin mayor pudor. Con respecto al sprint 2, ya conseguimos tener un mayor manejo de la herramienta, y con ello, pudimos superarlo sin ningún problema. Sin embargo, en el Sprint 3, la gran cantidad de trabajo por parte de la mayoría de las asignaturas, y el poco tiempo que previmos para el desenlace de la historia, nos hizo apurar la finalización de la práctica hasta el último día que estaba previsto.
 
 **Enlace hoja de cálculo Google Drive:**
 

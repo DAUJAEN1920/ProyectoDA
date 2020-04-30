@@ -124,3 +124,67 @@ Como ya hemos dicho en el Sprint Review tuvimos ciertos problemas con los objeto
 ![Trello](sprintbacklog3.PNG)
 ![Trello](historiaususprint.PNG)
 
+## Métricas del proyecto:
+
+**Tabla para los datos de las gráficas del proyecto en su totalidad:**
+
+![Trello](capFinal1.JPG)
+
+**Gráficas burndown y burn-up de los PU:**
+
+![Trello](capFinal2.JPG)
+
+![Trello](capFinal3.JPG)
+
+**Gráficas burndown y burn-up del Valor asociado a las HU:**
+
+![Trello](capFinal4.JPG)
+
+![Trello](capFinal5.JPG)
+
+**Tabla de velocidades:**
+
+![Trello](capFinal6.JPG)
+
+**Tablas (una por cada sprint) con los datos para las gráficas de los sprints:**
+
+![Trello](capFinal7.JPG)
+
+![Trello](capFinal8.JPG)
+
+![Trello](capFinal9.JPG)
+
+**Gráficas burndown y burn-up de los PU o tareas del sprint 1:**
+
+![Trello](capFinal10.JPG)
+
+![Trello](capFinal11.JPG)
+
+**Gráficas burndown y burn-up de los PU o tareas del sprint 2:**
+
+![Trello](capFinal12.JPG)
+
+![Trello](capFinal13.JPG)
+
+**Gráficas burndown y burn-up de los PU o tareas del sprint 3:**
+
+![Trello](capFinal14.JPG)
+
+![Trello](capFinal15.JPG)
+
+**Conclusiones que sacáis a la vista de las tablas y gráficas obtenidas:**
+
+- Conclusiones relativas al proyecto en su totalidad:
+  
+  La realización del proyecto nos ha ayudado a mejorar nuestro aprendizaje para trabajar en equipo de forma equitativa y así poder hacer un reparto uniforme de las tareas. Aparte de ello hemos aprendido mejor a programar en Java y en HTML, que nos ayudará en nuestra salida profesional. Respecto a la Daily Scrum no tuvimos problema en hacerla hasta que, por temas de coronavirus, tuvimos que reorganizarnos de nuevo, en este caso no la cumplimos del todo. 
+
+- Conclusiones relativas al desarrollo de los sprints: 
+
+En primer lugar, en lo relativo al sprint 1, nos confiamos, al pensar que era una programación muy monótona, y lo dejamos todo al último día. No obstante lo sacamos sin mayor pudor. Con respecto al sprint 2, ya conseguimos tener un mayor manejo de la herramienta, y con ello, pudimos superarlo sin ningún problema. Sin embargo, en el Sprint 3, la gran cantidad de trabajo por parte de la mayoría de las asignaturas, y el poco tiempo que previmos para el desenlace de la historia, nos hizo apurar la finalización de la práctica hasta el último día que estaba previsto.
+
+**Enlace hoja de cálculo Google Drive:**
+
+https://docs.google.com/spreadsheets/d/1vBKLCRsE3TyzPJkzvnzpTNyRCeVkc88-dNGqoqK4M9M/edit#gid=0
+
+
+

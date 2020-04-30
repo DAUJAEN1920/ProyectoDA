@@ -128,19 +128,49 @@ Como ya hemos dicho en el Sprint Review tuvimos ciertos problemas con los objeto
 
 **Tabla para los datos de las gráficas del proyecto en su totalidad:**
 
+![Trello](capFinal1.JPG)
+
 **Gráficas burndown y burn-up de los PU:**
+
+![Trello](capFinal2.JPG)
+
+![Trello](capFinal3.JPG)
 
 **Gráficas burndown y burn-up del Valor asociado a las HU:**
 
+![Trello](capFinal4.JPG)
+
+![Trello](capFinal5.JPG)
+
 **Tabla de velocidades:**
+
+![Trello](capFinal6.JPG)
 
 **Tablas (una por cada sprint) con los datos para las gráficas de los sprints:**
 
+![Trello](capFinal7.JPG)
+
+![Trello](capFinal8.JPG)
+
+![Trello](capFinal9.JPG)
+
 **Gráficas burndown y burn-up de los PU o tareas del sprint 1:**
+
+![Trello](capFinal10.JPG)
+
+![Trello](capFinal11.JPG)
 
 **Gráficas burndown y burn-up de los PU o tareas del sprint 2:**
 
+![Trello](capFinal12.JPG)
+
+![Trello](capFinal13.JPG)
+
 **Gráficas burndown y burn-up de los PU o tareas del sprint 3:**
+
+![Trello](capFinal14.JPG)
+
+![Trello](capFinal15.JPG)
 
 **Conclusiones que sacáis a la vista de las tablas y gráficas obtenidas:**
 
@@ -149,6 +179,7 @@ Como ya hemos dicho en el Sprint Review tuvimos ciertos problemas con los objeto
 - Conclusiones relativas al desarrollo de los sprints:
 
 **Enlace hoja de cálculo Google Drive:**
+
 https://docs.google.com/spreadsheets/d/1vBKLCRsE3TyzPJkzvnzpTNyRCeVkc88-dNGqoqK4M9M/edit#gid=0
 
 
